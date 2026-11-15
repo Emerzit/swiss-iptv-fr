@@ -103,6 +103,20 @@ class GuideAndLineupTests(unittest.TestCase):
         self.assertNotIn('url-tvg=', body)
         self.assertIsNone(result['epg']['swiss-fr']['url'])
 
+    def test_optional_exact_name_match_rejects_ambiguous_and_overridden_feeds(self):
+        self.store_guide()
+        guide = self.config['epg']['sources'][0]
+        guide.update(match_unique_names=True, channel_ids={})
+        self.db.execute("UPDATE channels SET name='RTS 1' WHERE id='RTS1.ch'")
+        result = export_playlists(self.db, self.config, self.root / 'public')
+        self.assertEqual(result['epg']['swiss-fr']['matched_channels'], 1)
+        guide['channel_ids'] = {'RTS1.ch': 'explicit-missing-feed'}
+        self.assertIsNone(export_playlists(self.db, self.config, self.root / 'public')['epg']['swiss-fr']['url'])
+        guide['channel_ids'] = {}
+        self.db.execute("INSERT INTO epg_channels SELECT check_id,'duplicate-id',display_names,last_stop,programmes FROM epg_channels WHERE epg_id='rts-one'")
+        self.db.commit()
+        self.assertIsNone(export_playlists(self.db, self.config, self.root / 'public')['epg']['swiss-fr']['url'])
+
     def test_current_failure_invalidates_previous_available_check(self):
         self.store_guide()
         with patch('swiss_iptv.epg.download_guide', side_effect=OSError('offline')):

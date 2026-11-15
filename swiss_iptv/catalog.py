@@ -117,14 +117,15 @@ def add_source(db, channel_id, url, origin, sha, observed=None, official=False, 
     db.execute('''INSERT INTO sources
       (id,channel_id,url,protocol,operator,official,priority,epg_id,first_seen,last_seen)
       VALUES (?,?,?,?,?,?,?,?,?,?) ON CONFLICT(id) DO UPDATE SET
-      last_seen=excluded.last_seen,active=1,official=MAX(official,excluded.official),
+      last_seen=MAX(sources.last_seen,excluded.last_seen),active=1,official=MAX(official,excluded.official),
       priority=MIN(priority,excluded.priority),
       operator=CASE WHEN sources.operator IN ('','unknown') AND excluded.operator NOT IN ('','unknown')
                     THEN excluded.operator ELSE sources.operator END,
       epg_id=CASE WHEN COALESCE(sources.epg_id,'')='' THEN excluded.epg_id ELSE sources.epg_id END''',
       (sid, channel_id, url, protocol(url), op, int(official), 10 if official else 100,
        epg_id, observed, observed))
-    db.execute('INSERT OR IGNORE INTO origins VALUES (?,?,?,?)', (sid, origin, sha, observed))
+    db.execute('''INSERT INTO origins VALUES (?,?,?,?) ON CONFLICT(source_id,url,sha256)
+                  DO UPDATE SET observed_at=MAX(origins.observed_at,excluded.observed_at)''', (sid, origin, sha, observed))
     return sid
 
 
@@ -205,6 +206,16 @@ def bootstrap(db, root, config):
                 db.execute('UPDATE sources SET geo=? WHERE channel_id=?', (config['channel_geo'][cid], cid))
             imported += 1
     # Official candidates can exist without any community playlist entry.
+    for cid in french:
+        meta = metadata.get(cid, {})
+        if (not meta or meta.get('closed') or meta.get('is_nsfw') or not meta.get('website') or
+                any(re.search(pattern, cid, re.I) for pattern in config.get('excluded_channel_patterns', []))):
+            continue
+        db.execute('''INSERT OR IGNORE INTO channels
+          (id,name,country,languages,category,logo,epg_id,website,regional)
+          VALUES (?,?,?,?,?,?,?,?,0)''',
+          (cid, meta['name'], meta.get('country', ''), 'fra', ','.join(meta.get('categories', [])) or 'general',
+           logos.get(cid, ''), cid, meta['website']))
     for cid, page in pages.items():
         meta = metadata.get(cid, {})
         db.execute('''INSERT OR IGNORE INTO channels

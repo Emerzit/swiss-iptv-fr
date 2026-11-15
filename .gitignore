@@ -12,6 +12,7 @@ data/update.lock
 data/github.local.yaml
 data/pages.git/
 data/logs/
+data/inputs/
 data/obscura-session/
 data/setup-github.json
 data/egress-context.json

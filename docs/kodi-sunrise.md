@@ -32,7 +32,7 @@ Le PC n’est pas un serveur vidéo. Kodi contacte directement les infrastructur
 
 ## Sélection et guide
 
-État examiné le 15 novembre 2026 : **54 chaînes avec image et son**, dont RTS 1/2, TF1 Suisse, France 2–5, M6 Suisse et ARTE. RTS 1 et RTS 2 ont aussi été lues quinze secondes en Full HD avec audio français. Le profil suit l’ordre Suisse romande demandé ; les variantes CH sont préférées et les chaînes non validées sont omises.
+La sélection initiale de 54 chaînes avec image et son a été élargie automatiquement. Le [site publié](https://emerzit.github.io/swiss-iptv-fr/) donne le nombre actuel et la qualité décodée de chaque chaîne. RTS 1/2, TF1 Suisse, France 2–5, M6 Suisse et ARTE restent dans l’ordre romand demandé ; les variantes CH sont préférées et les chaînes non validées sont omises. France 24 a été améliorée vers une source Full HD. Kodi garde le choix d’une variante adaptée au matériel et au débit du foyer.
 
 | Liste | Chaînes à la livraison | Guide vérifié |
 |---|---:|---:|

@@ -10,6 +10,7 @@ from .discover import discover
 from .epg import verify_guides
 from .publish import export_playlists, load_reviews, report
 from .verify import verify
+from .intake import sync_inputs
 
 
 def main():
@@ -24,6 +25,7 @@ def main():
     imp.add_argument('--origin', required=True)
     imp.add_argument('--country', default='')
     commands.add_parser('discover', help='Chercher les manifestes publics sur les pages officielles configurées')
+    commands.add_parser('sync', help='Actualiser les sources mondiales et leurs preuves sans approuver de lien')
     commands.add_parser('epg-check', help='Vérifier les guides XMLTV configurés et les identifiants de chaînes')
     check = commands.add_parser('verify', help='Décoder un échantillon; sans cible, seules les sources officielles')
     group = check.add_mutually_exclusive_group()
@@ -63,6 +65,8 @@ def main():
             result = {'imported': args.path}
         elif args.command == 'discover':
             result = {'pages': len(discover(db, config, 'data/evidence'))}
+        elif args.command == 'sync':
+            result = {'inputs': sync_inputs(db, config)}
         elif args.command == 'epg-check':
             result = {'guides': verify_guides(db, config)}
         elif args.command == 'verify':

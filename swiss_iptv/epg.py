@@ -7,6 +7,7 @@ from pathlib import Path
 import re
 import tempfile
 import time
+import unicodedata
 import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -165,4 +166,13 @@ def matching_guide(db, config, channel, source, audience, only_url=None):
             row = db.execute('SELECT * FROM epg_channels WHERE check_id=? AND epg_id=?', (check['id'], epg_id)).fetchone()
             if row and row['last_stop'] and datetime.fromisoformat(row['last_stop']) > current:
                 return guide['url'], epg_id
+        # Exact typography normalization only; never infer a regional feed from fuzzy similarity.
+        if (guide.get('match_unique_names', False) and channel['id'] not in guide.get('channel_ids', {}) and channel['name']):
+            def exact_name(value):
+                return re.sub(r'[\s.\-]+', '', unicodedata.normalize('NFKC', value).casefold())
+            matches = [row for row in db.execute('SELECT * FROM epg_channels WHERE check_id=?', (check['id'],))
+                       if row['last_stop'] and datetime.fromisoformat(row['last_stop']) > current and
+                       exact_name(channel['name']) in {exact_name(name) for name in json.loads(row['display_names'])}]
+            if len(matches) == 1:
+                return guide['url'], matches[0]['epg_id']
     return None, source['epg_id'] or channel['epg_id']

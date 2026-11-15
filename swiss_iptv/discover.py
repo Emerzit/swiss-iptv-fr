@@ -5,6 +5,7 @@ import json
 from functools import lru_cache
 from pathlib import Path
 import re
+import subprocess
 from urllib.parse import parse_qsl, urlencode, urljoin, urlparse
 
 from .catalog import add_source, now
@@ -23,6 +24,8 @@ def discover(db, config, dest):
     cfg = config['verification']
     @lru_cache(maxsize=64)
     def read(url):
+        if urlparse(url).path.endswith(('.js', '.mjs')):
+            return fetch(url, cfg['http_timeout'], cfg['request_delay'], max_bytes=8_000_000)
         return fetch(url, cfg['http_timeout'], cfg['request_delay'])
 
     for page in config.get('official_pages', []):
@@ -33,6 +36,41 @@ def discover(db, config, dest):
             (dest / f'{sha}.html').write_bytes(content)
             body = document_text(content)
             documents = [(final_url, body, sha)]
+            browser = Path(config.get('discovery', {}).get('browser', ''))
+            if page.get('render_html') and browser.is_file():
+                # Optional ordinary browser rendering, without a user profile, stealth or private-network access.
+                rendered = dest / 'rendered.html'
+                try:
+                    browser_result = subprocess.run([str(browser.resolve()), 'fetch', final_url, '--dump', 'html',
+                        '--timeout', '15', '--wait', '2', '--output', str(rendered.resolve())],
+                        capture_output=True, timeout=22, creationflags=getattr(subprocess, 'CREATE_NO_WINDOW', 0))
+                    if browser_result.returncode == 0 and rendered.exists() and rendered.stat().st_size <= 8_000_000:
+                        rendered_body = rendered.read_bytes()
+                        rendered_sha = hashlib.sha256(rendered_body).hexdigest()
+                        (dest / f'{rendered_sha}.html').write_bytes(rendered_body)
+                        rendered_text = document_text(rendered_body)
+                        documents.append((final_url, rendered_text, rendered_sha))
+                        body += '\n' + rendered_text
+                        record['browser_rendered'] = True
+                except (OSError, subprocess.TimeoutExpired):
+                    record['browser_rendered'] = False
+            if page.get('follow_live_links'):
+                links = [urljoin(final_url, html.unescape(link)) for link in
+                         re.findall(r'<a\b[^>]*href=["\x27]([^"\x27]+)', body, re.I)
+                         if re.search(r'direct|\blive\b|webtv|watch|player', link, re.I)]
+                for link in list(dict.fromkeys(links))[:3]:
+                    if urlparse(link).hostname != urlparse(final_url).hostname or link == final_url:
+                        continue
+                    try:
+                        linked_data, linked_url = read(link)
+                        linked_sha = hashlib.sha256(linked_data).hexdigest()
+                        (dest / f'{linked_sha}.html').write_bytes(linked_data)
+                        linked_body = document_text(linked_data)
+                        documents.append((linked_url, linked_body, linked_sha))
+                        # The actual public player often sits on /direct rather than the homepage.
+                        body += '\n' + linked_body
+                    except Exception as exc:
+                        record.setdefault('resource_errors', []).append({'url': link, 'error': str(exc)})
             allowed_srg = None
             api_blocked = False
             if page.get('json_url'):
@@ -88,8 +126,12 @@ def discover(db, config, dest):
                     record['access_status'] = 'drm_required' if record['drm_resources'] else 'token_required'
                 documents.append((api_url, json.dumps(sorted(allowed_srg)), api_sha))
             assets = re.findall(r'(?:src|href)=["\x27]([^"\x27]+\.(?:jsx?|mjs)(?:\?[^"\x27]*)?)["\x27]', body, re.I)
-            for asset in [a for a in assets if any(re.search(p, a) for p in page.get('script_patterns', []))][:min(12, page.get('script_limit', 2))]:
-                asset = urljoin(final_url, asset)
+            assets = list(dict.fromkeys(a for a in assets if any(re.search(p, a) for p in page.get('script_patterns', []))))
+            if page.get('follow_live_links'):
+                assets.sort(key=lambda a: (not bool(re.search('player|lecteur|stream|direct|webtv', a, re.I)),
+                                          urlparse(urljoin(final_url, a)).hostname != urlparse(final_url).hostname))
+            for asset in assets[:min(12, page.get('script_limit', 2))]:
+                asset = urljoin(final_url, html.unescape(asset))
                 try:
                     nested, asset_url = read(asset)
                 except Exception as exc:
@@ -107,13 +149,42 @@ def discover(db, config, dest):
                     child_sha = hashlib.sha256(child_data).hexdigest()
                     (dest / f'{child_sha}.js').write_bytes(child_data)
                     documents.append((child_url, document_text(child_data), child_sha))
+            if page.get('follow_live_links'):
+                # Only literal, public player configuration files, never license/key/token APIs.
+                for document_url, document, _ in list(documents):
+                    configs = re.findall(r'["\x27]([^"\x27\s<>]+\.json(?:\?[^"\x27\s<>]*)?)["\x27]', document)
+                    for location in list(dict.fromkeys(configs))[:2]:
+                        if (not re.search('config|player|live|stream', location, re.I) or
+                                re.search('license|drm|key|token|auth|session|secret', location, re.I)):
+                            continue
+                        config_url = urljoin(document_url, location)
+                        if urlparse(config_url).hostname != urlparse(document_url).hostname:
+                            continue
+                        try:
+                            settings, config_url = read(config_url)
+                            parsed_settings = json.loads(settings)
+                            config_sha = hashlib.sha256(settings).hexdigest()
+                            (dest / f'{config_sha}.json').write_bytes(settings)
+                            documents.append((config_url, json.dumps(parsed_settings), config_sha))
+                        except Exception as exc:
+                            record.setdefault('resource_errors', []).append({'url': config_url, 'error': str(exc)})
             embeds = [embed for _, document, _ in documents
                       for embed in re.findall(r'<iframe\b[^>]*\bsrc=["\x27]([^"\x27]+)', document, re.I)]
             embeds = [embed for embed in dict.fromkeys(embeds)
                       if not page.get('embed_pattern') or re.search(page['embed_pattern'], embed)]
+            embeds = [embed for embed in embeds if urlparse(urljoin(final_url, html.unescape(embed))).hostname == 'player.infomaniak.com'
+                      or (page.get('follow_live_links') and urlparse(urljoin(final_url, html.unescape(embed))).hostname == urlparse(final_url).hostname
+                          and re.search('live|direct|player', embed, re.I) and not re.search('vod|replay', embed, re.I))]
             for embed in embeds[:2]:
                 embed = html.unescape(embed)
                 embed = urljoin(final_url, embed)
+                if (urlparse(embed).hostname == urlparse(final_url).hostname and page.get('follow_live_links') and
+                        re.search(r'live|direct|player', embed, re.I) and not re.search('vod|replay', embed, re.I)):
+                    nested, embed_url = read(embed)
+                    nested_sha = hashlib.sha256(nested).hexdigest()
+                    (dest / f'{nested_sha}.html').write_bytes(nested)
+                    documents.append((embed_url, document_text(nested), nested_sha))
+                    continue
                 if urlparse(embed).hostname != 'player.infomaniak.com':
                     continue
                 nested, embed_url = read(embed)
@@ -132,8 +203,11 @@ def discover(db, config, dest):
                         clear_urls = [item['url'] for item in settings.get('data', settings).get('integrations', [])
                                       if item.get('constant_url') and item.get('type') in {'hls', 'ios'}]
                         documents.append((api_url, json.dumps(clear_urls), api_sha))
-            urls = []
+            candidates = []
             for document_url, document, document_sha in documents:
+                # A commented-out old manifest is not a public player's current source.
+                if urlparse(document_url).path.endswith(('.js', '.jsx', '.mjs')):
+                    document = re.sub(r'(?m)^\s*//[^\n]*|/\*.*?\*/', '', document, flags=re.S)
                 found = sorted(set(re.findall(r'https?://[^\s<>"\x27\x60\\]+?\.(?:m3u8|mpd)(?:\?[^\s<>"\x27\x60\\]*)?', document)))
                 # A TV page also contains replay manifests: never treat those as linear TV.
                 found = [url for url in found if not re.search(r'(?:[./_-])vod(?:[./_\d-])|replay', url, re.I)]
@@ -146,12 +220,18 @@ def discover(db, config, dest):
                 if page.get('stream_pattern'):
                     found = [url for url in found if re.search(page['stream_pattern'], url)]
                 for url in found:
-                    if not any(re.search(r'token|auth|sign|expire|key|z32', key, re.I)
+                    if not any(re.search(r'session|token|auth|sign|expire|key|z32', key, re.I)
                                for key, value in parse_qsl(urlparse(url).query, keep_blank_values=True)):
-                        add_source(db, page['channel_id'], url, document_url, document_sha, record['observed_at'], official=True)
-                        if document_url != final_url:
-                            add_source(db, page['channel_id'], url, final_url, sha, record['observed_at'], official=True)
-                        urls.append(url)
+                        candidates.append((url, document_url, document_sha))
+            urls = sorted({url for url, _, _ in candidates})
+            if page.get('require_unique_stream') and len(urls) > 1:
+                record['access_status'] = 'ambiguous_channel_identity'
+                record['ambiguous_stream_count'] = len(urls)
+                urls, candidates = [], []
+            for url, document_url, document_sha in candidates:
+                add_source(db, page['channel_id'], url, document_url, document_sha, record['observed_at'], official=True)
+                if document_url != final_url:
+                    add_source(db, page['channel_id'], url, final_url, sha, record['observed_at'], official=True)
             record.update(final_url=final_url, sha256=sha, streams=sorted(set(urls)),
                           resources=[{'url': u, 'sha256': h} for u, text, h in documents])
             if record.get('access_status') in {'drm_required', 'token_required'} or (

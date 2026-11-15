@@ -1,0 +1,115 @@
+import json
+from pathlib import Path
+import tempfile
+import unittest
+from unittest.mock import patch
+
+from swiss_iptv.autonomy import (REVIEWER, approve_playback, candidate_rule, controller_proof, explore, same_site, setup)
+from swiss_iptv.catalog import add_source, connect, now
+from swiss_iptv.publish import export_playlists, load_reviews
+
+
+class AutonomousPolicyTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.root = Path(self.temp.name)
+        self.db = connect(self.root / 'db.sqlite')
+        setup(self.db)
+        self.cfg = {'publication': {'review_max_days': 90, 'check_max_hours': 48},
+                    'verification': {}, 'discovery': {'official_pages_per_run': 0}}
+        self.db.execute("INSERT INTO channels (id,name,country,languages,website,category) VALUES ('TV.fr','TV','FR','fra','https://tele.example.org/','news')")
+        self.sid = add_source(self.db, 'TV.fr', 'https://live.tele.example.org/live.m3u8', 'https://example.org/feed.m3u', 'a' * 64)
+        self.source = self.db.execute('SELECT * FROM sources WHERE id=?', (self.sid,)).fetchone()
+        self.db.commit()
+
+    def tearDown(self):
+        self.db.close()
+        self.temp.cleanup()
+
+    def proof(self, live=True, language='fra'):
+        details = {'is_live': live, 'connection_isp': 'sunrise', 'decode': {'frames': 125, 'width': 1920, 'height': 1080,
+            'audio_decoded': True, 'audio_language': language}, 'quality': {'mode': 'best', 'bandwidth': 5000000}}
+        self.db.execute('INSERT INTO checks (source_id,run_id,checked_at,country,network,attempt,status,details) VALUES (?,?,?,?,?,?,?,?)',
+            (self.sid, now(), now(), 'CH', 'internet', 1, 'playable', json.dumps(details)))
+        self.db.commit()
+
+    def test_provenance_and_real_french_live_playback_are_independent_gates(self):
+        rule, _ = candidate_rule(self.db, self.source, self.cfg, [])
+        self.assertEqual(rule['rule'], 'first_party_public_live')
+        http = {**dict(self.source), 'url': self.source['url'].replace('https:', 'http:')}
+        self.assertEqual(candidate_rule(self.db, http, self.cfg, [])[0]['rule'], 'first_party_public_live')
+        self.assertFalse(approve_playback(self.db, self.source, rule, self.cfg))
+        self.proof()
+        self.assertFalse(approve_playback(self.db, self.source, rule, self.cfg))  # Controller not fetched yet.
+        rule['sha256'] = 'b' * 64
+        rule['rule'] = 'official_page_reference'
+        self.proof(live=False)
+        self.assertFalse(approve_playback(self.db, self.source, rule, self.cfg))
+        self.proof(language='eng')
+        self.assertFalse(approve_playback(self.db, self.source, rule, self.cfg))
+        self.proof()
+        self.assertTrue(approve_playback(self.db, self.source, rule, self.cfg))
+        output = export_playlists(self.db, self.cfg, self.root / 'site')
+        self.assertEqual(output['playlists']['swiss-fr-internet'], 1)
+        self.assertEqual(output['channels'][0]['width'], 1920)
+
+    def test_shared_cdn_untrusted_origin_and_editorial_rejection_cannot_be_promoted(self):
+        self.assertFalse(same_site('https://customer.amagi.tv/live.m3u8', 'https://amagi.tv/'))
+        self.assertFalse(same_site('https://tele.example.org.evil.org/live.m3u8', 'https://tele.example.org/'))
+        other = {**dict(self.source), 'url': 'https://customer.amagi.tv/live.m3u8'}
+        self.assertEqual(candidate_rule(self.db, other, self.cfg, [])[1], 'official_relationship_unresolved')
+        load_reviews(self.db, [dict(source_id=self.sid, decision='rejected', evidence_url='https://tele.example.org/terms',
+            evidence_sha256='b' * 64, reviewer='Human', reviewed_at=now(), scope='public_links',
+            notes='Forbidden', access_ch=False, operator='')])
+        self.proof()
+        self.assertEqual(candidate_rule(self.db, self.source, self.cfg, [])[1], 'explicit_editorial_hold')
+        self.assertFalse(approve_playback(self.db, self.source, {'url': 'https://tele.example.org/', 'sha256': 'b' * 64}, self.cfg))
+
+    def test_metadata_website_matching_stream_host_needs_a_public_player_reference(self):
+        rule, _ = candidate_rule(self.db, self.source, self.cfg, [])
+        cfg = {**self.cfg, 'verification': {'http_timeout': 1, 'request_delay': 0}}
+        with patch('swiss_iptv.autonomy.fetch', return_value=(b'Official homepage ' * 20, rule['url'])), \
+             patch('swiss_iptv.autonomy.discover', return_value=[]):
+            with self.assertRaisesRegex(ValueError, 'exact stream'):
+                controller_proof(self.db, rule, cfg, self.root / 'evidence')
+        self.assertEqual(self.db.execute('SELECT COUNT(*) FROM reviews').fetchone()[0], 0)
+
+    def test_service_replacement_is_bound_to_channel_and_service(self):
+        source = {**dict(self.source), 'url': 'https://viamotionhsi.netplus.ch/live/eds/test/browser-DASH/test.mpd', 'protocol': 'dash'}
+        anchor = {**source, 'url': 'https://viamotionhsi.netplus.ch/live/eds/test/browser-HLS/test.m3u8'}
+        self.assertEqual(candidate_rule(self.db, source, self.cfg, [anchor])[0]['rule'], 'reviewed_service')
+        wrong = {**anchor, 'channel_id': 'Other.fr'}
+        self.assertIsNone(candidate_rule(self.db, source, self.cfg, [wrong])[0])
+        wrong = {**anchor, 'url': anchor['url'].replace('/test/', '/premium/')}
+        self.assertIsNone(candidate_rule(self.db, source, self.cfg, [wrong])[0])
+
+    def test_quality_selects_decoded_source_and_vod_cannot_be_exported(self):
+        rule = {'rule': 'official_page_reference', 'url': 'https://tele.example.org/', 'sha256': 'b' * 64}
+        self.proof()
+        approve_playback(self.db, self.source, rule, self.cfg)
+        low = add_source(self.db, 'TV.fr', 'https://live.tele.example.org/low.m3u8', 'https://example.org/feed', 'a' * 64, official=True)
+        low_source = self.db.execute('SELECT * FROM sources WHERE id=?', (low,)).fetchone()
+        original = self.sid
+        self.sid = low
+        self.proof()
+        self.db.execute("UPDATE checks SET details=json_set(details,'$.decode.width',640,'$.decode.height',360) WHERE source_id=?", (low,))
+        self.db.commit()
+        approve_playback(self.db, low_source, rule, self.cfg)
+        result = export_playlists(self.db, self.cfg, self.root / 'site')
+        self.assertEqual(result['channels'][0]['source_id'], original)
+        self.sid = original
+        self.proof(live=False)
+        result = export_playlists(self.db, self.cfg, self.root / 'site')
+        self.assertEqual(result['channels'][0]['source_id'], low)
+
+    def test_controller_failure_is_rotated_instead_of_starving_next_candidate(self):
+        with patch('swiss_iptv.autonomy.controller_proof', side_effect=ValueError('Unavailable')) as controller:
+            first = explore(self.db, self.cfg, [], 'CH', 'sunrise', self.root / 'evidence', budget_seconds=2)
+            second = explore(self.db, self.cfg, [], 'CH', 'sunrise', self.root / 'evidence', budget_seconds=2)
+        self.assertEqual(first['sources_checked'], 1)
+        self.assertEqual(second['sources_checked'], 0)
+        self.assertEqual(controller.call_count, 1)
+
+
+if __name__ == '__main__':
+    unittest.main()

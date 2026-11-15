@@ -11,7 +11,7 @@ from .lineup import channel_number, ordered_selection
 
 
 def load_reviews(db, records):
-    """Explicit editorial action, never invoked by discovery/import/verification."""
+    """Validated editorial records; autonomous records must pass the separate link policy."""
     for review in records:
         if not db.execute('SELECT 1 FROM sources WHERE id=?', (review['source_id'],)).fetchone():
             raise ValueError('Unknown source_id')
@@ -59,6 +59,8 @@ def eligible(db, source, cfg, audience='public'):
     if current - datetime.fromisoformat(check['checked_at']) > timedelta(hours=cfg['check_max_hours']):
         return None, 'check_expired'
     details = json.loads(check['details'])
+    if details.get('is_live') is False:
+        return None, 'not_linear_live'
     # A hostname identifies a distributor; a reviewed public HTTP entry can work on another ISP.
     if provider_mismatch and details.get('connection_isp', 'unknown') in {'', 'unknown', source['operator']}:
         return None, 'operator_unconfirmed'
@@ -73,6 +75,13 @@ def clean(value):
     return str(value or '').replace('"', "'").replace('\r', ' ').replace('\n', ' ')
 
 
+def source_quality(source):
+    details = json.loads(source['verification']['details'])
+    video = details.get('decode', {})
+    return ((video.get('width') or 0) * (video.get('height') or 0), video.get('fps') or 0,
+            details.get('quality', {}).get('bandwidth', 0), source.get('official', 0), -source['priority'])
+
+
 def export_playlists(db, config, destination, audience='public'):
     dest = Path(destination)
     dest.mkdir(parents=True, exist_ok=True)
@@ -84,6 +93,7 @@ def export_playlists(db, config, destination, audience='public'):
         else:
             rejected[reason] = rejected.get(reason, 0) + 1
     channels = {r['id']: dict(r) for r in db.execute('SELECT * FROM channels')}
+    accepted.sort(key=source_quality, reverse=True)
     filters = {
         'swiss-fr': lambda s, c: True,
         'swiss-fr-internet': lambda s, c: not s['operator'] and s['protocol'] not in {'udp', 'rtp'},
@@ -91,7 +101,7 @@ def export_playlists(db, config, destination, audience='public'):
         'swiss-fr-regional': lambda s, c: c['country'] == 'CH' and c['regional'],
         'swiss-fr-news': lambda s, c: 'news' in c['category'].lower(),
     }
-    counts, epg_summary = {}, {}
+    counts, epg_summary, qualities = {}, {}, []
     for name, predicate in filters.items():
         selected = {}
         for source in accepted:
@@ -99,6 +109,16 @@ def export_playlists(db, config, destination, audience='public'):
             if predicate(source, channel):
                 selected.setdefault(channel['id'], (channel, source))
         ordered = ordered_selection(selected, config)
+        if name == 'swiss-fr-internet':
+            for channel, source in ordered:
+                details = json.loads(source['verification']['details'])
+                video = details.get('decode', {})
+                qualities.append({'id': channel['id'], 'name': channel['name'], 'source_id': source['id'],
+                    'url': source['url'], 'checked_at': source['verification']['checked_at'],
+                    'width': video.get('width'), 'height': video.get('height'), 'fps': video.get('fps'),
+                    'video_codec': video.get('video_codec'), 'audio_codec': video.get('audio_codec'),
+                    'audio_language': video.get('audio_language'), 'frames': video.get('frames'),
+                    'decoded_seconds': video.get('decoded_seconds'), 'quality': details.get('quality', {})})
         # Kodi uses one XMLTV location per IPTV Simple instance. Providers here are fallbacks.
         guide_url, epg_ids = None, {}
         for guide in config.get('epg', {}).get('sources', []):
@@ -128,20 +148,41 @@ def export_playlists(db, config, destination, audience='public'):
         temp.replace(target)
         counts[name] = len(ordered)
         epg_summary[name] = {'url': guide_url, 'matched_channels': len(epg_ids)}
+    previous_path = dest / 'status.json'
+    try:
+        previous = json.loads(previous_path.read_text(encoding='utf-8')) if previous_path.exists() else {}
+    except ValueError:
+        previous = {}
+    before = {c['id']: c for c in previous.get('channels', [])}
+    after = {c['id']: c for c in qualities}
+    changes = {'added': sorted(after.keys() - before.keys()) if before else [],
+               'removed': sorted(before.keys() - after.keys()),
+               'source_changed': [cid for cid in before.keys() & after.keys() if before[cid]['source_id'] != after[cid]['source_id']]}
     summary = {'generated_at': now(), 'audience': audience, 'playlists': counts,
-               'exclusions': rejected, 'epg': epg_summary}
-    (dest / 'status.json').write_text(json.dumps(summary, indent=2), encoding='utf-8')
+               'exclusions': rejected, 'epg': epg_summary, 'channels': qualities, 'changes': changes}
+    status_temp = dest / 'status.json.tmp'
+    status_temp.write_text(json.dumps(summary, indent=2), encoding='utf-8')
+    status_temp.replace(dest / 'status.json')
     links = ''.join(f'<li><a href="{html.escape(name)}.m3u">{html.escape(name)}</a> : {count} chaînes</li>'
                     for name, count in counts.items())
     guide = epg_summary['swiss-fr-internet']
     guide_link = (f'<p>Guide XMLTV externe : <a href="{html.escape(guide["url"], quote=True)}">'
                   f'{guide["matched_channels"]} chaînes couvertes</a>.</p>') if guide['url'] else '<p>Aucun guide actuellement validé.</p>'
+    quality_rows = ''.join('<tr><td>' + html.escape(c['name']) + '</td><td>' +
+        html.escape(f"{c['width'] or '?'} × {c['height'] or '?'} · {c['fps'] or '?'} images/s") +
+        '</td><td>' + html.escape(c['video_codec'] or '?') + '</td></tr>' for c in qualities)
     (dest / 'index.html').write_text('<!doctype html><html lang="fr"><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width"><title>Swiss IPTV FR</title>'
+        '<style>body{font:16px system-ui;max-width:950px;margin:2rem auto;padding:0 1rem;line-height:1.5}'
+        'table{border-collapse:collapse;width:100%}th,td{text-align:left;padding:.5rem;border-bottom:1px solid #ccc}</style>'
         '<h1>Swiss IPTV FR</h1><p>Playlists de sources externes pour une réception personnelle en Suisse.</p>'
         f'<p>Dernière génération : {html.escape(summary["generated_at"])}.</p>'
         '<p>Configurer une fois l’URL de la liste Internet dans Kodi IPTV Simple, puis activer '
         'l’actualisation périodique des chaînes.</p><ul>' + links + '</ul>' + guide_link +
+        f'<details><summary>Qualité vérifiée : {len(qualities)} chaînes</summary>'
+        '<p>Meilleure variante décodée parmi les sources contrôlées. Les liens adaptatifs restent compatibles '
+        'avec le choix de qualité du lecteur. Un essai court ne garantit pas tous les programmes.</p>'
+        '<table><tr><th>Chaîne</th><th>Lecture vérifiée</th><th>Codec vidéo</th></tr>' + quality_rows + '</table></details>' +
         '<p>Les lecteurs contactent directement les infrastructures des diffuseurs ou de leurs distributeurs. '
         'Ce site ne contient aucun lecteur embarqué et n’héberge aucun programme, logo ou guide XMLTV. '
         'Les marques et contenus restent ceux de leurs titulaires. Un test court ne garantit pas la disponibilité continue.</p>'

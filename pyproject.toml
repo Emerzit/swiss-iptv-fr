@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "swiss-iptv-fr"
-version = "0.1.0"
+version = "0.2.0"
 description = "Catalogue traçable de télévision francophone pour la Suisse"
 requires-python = ">=3.11"
 dependencies = ["PyYAML>=6.0.2,<7"]

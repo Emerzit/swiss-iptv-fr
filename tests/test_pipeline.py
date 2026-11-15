@@ -90,12 +90,13 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(eligible(self.db, {**dict(source), 'protocol': 'rtp'}, CONFIG['publication'], 'domestic')[1], 'operator_mismatch')
 
     def test_cdn_session_urls_are_not_persisted_in_check_reports(self):
-        proof = {'decode': {'frames': 125}, 'manifests': [{'url': 'https://cdn.example.org/tok_private-session/live/master.m3u8', 'sha256': 'a' * 64}]}
+        proof = {'decode': {'frames': 125}, 'manifests': [{'url': 'https://cdn.example.org/tok_private-session/live/master.m3u8?session=private-query', 'sha256': 'a' * 64}]}
         cfg = {**CONFIG['verification'], 'request_delay': 0}
         with patch('swiss_iptv.verify.check_once', return_value=proof):
             verify(self.db, cfg, source_id=self.sid, country='CH', isp='sunrise')
         saved = self.db.execute('SELECT details FROM checks').fetchone()[0]
         self.assertNotIn('private-session', saved)
+        self.assertNotIn('private-query', saved)
         self.assertIn('/SESSION_REDACTED/live/master.m3u8', saved)
         self.assertIn('a' * 64, saved)
 
@@ -162,7 +163,7 @@ class PipelineTests(unittest.TestCase):
                       '#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="aud",NAME="French",LANGUAGE="FRA",URI="french.m3u8"\n'
                       '#EXT-X-STREAM-INF:BANDWIDTH=150000,CODECS="mp4a.40.2",AUDIO="aud"\nenglish.m3u8\n'
                       f'#EXT-X-STREAM-INF:BANDWIDTH=970000,{video_attrs},AUDIO="aud"\nvideo.m3u8\n').encode()
-            def download(url, *args):
+            def download(url, *args, **kwargs):
                 return (master if url.endswith('/master.m3u8') else media), url
             with patch('swiss_iptv.verify.fetch', side_effect=download), patch('swiss_iptv.verify.public_url', side_effect=lambda url: url):
                 selected, proofs = manifest('https://example.org/master.m3u8', 'hls', CONFIG['verification'])
@@ -219,7 +220,7 @@ class PipelineTests(unittest.TestCase):
             asset = f'https://example.org/player.{suffix}'
             page = f'<script src="{asset}"></script>'.encode()
             config = {**CONFIG, 'official_pages': [{'channel_id': 'TV.ch', 'url': 'https://example.org/live', 'script_patterns': ['player']}]}
-            def download(url, *args):
+            def download(url, *args, **kwargs):
                 if url == 'https://example.org/live':
                     return page, url
                 self.assertEqual(url, asset)
@@ -232,6 +233,44 @@ class PipelineTests(unittest.TestCase):
             result = discover(self.db, config, self.root / 'evidence')
         self.assertEqual(result[0]['streams'], ['https://example.org/root.m3u8'])
         self.assertTrue(result[0]['resource_errors'])
+
+    def test_public_player_configuration_and_ambiguous_channel_gate(self):
+        page = 'https://example.org/direct'
+        script = 'https://example.org/live/lecteur.js'
+        settings = 'https://example.org/live/config.json'
+        docs = {page: f'<script src="{script}"></script>', script:
+                '// const unused="https://example.org/old.m3u8";\nconst config="config.json"; const ignored="license-config.json";',
+                settings: json.dumps({'streamUrl': 'https://example.org/new.m3u8'})}
+        config = {**CONFIG, 'official_pages': [{'channel_id': 'TV.ch', 'url': page,
+            'script_patterns': ['lecteur'], 'follow_live_links': True, 'require_unique_stream': True}]}
+        def download(url, *args, **kwargs):
+            return docs[url].encode(), url
+        with patch('swiss_iptv.discover.fetch', side_effect=download) as fetcher:
+            result = discover(self.db, config, self.root / 'evidence')
+        self.assertEqual(result[0]['streams'], ['https://example.org/new.m3u8'])
+        self.assertNotIn('license-config.json', ' '.join(call.args[0] for call in fetcher.call_args_list))
+        config['official_pages'][0]['script_patterns'] = []
+        with patch('swiss_iptv.discover.fetch', return_value=(b'https://example.org/a.m3u8 https://example.org/b.m3u8', page)):
+            result = discover(self.db, config, self.root / 'evidence')
+        self.assertEqual(result[0]['access_status'], 'ambiguous_channel_identity')
+        self.assertEqual(result[0]['streams'], [])
+
+    def test_optional_browser_dom_is_recorded_without_session_extraction(self):
+        browser = self.root / 'obscura.exe'
+        browser.write_bytes(b'fixture, never executed')
+        config = {**CONFIG, 'discovery': {'browser': str(browser)}, 'official_pages': [
+            {'channel_id': 'TV.ch', 'url': 'https://example.org/direct', 'render_html': True}]}
+        def render(command, **kwargs):
+            Path(command[command.index('--output') + 1]).write_text('<video src="https://example.org/rendered.m3u8"></video>', encoding='utf-8')
+            self.assertNotIn('--stealth', command)
+            self.assertNotIn('--allow-private-network', command)
+            self.assertNotIn('cookies', command)
+            return subprocess.CompletedProcess(command, 0)
+        with patch('swiss_iptv.discover.fetch', return_value=(b'<html>Public TV</html>', 'https://example.org/direct')), \
+             patch('swiss_iptv.discover.subprocess.run', side_effect=render):
+            result = discover(self.db, config, self.root / 'evidence')
+        self.assertTrue(result[0]['browser_rendered'])
+        self.assertEqual(result[0]['streams'], ['https://example.org/rendered.m3u8'])
 
     def test_srg_drm_and_token_resources_never_become_clear_sources(self):
         config = {**CONFIG, 'official_pages': [{'channel_id': 'TV.ch', 'url': 'https://example.org/live', 'srg_urn': 'urn:rts:video:1967124'}]}
@@ -333,6 +372,7 @@ class PipelineTests(unittest.TestCase):
                     self.assertEqual(details['decode']['width'], 160)
                     self.assertEqual(details['decode']['audio_codec'], 'aac')
                     self.assertTrue(details['decode']['audio_decoded'])
+                    self.assertIsNone(details['decode']['audio_language'])
                 audio_folder = self.root / 'audio'
                 audio_folder.mkdir()
                 subprocess.run([executable, '-hide_banner', '-loglevel', 'error', '-f', 'lavfi', '-i',
@@ -340,6 +380,37 @@ class PipelineTests(unittest.TestCase):
                                cwd=audio_folder, check=True, capture_output=True, timeout=30)
                 (self.root / 'hls/master.m3u8').write_text('#EXTM3U\n#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="aud",NAME="French",DEFAULT=YES,LANGUAGE="fr",URI="../audio/index.m3u8"\n#EXT-X-STREAM-INF:BANDWIDTH=64000,CODECS="mp4a.40.2",AUDIO="aud"\n../audio/index.m3u8\n#EXT-X-STREAM-INF:BANDWIDTH=100000,RESOLUTION=160x90,CODECS="avc1.42e01e,mp4a.40.2",AUDIO="aud"\nindex.m3u8\n', encoding='utf-8')
                 paired = check_once({'url': f'http://127.0.0.1:{server.server_port}/hls/master.m3u8', 'protocol': 'hls'}, cfg)
+                high = self.root / 'high'
+                high.mkdir()
+                subprocess.run([executable, '-hide_banner', '-loglevel', 'error', '-f', 'lavfi', '-i',
+                                'testsrc=size=320x180:rate=25', '-f', 'lavfi', '-i', 'sine=frequency=440:sample_rate=48000',
+                                '-t', '4', '-c:v', 'libx264', '-c:a', 'aac', '-pix_fmt', 'yuv420p', '-g', '25', '-f', 'hls', 'index.m3u8'],
+                               cwd=high, check=True, capture_output=True, timeout=30)
+                master = self.root / 'hls/quality.m3u8'
+                master.write_text('#EXTM3U\n#EXT-X-STREAM-INF:BANDWIDTH=100000,RESOLUTION=160x90\nindex.m3u8\n'
+                                  '#EXT-X-STREAM-INF:BANDWIDTH=400000,RESOLUTION=320x180\n../high/index.m3u8\n', encoding='utf-8')
+                quality_url = f'http://127.0.0.1:{server.server_port}/hls/quality.m3u8'
+                best = check_once({'url': quality_url, 'protocol': 'hls'}, cfg)
+                self.assertEqual(best['decode']['width'], 320)
+                self.assertEqual(best['quality']['bandwidth'], 400000)
+                self.assertFalse(best['is_live'])  # Local fixture is VOD, not an actual TV channel.
+                (high / 'index.m3u8').unlink()
+                fallback = check_once({'url': quality_url, 'protocol': 'hls'}, cfg)
+                self.assertEqual(fallback['decode']['width'], 160)
+                self.assertEqual(fallback['quality']['variant_rank'], 1)
+                multi = self.root / 'multi'
+                multi.mkdir()
+                subprocess.run([executable, '-hide_banner', '-loglevel', 'error', '-f', 'lavfi', '-i',
+                    'testsrc=size=320x180:rate=25', '-f', 'lavfi', '-i', 'sine=frequency=440:sample_rate=48000',
+                    '-t', '4', '-map', '0:v', '-map', '0:v', '-map', '1:a', '-c:v', 'libx264', '-pix_fmt', 'yuv420p',
+                    '-filter:v:0', 'scale=160:90', '-b:v:0', '100k', '-b:v:1', '400k', '-c:a', 'aac', '-metadata:s:a:0', 'language=fra',
+                    '-g', '25', '-adaptation_sets', 'id=0,streams=v id=1,streams=a', '-f', 'dash', 'index.mpd'],
+                    cwd=multi, check=True, capture_output=True, timeout=30)
+                dash_best = check_once({'url': f'http://127.0.0.1:{server.server_port}/multi/index.mpd', 'protocol': 'dash'}, cfg)
+                self.assertEqual(dash_best['decode']['width'], 320)
+                self.assertEqual(dash_best['manifests'][0]['dash_video_index'], 1)
+                self.assertTrue(dash_best['decode']['audio_decoded'])
+                self.assertEqual(dash_best['decode']['audio_language'], 'fra')
                 self.assertTrue(paired['decode']['audio_decoded'])
                 self.assertTrue(paired['manifests'][0]['audio_url'].endswith('/audio/index.m3u8'))
                 for segment in (self.root / 'hls').glob('*.ts'):

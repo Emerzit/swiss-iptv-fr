@@ -1,9 +1,12 @@
 verification:
   ffmpeg: ffmpeg
+  quality_mode: best
+  max_variant_attempts: 6
   attempts: 3
   sample_seconds: 5
   http_timeout: 12
   process_timeout: 30
+  source_timeout: 100
   request_delay: 1
   retry_delay: 2
 publication:
@@ -11,6 +14,31 @@ publication:
   review_max_days: 90
   seed_file: data/curated-sources.yaml
   review_files: [data/domestic-reviews.yaml, data/public-reviews.yaml]
+
+# Collecte mondiale : la langue du feed, et non le pays, détermine les candidates.
+# Ajouter une URL ici ne lui donne aucun droit de publication.
+discovery:
+  refresh_hours: 24
+  http_timeout: 20
+  max_input_bytes: 25000000
+  download_timeout: 60
+  exploration_minutes: 18
+  primary_minutes: 16
+  official_pages_per_run: 24
+  retry_hours: 72
+  preferred_countries: [CH, FR, BE, MC, CA] # Priorité de visite ; aucun autre pays n'est exclu.
+  browser: tools/bin/obscura/obscura.exe # Facultatif ; rendu public, sans profil de connexion.
+  rendered_pages_per_run: 4
+  inputs:
+    - {file: api/channels.json, url: 'https://iptv-org.github.io/api/channels.json'}
+    - {file: api/feeds.json, url: 'https://iptv-org.github.io/api/feeds.json'}
+    - {file: api/logos.json, url: 'https://iptv-org.github.io/api/logos.json'}
+    - {file: fra.m3u, url: 'https://iptv-org.github.io/iptv/languages/fra.m3u'}
+    - {file: free-tv.m3u8, url: 'https://raw.githubusercontent.com/Free-TV/IPTV/master/playlist.m3u8'}
+    - {file: tvopenchfr.m3u, url: 'https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/master/tvopenchfr.m3u'}
+    - {file: netplus.m3u, url: 'https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/master/netplus.m3u'}
+    - {file: netplus.m3u8, url: 'https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/master/netplus.m3u8'}
+    - {file: webtv.m3u, url: 'https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/master/webtv.m3u'}
 
 # Ordre personnalisé Suisse romande, inspiré de tvopenchfr.m3u.
 # Les variantes CH sont préférées quand plusieurs variantes approuvées sont disponibles.
@@ -105,6 +133,7 @@ epg:
   # Sources de repli : un seul guide XMLTV par playlist pour Kodi IPTV Simple.
   sources:
     - url: 'https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz'
+      match_unique_names: true
       provenance: 'https://epgshare01.online/epgshare01/0_READ_ME_FIRST_AS_I_CONTAIN_VERY_HELPFUL_INFO.html'
       enabled: true
       link_scopes: [domestic_links, public_links]
@@ -238,9 +267,11 @@ feed_language_overrides:
   'CanalAlphaNeuchatel.ch@SD': [fra]
 
 excluded_channel_patterns:
+  - '^(13emeRue|Syfy|ParisPremiere|Teva|RTL9|AB1\.|TVBreizh|Boomerang|CartoonNetwork|NationalGeographic|Nickelodeon|Disney|DAZN|DiscoveryChannel|WarnerTV|E\.fr)'
   - '^(CanalPlus|beIN|OCS|CinePlus|CineCinema|Eurosport|RMCSport|Teleclub|SkySport|TCM|PlanetePlus|MTVFrance)'
   - '^local\.(tcm|canalplus|mtvfrance|canalenclair)'
 excluded_host_suffixes:
+  - foxkidstv.be # Portail de rediffusion : identité du titulaire non établie.
   - zappr.stream
   - zahs.tv
 
@@ -310,3 +341,22 @@ official_pages:
   - {channel_id: Tipik.be, url: 'https://auvio.rtbf.be/chaine/tipik-2'}
   - {channel_id: BX1.be, url: 'https://bx1.be/lives/direct-tv/'}
   - {channel_id: TV5MondeInfo.fr, url: 'https://information.tv5monde.com/direct'}
+  # Pages de diffuseurs (métadonnées et répertoires professionnels), pas des agrégateurs vidéo.
+  - <<: &public_player
+      follow_live_links: true
+      require_unique_stream: true
+      allow_embed: true
+      script_patterns: ['player|lecteur|live|video|stream|main|app|index']
+      script_limit: 4
+    channel_id: MonacoInfo.mc
+    url: 'https://monacoinfo.com/'
+  - {<<: *public_player, channel_id: Matele.be, url: 'https://www.matele.be/'}
+  - {<<: *public_player, channel_id: TVLux.be, url: 'https://www.tvlux.be/'}
+  - {<<: *public_player, channel_id: Telesambre.be, url: 'https://www.telesambre.be/'}
+  - {<<: *public_player, channel_id: Vedia.be, url: 'https://www.vedia.be/'}
+  - {<<: *public_player, channel_id: TeleMB.be, url: 'https://www.telemb.be/'}
+  - {<<: *public_player, channel_id: CanalZoom.be, url: 'https://www.canalzoom.be/'}
+  - {<<: *public_player, channel_id: Canal32.fr, url: 'https://www.canal32.fr/'}
+  - {<<: *public_player, channel_id: TVVendee.fr, url: 'https://tvvendee.fr/'}
+  - {<<: *public_player, channel_id: TeleGrenoble.fr, url: 'https://www.telegrenoble.net/'}
+  - {<<: *public_player, channel_id: Savoirmedia.ca, url: 'https://savoir.media/'}
