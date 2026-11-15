@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T16:29:30.078881+00:00",
+  "generated_at": "2026-11-15T16:33:44.627618+00:00",
   "audience": "public",
   "playlists": {
     "swiss-fr": 59,
@@ -9,7 +9,7 @@
     "swiss-fr-news": 13
   },
   "exclusions": {
-    "rights_pending": 865
+    "rights_pending": 866
   },
   "epg": {
     "swiss-fr": {
@@ -1275,10 +1275,7 @@
     }
   ],
   "changes": {
-    "added": [
-      "Matele.be",
-      "MonacoInfo.mc"
-    ],
+    "added": [],
     "removed": [],
     "source_changed": []
   }
