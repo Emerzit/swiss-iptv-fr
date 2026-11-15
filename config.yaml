@@ -29,6 +29,7 @@ discovery:
   preferred_countries: [CH, FR, BE, MC, CA] # Priorité de visite ; aucun autre pays n'est exclu.
   browser: tools/bin/obscura/obscura.exe # Facultatif ; rendu public, sans profil de connexion.
   rendered_pages_per_run: 4
+  priority_channels: [TV5MondeEurope.fr, ORTBTV.bj, i24NEWSFrench.il, TVOnex.ch, GeneveRegionTelevision.fr]
   inputs:
     - {file: api/channels.json, url: 'https://iptv-org.github.io/api/channels.json'}
     - {file: api/feeds.json, url: 'https://iptv-org.github.io/api/feeds.json'}
@@ -106,6 +107,8 @@ lineup:
   - {ids: [BX1.be]}
 
 channel_names:
+  ORTBTV.bj: 'Bénin TV (ex-ORTB)'
+  CPACFrench.ca: 'CPAC (français / anglais)'
   TF1Switzerland.ch: TF1 Suisse
   M6.ch: M6 Suisse
   W9Switzerland.ch: W9 Suisse
@@ -122,6 +125,16 @@ channel_names:
   TVM3.ch: TVM3
   MaxTV.ch: MaxTV / DieuTV
   LEquipe.fr: L'Équipe
+
+# Correction limitée à une URL précise : lecteur officiel FR et habillage français inspectés.
+# La mesure brute du tag MPEG "eng" reste conservée ; aucune reconnaissance vocale n'est prétendue.
+source_language_overrides:
+  44e2e8a0f6417e3fd924673e:
+    url: 'https://i24newsfrench-cdn.encoders.immergo.tv/master.m3u8'
+    language: fra
+    evidence_url: 'https://www.i24news.tv/fr/'
+    evidence_sha256: cfd91cdb7a8558c20383742eb5e4cc5acc79129e6c64c7e9040a0b0a82c3a128
+    reason: 'Service TV français déclaré par le lecteur officiel ; habillage et bandeaux français inspectés. Tag audio eng incohérent, conservé comme mesure brute.'
 
 epg:
   check_max_hours: 24
@@ -151,6 +164,7 @@ epg:
         M6.fr: M6.ch
         arte.fr: Arte.Français.ch
         France24.fr: France.24.ch
+        i24NEWSFrench.il: i24.News.Français.ch
         Franceinfo.fr: franceinfo.ch
         W9Switzerland.ch: W9.ch
         TFXSwitzerland.ch: TFX.ch
@@ -246,6 +260,8 @@ aliases:
 canonical_ids:
   CanalAlphaJU.ch: CanalAlphaJura.ch
   CanalAlphaNE.ch: CanalAlphaNeuchatel.ch
+  local.conseilnationalsuisse.unknown: ConseilNational.ch
+  local.conseiletatssuisse.unknown: ConseilEtats.ch
 
 # Ces entrées du distributeur correspondent aux versions publicitaires suisses.
 # Conserver les versions françaises des autres sources comme identités distinctes.
@@ -360,3 +376,39 @@ official_pages:
   - {<<: *public_player, channel_id: TVVendee.fr, url: 'https://tvvendee.fr/'}
   - {<<: *public_player, channel_id: TeleGrenoble.fr, url: 'https://www.telegrenoble.net/'}
   - {<<: *public_player, channel_id: Savoirmedia.ca, url: 'https://savoir.media/'}
+  - {<<: *public_player, channel_id: ORTBTV.bj, url: 'https://srtb.bj/directbenintv/', stream_pattern: 'ortb1|benintv|benin-tv', embed_hosts: [webcast.streamakaci.com]}
+  - {<<: *public_player, channel_id: i24NEWSFrench.il, url: 'https://www.i24news.tv/fr/', stream_pattern: '^https://i24newsfrench-cdn\.encoders\.immergo\.tv/'}
+  - {<<: *public_player, channel_id: TVOnex.ch, url: 'https://tvonex.ch/', regional: true}
+  - {<<: *public_player, channel_id: GeneveRegionTelevision.fr, url: 'https://grtv.news/', country: CH, regional: true}
+  - {<<: *public_player, channel_id: CPACFrench.ca, url: 'https://www.cpac.ca/fr/', content_store: '/site/components/cpac-item-lists/livestreams.xml'}
+  - <<: *public_player
+    channel_id: ConseilNational.ch
+    name: Conseil national (français)
+    country: CH
+    url: 'https://www.parlament.ch/fr'
+    embed_hosts: [par-pcache.simplex.tv]
+    embed_urls: ['https://par-pcache.simplex.tv/content?externalid=-3&enableHLS=1&themeColor=AA9E72']
+    stream_pattern: 'sc-par-lb-01\.akamaized\.net/'
+  - <<: *public_player
+    channel_id: ConseilEtats.ch
+    name: Conseil des États (langues originales)
+    country: CH
+    url: 'https://www.parlament.ch/fr'
+    embed_hosts: [par-pcache.simplex.tv]
+    embed_urls: ['https://par-pcache.simplex.tv/content?externalid=-5&enableHLS=1&themeColor=AA9E72']
+    stream_pattern: 'sc-par-lb-01\.akamaized\.net/'
+
+reference:
+  file: data/inputs/tvopenchfr.m3u
+  url: 'https://github.com/iptv-ch/iptv-ch.github.io/blob/master/tvopenchfr.m3u'
+  channel_ids:
+    canalb.ch: CanalBFr.ch
+  notes:
+    LCP.fr: 'La référence nomme le multiplex LCP/Public Sénat ; l’identité précise du service partagé reste à distinguer des chaînes parlementaires 24h/24.'
+    TMC.fr: 'La référence indique une variante CH ; l’équivalence de variante publicitaire ne découle pas du seul nom TMC.'
+    ORTBTV.bj: 'Ancien nom ORTB ; le lecteur actuel Bénin TV est identifié, mais répond HTTP 403 lors du contrôle CH.'
+    TV5MondeEurope.fr: 'Refus HTTP 403 constaté depuis CH. La variante Europe ne doit pas être remplacée silencieusement par FBS.'
+    TVOnex.ch: 'Le site officiel propose des rediffusions ; aucun manifeste linéaire Internet vérifié.'
+    GeneveRegionTelevision.fr: 'Site officiel en maintenance au contrôle ; aucun flux Internet linéaire vérifié.'
+    ConseilNational.ch: 'Service événementiel selon les séances ; la présence du lecteur ne prouve pas une diffusion active.'
+    ConseilEtats.ch: 'Débats en langues originales, événementiels ; ce service n’est pas exclusivement francophone.'

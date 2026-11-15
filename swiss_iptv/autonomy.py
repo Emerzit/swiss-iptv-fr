@@ -15,6 +15,7 @@ from urllib.parse import parse_qsl, urlparse
 from .catalog import now
 from .discover import discover
 from .publish import load_reviews
+from .reference import reference_report
 from .verify import fetch, verify
 
 
@@ -155,6 +156,15 @@ def approve_playback(db, source, proof, config):
     details = json.loads(check['details'])
     decoded = details.get('decode', {})
     language = decoded.get('audio_language') or next((m['audio_language'] for m in details.get('manifests', []) if m.get('audio_language')), '')
+    language_override = config.get('source_language_overrides', {}).get(source['id'])
+    if language_override:
+        if (language_override.get('url') == source['url'] and language_override.get('language') in {'fr', 'fra', 'fre'} and
+                proof.get('rule') == 'official_page_reference' and
+                same_site(proof['url'], language_override.get('evidence_url', '')) and
+                re.fullmatch('[a-f0-9]{64}', language_override.get('evidence_sha256', '')) and language_override.get('reason')):
+            language = language_override['language']
+        else:
+            language_override = None
     if (details.get('is_live') is not True or decoded.get('frames', 0) < 2 or not decoded.get('audio_decoded') or
             language.lower() not in {'', 'und', 'fr', 'fra', 'fre'} or
             details.get('connection_isp') in {'', None, 'unknown'}):
@@ -171,6 +181,7 @@ def approve_playback(db, source, proof, config):
     load_reviews(db, [dict(source_id=source['id'], decision='approved', evidence_url=proof['url'],
         evidence_sha256=proof['sha256'], reviewer=REVIEWER, reviewed_at=now(), scope='public_links',
         notes=json.dumps({'policy': proof, 'checked_at': check['checked_at'],
+            'language_evidence': language_override,
             'prior_editorial_evidence': dict(old) if old and old['reviewer'] != REVIEWER else None,
             'basis': 'Ordinary external link to a public clear linear service; verified controller provenance and CH playback. '
                      'No embedded player, programme redistribution, DRM key, account or access bypass. '
@@ -196,7 +207,17 @@ def explore(db, config, anchors, country, isp, evidence_dir='data/evidence/auton
                                             'script_patterns': ['player|live|video|stream|main|app|index'], 'script_limit': 2,
                                             'follow_live_links': True, 'require_unique_stream': True, 'allow_embed': True})
     has_sources = {r[0] for r in db.execute('SELECT DISTINCT channel_id FROM sources WHERE active=1')}
-    pending_pages = sorted(pages.values(), key=lambda p: (bool(attempts.get(p['channel_id'])),
+    priority_ids = set(cfg.get('priority_channels', []))
+    previous_status = Path('output/public/status.json')
+    if config.get('reference') and previous_status.exists():
+        try:
+            comparison = reference_report(db, config, json.loads(previous_status.read_text(encoding='utf-8')).get('channels', []))
+            if comparison:
+                priority_ids.update(row['channel_id'] for row in comparison['channels'] if not row['present'] and row['channel_id'])
+        except (ValueError, OSError):
+            pass
+    pending_pages = sorted(pages.values(), key=lambda p: (p['channel_id'] not in priority_ids,
+                           bool(attempts.get(p['channel_id'])),
                            attempts.get(p['channel_id'], ''), p['channel_id'] in current_channels,
                            p['channel_id'] not in configured, p['channel_id'] not in has_sources,
                            countries.get(p['channel_id']) not in cfg.get('preferred_countries', ['CH', 'FR', 'BE', 'MC', 'CA']),

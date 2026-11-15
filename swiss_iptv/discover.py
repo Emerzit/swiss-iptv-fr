@@ -6,7 +6,7 @@ from functools import lru_cache
 from pathlib import Path
 import re
 import subprocess
-from urllib.parse import parse_qsl, urlencode, urljoin, urlparse
+from urllib.parse import parse_qsl, quote, urlencode, urljoin, urlparse
 
 from .catalog import add_source, now
 from .verify import fetch
@@ -73,6 +73,34 @@ def discover(db, config, dest):
                         record.setdefault('resource_errors', []).append({'url': link, 'error': str(exc)})
             allowed_srg = None
             api_blocked = False
+            if page.get('content_store'):
+                component = page['content_store']
+                if urlparse(final_url).hostname != 'www.cpac.ca' or component not in body:
+                    raise ValueError('CPAC public content component not established in the official page')
+                pending, visited = [component], set()
+                while pending and len(visited) < 6:
+                    item = pending.pop(0)
+                    if item in visited:
+                        continue
+                    visited.add(item)
+                    api_url = 'https://www.cpac.ca/api/1/site/content_store/item.json?url=' + quote(item, safe='/')
+                    data, api_url = read(api_url)
+                    parsed = json.loads(data)
+                    item_sha = hashlib.sha256(data).hexdigest()
+                    (dest / f'{item_sha}.json').write_bytes(data)
+                    documents.append((api_url, json.dumps(parsed), item_sha))
+                    def includes(value):
+                        if isinstance(value, dict):
+                            for key, child in value.items():
+                                if key == 'include' and isinstance(child, str) and re.fullmatch(r'/site/components/[\w/-]+\.xml', child):
+                                    if child not in visited:
+                                        pending.append(child)
+                                else:
+                                    includes(child)
+                        elif isinstance(value, list):
+                            for child in value:
+                                includes(child)
+                    includes(parsed.get('descriptorDom', {}))
             if page.get('json_url'):
                 api_url = page['json_url']
                 if api_url not in body:
@@ -170,16 +198,21 @@ def discover(db, config, dest):
                             record.setdefault('resource_errors', []).append({'url': config_url, 'error': str(exc)})
             embeds = [embed for _, document, _ in documents
                       for embed in re.findall(r'<iframe\b[^>]*\bsrc=["\x27]([^"\x27]+)', document, re.I)]
+            for declared in page.get('embed_urls', []):
+                if declared not in body:
+                    raise ValueError('Configured player link is not present in the official page')
+                embeds.append(declared)
             embeds = [embed for embed in dict.fromkeys(embeds)
                       if not page.get('embed_pattern') or re.search(page['embed_pattern'], embed)]
-            embeds = [embed for embed in embeds if urlparse(urljoin(final_url, html.unescape(embed))).hostname == 'player.infomaniak.com'
+            embeds = [embed for embed in embeds if urlparse(urljoin(final_url, html.unescape(embed))).hostname in {'player.infomaniak.com', *page.get('embed_hosts', [])}
                       or (page.get('follow_live_links') and urlparse(urljoin(final_url, html.unescape(embed))).hostname == urlparse(final_url).hostname
                           and re.search('live|direct|player', embed, re.I) and not re.search('vod|replay', embed, re.I))]
             for embed in embeds[:2]:
                 embed = html.unescape(embed)
                 embed = urljoin(final_url, embed)
-                if (urlparse(embed).hostname == urlparse(final_url).hostname and page.get('follow_live_links') and
-                        re.search(r'live|direct|player', embed, re.I) and not re.search('vod|replay', embed, re.I)):
+                if (urlparse(embed).hostname in page.get('embed_hosts', []) or
+                        (urlparse(embed).hostname == urlparse(final_url).hostname and page.get('follow_live_links') and
+                         re.search(r'live|direct|player', embed, re.I) and not re.search('vod|replay', embed, re.I))):
                     nested, embed_url = read(embed)
                     nested_sha = hashlib.sha256(nested).hexdigest()
                     (dest / f'{nested_sha}.html').write_bytes(nested)

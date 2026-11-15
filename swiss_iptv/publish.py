@@ -8,6 +8,7 @@ import zipfile
 from .catalog import now
 from .epg import matching_guide
 from .lineup import channel_number, ordered_selection
+from .reference import reference_report
 
 
 def load_reviews(db, records):
@@ -118,6 +119,7 @@ def export_playlists(db, config, destination, audience='public'):
                     'width': video.get('width'), 'height': video.get('height'), 'fps': video.get('fps'),
                     'video_codec': video.get('video_codec'), 'audio_codec': video.get('audio_codec'),
                     'audio_language': video.get('audio_language'), 'frames': video.get('frames'),
+                    'language_evidence': config.get('source_language_overrides', {}).get(source['id']),
                     'decoded_seconds': video.get('decoded_seconds'), 'quality': details.get('quality', {})})
         # Kodi uses one XMLTV location per IPTV Simple instance. Providers here are fallbacks.
         guide_url, epg_ids = None, {}
@@ -160,6 +162,9 @@ def export_playlists(db, config, destination, audience='public'):
                'source_changed': [cid for cid in before.keys() & after.keys() if before[cid]['source_id'] != after[cid]['source_id']]}
     summary = {'generated_at': now(), 'audience': audience, 'playlists': counts,
                'exclusions': rejected, 'epg': epg_summary, 'channels': qualities, 'changes': changes}
+    comparison = reference_report(db, config, qualities)
+    if comparison:
+        summary['reference'] = comparison
     status_temp = dest / 'status.json.tmp'
     status_temp.write_text(json.dumps(summary, indent=2), encoding='utf-8')
     status_temp.replace(dest / 'status.json')
@@ -171,6 +176,20 @@ def export_playlists(db, config, destination, audience='public'):
     quality_rows = ''.join('<tr><td>' + html.escape(c['name']) + '</td><td>' +
         html.escape(f"{c['width'] or '?'} × {c['height'] or '?'} · {c['fps'] or '?'} images/s") +
         '</td><td>' + html.escape(c['video_codec'] or '?') + '</td></tr>' for c in qualities)
+    reference_html = ''
+    if comparison:
+        missing = ', '.join(row['name'] for row in comparison['channels'] if not row['present']) or 'aucune'
+        reference_rows = ''.join('<tr><td>' + html.escape(row['name']) +
+            ('<br><small>' + html.escape(row['note']) + '</small>' if row['note'] else '') +
+            '</td><td>' + ('Oui' if row['present'] else 'Absente') + '</td><td>' +
+            (html.escape(f"{row['published_width']} × {row['published_height']} · {row['published_fps']} images/s") if row['present'] else '—') +
+            '</td><td>' + ('Mesuré' if row['reference_decode'] else 'Non mesuré') + '</td></tr>' for row in comparison['channels'])
+        reference_html = (f'<h2>Comparaison avec tvopenchfr.m3u</h2><p>{comparison["covered_entries"]} entrées couvertes '
+            f'sur {comparison["reference_entries"]}. Absentes : {html.escape(missing)}.</p>'
+            '<p>Les mentions HD/FHD de la référence ne sont pas des mesures. '
+            'La qualité de ses flux multicast ne peut être comparée sans lecture sur un réseau compatible.</p>'
+            '<details><summary>Comparer chaque chaîne</summary><table><tr><th>Référence</th><th>Présence</th>'
+            '<th>Notre lecture vérifiée</th><th>Flux de référence</th></tr>' + reference_rows + '</table></details>')
     (dest / 'index.html').write_text('<!doctype html><html lang="fr"><meta charset="utf-8">'
         '<meta name="viewport" content="width=device-width"><title>Swiss IPTV FR</title>'
         '<style>body{font:16px system-ui;max-width:950px;margin:2rem auto;padding:0 1rem;line-height:1.5}'
@@ -183,6 +202,7 @@ def export_playlists(db, config, destination, audience='public'):
         '<p>Meilleure variante décodée parmi les sources contrôlées. Les liens adaptatifs restent compatibles '
         'avec le choix de qualité du lecteur. Un essai court ne garantit pas tous les programmes.</p>'
         '<table><tr><th>Chaîne</th><th>Lecture vérifiée</th><th>Codec vidéo</th></tr>' + quality_rows + '</table></details>' +
+        reference_html +
         '<p>Les lecteurs contactent directement les infrastructures des diffuseurs ou de leurs distributeurs. '
         'Ce site ne contient aucun lecteur embarqué et n’héberge aucun programme, logo ou guide XMLTV. '
         'Les marques et contenus restent ceux de leurs titulaires. Un test court ne garantit pas la disponibilité continue.</p>'

@@ -272,6 +272,38 @@ class PipelineTests(unittest.TestCase):
         self.assertTrue(result[0]['browser_rendered'])
         self.assertEqual(result[0]['streams'], ['https://example.org/rendered.m3u8'])
 
+    def test_explicit_public_embedded_player_requires_documented_link_and_host(self):
+        page, player = 'https://example.org/live', 'https://public-player.example.net/channel/1/'
+        cfg = {**CONFIG, 'official_pages': [{'channel_id': 'TV.ch', 'url': page, 'embed_urls': [player],
+                                           'embed_hosts': ['public-player.example.net']}]}
+        with patch('swiss_iptv.discover.fetch', side_effect=[(player.encode(), page), (b'https://example.org/official.m3u8', player)]):
+            result = discover(self.db, cfg, self.root / 'evidence')
+        self.assertEqual(result[0]['streams'], ['https://example.org/official.m3u8'])
+        with patch('swiss_iptv.discover.fetch', return_value=(b'No player published here', page)) as fetcher:
+            result = discover(self.db, cfg, self.root / 'evidence')
+        self.assertIn('not present', result[0]['error'])
+        self.assertEqual(fetcher.call_count, 1)
+
+    def test_cpac_public_components_are_followed_without_guessing_unpublished_items(self):
+        page = 'https://www.cpac.ca/fr/'
+        first, video = '/site/components/cpac-item-lists/livestreams.xml', '/site/components/videos/CPAC_TV.xml'
+        cfg = {**CONFIG, 'official_pages': [{'channel_id': 'TV.ch', 'url': page, 'content_store': first}]}
+        def download(url, *args, **kwargs):
+            if url == page:
+                return first.encode(), page
+            if url.endswith(first):
+                return json.dumps({'descriptorDom': {'component': {'include': video}}}).encode(), url
+            self.assertTrue(url.endswith(video))
+            return json.dumps({'descriptorDom': {'component': {'url_s': 'https://example.org/cpac.m3u8'}}}).encode(), url
+        with patch('swiss_iptv.discover.fetch', side_effect=download) as fetcher:
+            result = discover(self.db, cfg, self.root / 'evidence')
+        self.assertEqual(fetcher.call_count, 3)
+        self.assertEqual(result[0]['streams'], ['https://example.org/cpac.m3u8'])
+        with patch('swiss_iptv.discover.fetch', return_value=(b'No component', page)) as fetcher:
+            result = discover(self.db, cfg, self.root / 'evidence')
+        self.assertIn('not established', result[0]['error'])
+        self.assertEqual(fetcher.call_count, 1)
+
     def test_srg_drm_and_token_resources_never_become_clear_sources(self):
         config = {**CONFIG, 'official_pages': [{'channel_id': 'TV.ch', 'url': 'https://example.org/live', 'srg_urn': 'urn:rts:video:1967124'}]}
         metadata = {'chapterList': [{'resourceList': [

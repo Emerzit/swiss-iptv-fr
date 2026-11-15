@@ -225,6 +225,10 @@ def bootstrap(db, root, config):
            'fra', ','.join(meta.get('categories', [])) or 'general', logos.get(cid, ''), cid,
            page['url'], int(page.get('regional', False))))
         db.execute('UPDATE channels SET regional=? WHERE id=?', (int(page.get('regional', False)), cid))
+        if page.get('country'):
+            db.execute('UPDATE channels SET country=? WHERE id=?', (page['country'], cid))
+        if page.get('name'):
+            db.execute('UPDATE channels SET name=? WHERE id=?', (page['name'], cid))
     for cid, name in config.get('channel_names', {}).items():
         db.execute('UPDATE channels SET name=? WHERE id=?', (name, cid))
     db.commit()

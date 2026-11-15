@@ -11,7 +11,7 @@ Le point d’entrée est `python tools/update.py`. La tâche Windows déjà inst
 5. Visiter une partie des pages officielles et explorer des alternatives, en conservant les dates des tentatives dans SQLite. Le nombre de candidates n’est pas plafonné. Le budget de chaque exécution limite les requêtes ; la rotation reprend ensuite les éléments restants. Les pays voisins ont une priorité de visite, sans exclusion des autres pays.
 6. Prendre une décision de publication seulement si les règles ci-dessous sont satisfaites. Vérifier XMLTV, générer les cinq M3U, les mesures de qualité et le bilan des changements, puis publier uniquement les fichiers statiques autorisés.
 
-Les sources et leur provenance restent dans SQLite. `output/audit/update.json`, `data/evidence/autonomy/exploration.json` et `data/logs/last-update.log` décrivent le dernier cycle. Le rapport public `status.json` contient les chaînes retenues, leur résolution décodée, cadence, codecs, date de lecture et les changements de sélection.
+Les sources et leur provenance restent dans SQLite. `output/audit/update.json`, `data/evidence/autonomy/exploration.json` et `data/logs/last-update.log` décrivent le dernier cycle. Le rapport public `status.json` contient les chaînes retenues, leur résolution décodée, cadence, codecs, date de lecture et les changements de sélection. La comparaison de référence est recalculée à chaque export ; ses chaînes manquantes deviennent des priorités de découverte tout en conservant les délais entre tentatives.
 
 ## Conditions d’un ajout automatique
 

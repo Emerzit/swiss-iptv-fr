@@ -74,6 +74,18 @@ class AutonomousPolicyTests(unittest.TestCase):
                 controller_proof(self.db, rule, cfg, self.root / 'evidence')
         self.assertEqual(self.db.execute('SELECT COUNT(*) FROM reviews').fetchone()[0], 0)
 
+    def test_audited_language_correction_is_exact_and_keeps_raw_measurement(self):
+        self.proof(language='eng')
+        proof = {'rule': 'official_page_reference', 'url': 'https://tele.example.org/direct', 'sha256': 'b' * 64}
+        correction = {'url': self.source['url'], 'language': 'fra', 'evidence_url': 'https://tele.example.org/direct',
+                      'evidence_sha256': 'b' * 64, 'reason': 'French official service verified; incorrect audio tag.'}
+        cfg = {**self.cfg, 'source_language_overrides': {self.sid: correction}}
+        correction['url'] = 'https://tele.example.org/other.m3u8'
+        self.assertFalse(approve_playback(self.db, self.source, proof, cfg))
+        correction['url'] = self.source['url']
+        self.assertTrue(approve_playback(self.db, self.source, proof, cfg))
+        self.assertEqual(json.loads(self.db.execute('SELECT details FROM checks').fetchone()[0])['decode']['audio_language'], 'eng')
+
     def test_service_replacement_is_bound_to_channel_and_service(self):
         source = {**dict(self.source), 'url': 'https://viamotionhsi.netplus.ch/live/eds/test/browser-DASH/test.mpd', 'protocol': 'dash'}
         anchor = {**source, 'url': 'https://viamotionhsi.netplus.ch/live/eds/test/browser-HLS/test.m3u8'}
@@ -109,6 +121,22 @@ class AutonomousPolicyTests(unittest.TestCase):
         self.assertEqual(first['sources_checked'], 1)
         self.assertEqual(second['sources_checked'], 0)
         self.assertEqual(controller.call_count, 1)
+
+    def test_reference_gap_due_for_retry_precedes_unvisited_background_channel(self):
+        self.db.execute("INSERT INTO channels (id,name,languages,website) VALUES ('A.fr','A','fra','https://a.example.org/')")
+        self.db.execute("INSERT INTO exploration VALUES ('page','TV.fr','2000-01-01T00:00:00+00:00','{}')")
+        self.db.commit()
+        status = self.root / 'status.json'
+        status.write_text('{"channels":[]}')
+        cfg = {**self.cfg, 'reference': {'file': 'fixture'}, 'discovery': {'official_pages_per_run': 1}}
+        def paths(value):
+            return status if str(value) == 'output/public/status.json' else Path(value)
+        with patch('swiss_iptv.autonomy.Path', side_effect=paths), \
+             patch('swiss_iptv.autonomy.reference_report', return_value={'channels': [{'channel_id': 'TV.fr', 'present': False}]}), \
+             patch('swiss_iptv.autonomy.discover', return_value=[{'channel_id': 'TV.fr', 'streams': []}]) as discovery, \
+             patch('swiss_iptv.autonomy.controller_proof', side_effect=ValueError('fixture')):
+            explore(self.db, cfg, [], 'CH', 'sunrise', self.root / 'evidence', budget_seconds=2)
+        self.assertEqual(discovery.call_args.args[1]['official_pages'][0]['channel_id'], 'TV.fr')
 
 
 if __name__ == '__main__':
