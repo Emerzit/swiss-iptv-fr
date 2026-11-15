@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-15T16:20:57.354519+00:00",
+  "generated_at": "2026-11-15T16:29:30.078881+00:00",
   "audience": "public",
   "playlists": {
-    "swiss-fr": 57,
-    "swiss-fr-internet": 57,
+    "swiss-fr": 59,
+    "swiss-fr-internet": 59,
     "swiss-fr-multicast": 0,
     "swiss-fr-regional": 10,
-    "swiss-fr-news": 12
+    "swiss-fr-news": 13
   },
   "exclusions": {
     "rights_pending": 865
@@ -14,11 +14,11 @@
   "epg": {
     "swiss-fr": {
       "url": "https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz",
-      "matched_channels": 45
+      "matched_channels": 46
     },
     "swiss-fr-internet": {
       "url": "https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz",
-      "matched_channels": 45
+      "matched_channels": 46
     },
     "swiss-fr-multicast": {
       "url": null,
@@ -1211,6 +1211,48 @@
       }
     },
     {
+      "id": "Matele.be",
+      "name": "Matele",
+      "source_id": "3863bd957b88d31994849e3f",
+      "url": "https://live.matele.be/hls/live.m3u8",
+      "checked_at": "2026-11-15T16:29:01.365924+00:00",
+      "width": 1920,
+      "height": 1080,
+      "fps": 25.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": "und",
+      "frames": 125,
+      "decoded_seconds": 5.0,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 4182088,
+        "failed_higher_variants": []
+      }
+    },
+    {
+      "id": "MonacoInfo.mc",
+      "name": "Monaco Info",
+      "source_id": "80ae168269e8dd02ea264455",
+      "url": "https://webtv.monacoinfo.com/live/master.m3u8",
+      "checked_at": "2026-11-15T16:29:05.116816+00:00",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 150,
+      "decoded_seconds": 5.0,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 4600000,
+        "failed_higher_variants": []
+      }
+    },
+    {
       "id": "ZitataTV.mq",
       "name": "Zitata TV",
       "source_id": "b662337c55347ec8d7a94bae",
@@ -1234,7 +1276,8 @@
   ],
   "changes": {
     "added": [
-      "BFMTechCo.fr"
+      "Matele.be",
+      "MonacoInfo.mc"
     ],
     "removed": [],
     "source_changed": []
