@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T18:44:31.667103+00:00",
+  "generated_at": "2026-11-15T18:47:40.725782+00:00",
   "audience": "public",
   "playlists": {
     "swiss-fr": 63,
@@ -1430,9 +1430,7 @@
   ],
   "changes": {
     "added": [],
-    "removed": [
-      "MontrealGreekTV.ca"
-    ],
+    "removed": [],
     "source_changed": []
   },
   "reference": {
