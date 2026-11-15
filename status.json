@@ -1,16 +1,18 @@
 {
-  "generated_at": "2026-11-15T18:47:40.725782+00:00",
+  "generated_at": "2026-11-15T19:41:28.990653+00:00",
   "audience": "public",
   "playlists": {
-    "swiss-fr": 63,
-    "swiss-fr-internet": 63,
+    "swiss-fr": 66,
+    "swiss-fr-internet": 66,
     "swiss-fr-multicast": 0,
-    "swiss-fr-regional": 10,
+    "swiss-fr-regional": 11,
     "swiss-fr-news": 14
   },
   "exclusions": {
-    "rights_pending": 868,
-    "unconfirmed_french_audio": 1
+    "rights_pending": 864,
+    "unconfirmed_french_audio": 1,
+    "account_required": 2,
+    "identity_unresolved": 1
   },
   "epg": {
     "swiss-fr": {
@@ -1340,6 +1342,28 @@
       }
     },
     {
+      "id": "HANDICAPTV.fr",
+      "name": "HANDICAP TV",
+      "source_id": "774ea5d319fd5d10212bf4ab",
+      "url": "https://srv.webtvmanager.fr:3697/stream/play.m3u8",
+      "checked_at": "2026-11-15T18:59:08.904780+00:00",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 148,
+      "language_evidence": null,
+      "decoded_seconds": 5.0,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 0,
+        "failed_higher_variants": []
+      }
+    },
+    {
       "id": "Matele.be",
       "name": "Matele",
       "source_id": "3863bd957b88d31994849e3f",
@@ -1406,6 +1430,50 @@
       }
     },
     {
+      "id": "TebeoTV.fr",
+      "name": "Tebeo TV",
+      "source_id": "bce1dca0b5cee2acdb90123b",
+      "url": "https://tebeo.streamakaci.tv/tebeo/tebeo-multi/playlist.m3u8",
+      "checked_at": "2026-11-15T19:37:01.605628+00:00",
+      "width": 1920,
+      "height": 1080,
+      "fps": 25.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 127,
+      "language_evidence": null,
+      "decoded_seconds": 5.0,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 2858430,
+        "failed_higher_variants": []
+      }
+    },
+    {
+      "id": "TVDecouverte.ch",
+      "name": "TV Decouverte",
+      "source_id": "361308eea549b8266555d858",
+      "url": "https://tvdecouverte.vedge.infomaniak.com/livecast/ik:tvdecouverte/manifest.m3u8",
+      "checked_at": "2026-11-15T19:36:57.881014+00:00",
+      "width": 1920,
+      "height": 1080,
+      "fps": 25.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 124,
+      "language_evidence": null,
+      "decoded_seconds": 5.0,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 3001080,
+        "failed_higher_variants": []
+      }
+    },
+    {
       "id": "ZitataTV.mq",
       "name": "Zitata TV",
       "source_id": "b662337c55347ec8d7a94bae",
@@ -1429,7 +1497,11 @@
     }
   ],
   "changes": {
-    "added": [],
+    "added": [
+      "HANDICAPTV.fr",
+      "TVDecouverte.ch",
+      "TebeoTV.fr"
+    ],
     "removed": [],
     "source_changed": []
   },
@@ -1445,12 +1517,15 @@
       "BFMTechCo.fr",
       "CPACFrench.ca",
       "Gong.fr",
+      "HANDICAPTV.fr",
       "Matele.be",
       "MonacoInfo.mc",
       "NOVO19.fr",
       "RTSInfo.ch",
       "RadioTeleEvangileSansLimite.ca",
       "TV5MondeInfo.fr",
+      "TVDecouverte.ch",
+      "TebeoTV.fr",
       "ValTV.ch",
       "ZitataTV.mq"
     ],
