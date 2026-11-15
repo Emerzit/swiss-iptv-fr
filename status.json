@@ -1,15 +1,16 @@
 {
-  "generated_at": "2026-11-15T18:39:57.939614+00:00",
+  "generated_at": "2026-11-15T18:44:31.667103+00:00",
   "audience": "public",
   "playlists": {
-    "swiss-fr": 64,
-    "swiss-fr-internet": 64,
+    "swiss-fr": 63,
+    "swiss-fr-internet": 63,
     "swiss-fr-multicast": 0,
     "swiss-fr-regional": 10,
     "swiss-fr-news": 14
   },
   "exclusions": {
-    "rights_pending": 868
+    "rights_pending": 868,
+    "unconfirmed_french_audio": 1
   },
   "epg": {
     "swiss-fr": {
@@ -1383,28 +1384,6 @@
       }
     },
     {
-      "id": "MontrealGreekTV.ca",
-      "name": "Montreal Greek TV",
-      "source_id": "56acfade4d70e1c2d6830cd8",
-      "url": "https://live.greektv.ca/hls1/greektv.m3u8",
-      "checked_at": "2026-11-15T18:39:26.104445+00:00",
-      "width": 640,
-      "height": 480,
-      "fps": 29.97,
-      "video_codec": "h264",
-      "audio_codec": "aac",
-      "audio_language": null,
-      "frames": 146,
-      "language_evidence": null,
-      "decoded_seconds": 5.0,
-      "quality": {
-        "mode": "best",
-        "variant_rank": 0,
-        "bandwidth": 0,
-        "failed_higher_variants": []
-      }
-    },
-    {
       "id": "RadioTeleEvangileSansLimite.ca",
       "name": "Radio Tele Evangile Sans Limite",
       "source_id": "90751c03772fe7ea13da74fd",
@@ -1450,11 +1429,10 @@
     }
   ],
   "changes": {
-    "added": [
-      "MontrealGreekTV.ca",
-      "RadioTeleEvangileSansLimite.ca"
+    "added": [],
+    "removed": [
+      "MontrealGreekTV.ca"
     ],
-    "removed": [],
     "source_changed": []
   },
   "reference": {
@@ -1471,7 +1449,6 @@
       "Gong.fr",
       "Matele.be",
       "MonacoInfo.mc",
-      "MontrealGreekTV.ca",
       "NOVO19.fr",
       "RTSInfo.ch",
       "RadioTeleEvangileSansLimite.ca",

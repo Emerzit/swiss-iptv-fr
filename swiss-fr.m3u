@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz" x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz"
-# Generated 2026-11-15T18:39:57.849618+00:00; audience=public; sample playback only
+# Generated 2026-11-15T18:44:31.590058+00:00; audience=public; sample playback only
 #EXTINF:-1 tvg-id="RTS.1.ch" tvg-name="RTS 1" tvg-logo="https://i.imgur.com/OP5lHv9.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="1",RTS 1
 https://viamotionhsi.netplus.ch/live/eds/rts1hd/browser-HLS8/rts1hd.m3u8
 #EXTINF:-1 tvg-id="RTS.2.ch" tvg-name="RTS 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/RTS_2_logo_2019.svg/960px-RTS_2_logo_2019.svg.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="2",RTS 2
@@ -80,7 +80,7 @@ https://canalalphaju.vedge.infomaniak.com/livecast/ik:canalalphaju/manifest.m3u8
 https://canalalpha.vedge.infomaniak.com/livecast/ik:canalalpha/playlist.m3u8
 #EXTINF:-1 tvg-id="La.Télé.ch" tvg-name="La Télé" tvg-logo="https://i.imgur.com/DdCfl4n.png" group-title="general" tvg-language="fra" tvg-country="CH" tvg-chno="73",La Télé
 https://latele2.vedge.infomaniak.com/livecast/ik:latele2/manifest.m3u8?DVR
-#EXTINF:-1 tvg-id="Tele.Bielingue.ch" tvg-name="TeleBielingue" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/TeleBielingue_Logo.svg/960px-TeleBielingue_Logo.svg.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="303",TeleBielingue
+#EXTINF:-1 tvg-id="Tele.Bielingue.ch" tvg-name="TeleBielingue" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/TeleBielingue_Logo.svg/960px-TeleBielingue_Logo.svg.png" group-title="unknown" tvg-language="deu,fra" tvg-country="CH" tvg-chno="303",TeleBielingue
 https://viamotionhsi.netplus.ch/live/eds/telebielingue/browser-HLS8/telebielingue.m3u8
 #EXTINF:-1 tvg-id="canalbfr.ch" tvg-name="Canal B français" tvg-logo="https://picserve.netplus.ch/channels/canalbfr.png" group-title="CH Regional" tvg-language="fra" tvg-country="CH",Canal B français
 https://viamotionhsi.netplus.ch/live/eds/canalbfr/browser-HLS8/canalbfr.m3u8
@@ -122,8 +122,6 @@ https://amg01596-gongnetworks-gong-ono-vh5f2.amagi.tv/playlist.m3u8
 https://live.matele.be/hls/live.m3u8
 #EXTINF:-1 tvg-id="MonacoInfo.mc" tvg-name="Monaco Info" tvg-logo="https://i.imgur.com/dIrKYH7.png" group-title="news" tvg-language="fra" tvg-country="MC",Monaco Info
 https://webtv.monacoinfo.com/live/master.m3u8
-#EXTINF:-1 tvg-id="MontrealGreekTV.ca" tvg-name="Montreal Greek TV" tvg-logo="https://i.imgur.com/Y5YnUit.png" group-title="culture" tvg-language="fra" tvg-country="CA",Montreal Greek TV
-https://live.greektv.ca/hls1/greektv.m3u8
 #EXTINF:-1 tvg-id="RadioTeleEvangileSansLimite.ca@SD" tvg-name="Radio Tele Evangile Sans Limite" tvg-logo="https://i.imgur.com/CL32kFA.png" group-title="religious" tvg-language="fra" tvg-country="CA",Radio Tele Evangile Sans Limite
 https://5790d294af2dc.streamlock.net/8124/8124/chunklist.m3u8
 #EXTINF:-1 tvg-id="ZitataTV.mq@SD" tvg-name="Zitata TV" tvg-logo="https://i.imgur.com/KJmefse.png" group-title="general" tvg-language="fra" tvg-country="MQ",Zitata TV
