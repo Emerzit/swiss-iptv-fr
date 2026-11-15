@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-11-15T14:33:16.598959+00:00",
+  "audience": "public",
+  "playlists": {
+    "swiss-fr": 54,
+    "swiss-fr-internet": 54,
+    "swiss-fr-multicast": 0,
+    "swiss-fr-regional": 10,
+    "swiss-fr-news": 10
+  },
+  "exclusions": {
+    "rights_pending": 855
+  },
+  "epg": {
+    "swiss-fr": {
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz",
+      "matched_channels": 45
+    },
+    "swiss-fr-internet": {
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz",
+      "matched_channels": 45
+    },
+    "swiss-fr-multicast": {
+      "url": null,
+      "matched_channels": 0
+    },
+    "swiss-fr-regional": {
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz",
+      "matched_channels": 8
+    },
+    "swiss-fr-news": {
+      "url": "https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz",
+      "matched_channels": 7
+    }
+  }
+}

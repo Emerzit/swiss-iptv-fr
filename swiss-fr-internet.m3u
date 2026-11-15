@@ -1,0 +1,110 @@
+#EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz" x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz"
+# Generated 2026-11-15T14:33:16.591931+00:00; audience=public; sample playback only
+#EXTINF:-1 tvg-id="RTS.1.ch" tvg-name="RTS 1" tvg-logo="https://i.imgur.com/OP5lHv9.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="1",RTS 1
+https://viamotionhsi.netplus.ch/live/eds/rts1hd/browser-HLS8/rts1hd.m3u8
+#EXTINF:-1 tvg-id="RTS.2.ch" tvg-name="RTS 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/RTS_2_logo_2019.svg/960px-RTS_2_logo_2019.svg.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="2",RTS 2
+https://viamotionhsi.netplus.ch/live/eds/rts2hd/browser-HLS8/rts2hd.m3u8
+#EXTINF:-1 tvg-id="TF1.ch" tvg-name="TF1 Suisse" tvg-logo="https://i.imgur.com/4JynpVF.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="3",TF1 Suisse
+https://viamotionhsi.netplus.ch/live/eds/tf1hd/browser-HLS8/tf1hd.m3u8
+#EXTINF:-1 tvg-id="France.2.ch" tvg-name="France 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/France_2_2018.svg/960px-France_2_2018.svg.png" group-title="general" tvg-language="fra" tvg-country="FR" tvg-chno="4",France 2
+https://viamotionhsi.netplus.ch/live/eds/france2hd/browser-HLS8/france2hd.m3u8
+#EXTINF:-1 tvg-id="France.3.ch" tvg-name="France 3" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/2/2b/France_3_Alsace_-_Logo_2018.svg" group-title="general" tvg-language="fra" tvg-country="FR" tvg-chno="5",France 3
+https://viamotionhsi.netplus.ch/live/eds/france3hd/browser-HLS8/france3hd.m3u8
+#EXTINF:-1 tvg-id="France.4.ch" tvg-name="France 4" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/France_4_2018.svg/960px-France_4_2018.svg.png" group-title="kids" tvg-language="fra" tvg-country="FR" tvg-chno="6",France 4
+https://viamotionhsi.netplus.ch/live/eds/france4hd/browser-HLS8/france4hd.m3u8
+#EXTINF:-1 tvg-id="France.5.ch" tvg-name="France 5" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/France_5_2018.svg/960px-France_5_2018.svg.png" group-title="general" tvg-language="fra" tvg-country="FR" tvg-chno="7",France 5
+https://viamotionhsi.netplus.ch/live/eds/france5hd/browser-HLS8/france5hd.m3u8
+#EXTINF:-1 tvg-id="M6.ch" tvg-name="M6 Suisse" tvg-logo="https://i.imgur.com/7GVp3fW.png" group-title="entertainment" tvg-language="fra" tvg-country="CH" tvg-chno="8",M6 Suisse
+https://viamotionhsi.netplus.ch/live/eds/m6hd/browser-HLS8/m6hd.m3u8
+#EXTINF:-1 tvg-id="Arte.Français.ch" tvg-name="arte" tvg-logo="https://i.imgur.com/ecXMjNl.png" group-title="entertainment" tvg-language="fra" tvg-country="FR" tvg-chno="9",arte
+https://viamotionhsi.netplus.ch/live/eds/artehd/browser-HLS8/artehd.m3u8
+#EXTINF:-1 tvg-id="W9.ch" tvg-name="W9 Suisse" tvg-logo="https://i.imgur.com/rLYQCBS.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="11",W9 Suisse
+https://viamotionhsi.netplus.ch/live/eds/w9/browser-HLS8/w9.m3u8
+#EXTINF:-1 tvg-id="TMC.ch" tvg-name="TMC" tvg-logo="https://upload.wikimedia.org/wikipedia/en/thumb/5/54/TMC_logo.svg/960px-TMC_logo.svg.png" group-title="general" tvg-language="fra" tvg-country="FR" tvg-chno="12",TMC
+https://viamotionhsi.netplus.ch/live/eds/tmc/browser-HLS8/tmc.m3u8
+#EXTINF:-1 tvg-id="TFX.ch" tvg-name="TFX Suisse" tvg-logo="https://i.imgur.com/bA1pma2.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="13",TFX Suisse
+https://viamotionhsi.netplus.ch/live/eds/nt1/browser-HLS8/nt1.m3u8
+#EXTINF:-1 tvg-id="6ter.ch" tvg-name="6ter Suisse" tvg-logo="https://i.imgur.com/PUL07KK.png" group-title="entertainment" tvg-language="fra" tvg-country="CH" tvg-chno="21",6ter Suisse
+https://viamotionhsi.netplus.ch/live/eds/6ter/browser-HLS8/6ter.m3u8
+#EXTINF:-1 tvg-id="TV5.Monde.FBS.ch" tvg-name="TV5MONDE FBS" tvg-logo="https://i.imgur.com/WmRbudc.png" group-title="general" tvg-language="fra" tvg-country="FR" tvg-chno="30",TV5MONDE FBS
+https://ott.tv5monde.com/Content/HLS/Live/channel(fbs)/variant.m3u8
+#EXTINF:-1 tvg-id="KTO.ch" tvg-name="KTO" tvg-logo="https://i.imgur.com/EY6TsdV.png" group-title="religious" tvg-language="fra" tvg-country="FR" tvg-chno="32",KTO
+https://livekto.akamaized.net/hls/live/20000018/ktotv/master.m3u8
+#EXTINF:-1 tvg-id="TV.Monaco.ch" tvg-name="TV Monaco" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/4/4b/TVMonaco_2023.svg" group-title="general" tvg-language="fra" tvg-country="MC",TV Monaco
+https://viamotionhsi.netplus.ch/live/eds/monacotv/browser-HLS8/monacotv.m3u8
+#EXTINF:-1 tvg-id="t18.fr" tvg-name="T18" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Logo_de_la_chaine_T18.svg/500px-Logo_de_la_chaine_T18.svg.png" group-title="general" tvg-language="fra" tvg-country="FR",T18
+https://viamotionhsi.netplus.ch/live/eds/t18/browser-HLS8/t18.m3u8
+#EXTINF:-1 tvg-id="novo19.fr" tvg-name="NOVO19" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Logo_NOVO19_-_2025.svg/960px-Logo_NOVO19_-_2025.svg.png" group-title="general" tvg-language="fra" tvg-country="FR",NOVO19
+https://viamotionhsi.netplus.ch/live/eds/novo19/browser-HLS8/novo19.m3u8
+#EXTINF:-1 tvg-id="TF1.Séries.Films.ch" tvg-name="TF1 Series Films" tvg-logo="https://i.imgur.com/4CJIDKQ.png" group-title="movies" tvg-language="fra" tvg-country="FR",TF1 Series Films
+https://viamotionhsi.netplus.ch/live/eds/hd1/browser-HLS8/hd1.m3u8
+#EXTINF:-1 tvg-id="rmclife.fr" tvg-name="RMC Life" tvg-logo="https://img1.dc2.oqee.net/channel_pictures/3606/w512" group-title="entertainment,interactive" tvg-language="fra" tvg-country="FR" tvg-chno="27",RMC Life
+https://viamotionhsi.netplus.ch/live/eds/cherie25/browser-HLS8/cherie25.m3u8
+#EXTINF:-1 tvg-id="ab3.tv" tvg-name="AB3" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/5/5d/AB3_2025.svg" group-title="entertainment" tvg-language="fra" tvg-country="BE" tvg-chno="35",AB3
+https://viamotionhsi.netplus.ch/live/eds/ab3/browser-HLS8/ab3.m3u8
+#EXTINF:-1 tvg-id="RMC.Découverte.ch" tvg-name="RMC Decouverte" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/thumb/b/b3/RMC_D%C3%A9couverte_logo_2017.svg/960px-RMC_D%C3%A9couverte_logo_2017.svg.png" group-title="unknown" tvg-language="fra" tvg-country="FR",RMC Decouverte
+https://viamotionhsi.netplus.ch/live/eds/rmcdecouverte/browser-HLS8/rmcdecouverte.m3u8
+#EXTINF:-1 tvg-id="RMC.Story.ch" tvg-name="RMC Story" tvg-logo="https://upload.wikimedia.org/wikipedia/fr/thumb/4/43/Logo_RMC_Story_2025.png/960px-Logo_RMC_Story_2025.png" group-title="unknown" tvg-language="fra" tvg-country="FR",RMC Story
+https://viamotionhsi.netplus.ch/live/eds/numero23/browser-HLS8/numero23.m3u8
+#EXTINF:-1 tvg-id="RTSInfo.ch" tvg-name="RTS Info" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/switzerland/rts-info-ch.png" group-title="news" tvg-language="fra" tvg-country="CH",RTS Info
+https://rtsinfo-d.akamaized.net/out/v1/lsvs/rts-info/cmaf/hls-master.m3u8?dw=7201
+#EXTINF:-1 tvg-id="franceinfo.ch" tvg-name="Franceinfo" tvg-logo="https://i.imgur.com/eITXz6A.png" group-title="news" tvg-language="fra" tvg-country="FR" tvg-chno="16",Franceinfo
+https://viamotionhsi.netplus.ch/live/eds/franceinfo/browser-HLS8/franceinfo.m3u8
+#EXTINF:-1 tvg-id="BFM.TV.ch" tvg-name="BFM TV" tvg-logo="https://i.imgur.com/YJCcczD.png" group-title="news" tvg-language="fra" tvg-country="FR" tvg-chno="17",BFM TV
+https://viamotionhsi.netplus.ch/live/eds/bfmtv/browser-HLS8/bfmtv.m3u8
+#EXTINF:-1 tvg-id="bfmbusiness.fr" tvg-name="BFM Business" tvg-logo="https://i.imgur.com/psqIHn4.png" group-title="business,news" tvg-language="fra" tvg-country="FR",BFM Business
+https://viamotionhsi.netplus.ch/live/eds/bfmbusiness/browser-HLS8/bfmbusiness.m3u8
+#EXTINF:-1 tvg-id="CNEWS.ch" tvg-name="CNews" tvg-logo="https://i.imgur.com/sSNhk2g.png" group-title="news" tvg-language="fra" tvg-country="FR" tvg-chno="18",CNews
+https://viamotionhsi.netplus.ch/live/eds/itele/browser-HLS8/itele.m3u8
+#EXTINF:-1 tvg-id="La.Chaine.Info.-.LCI.ch" tvg-name="LCI" tvg-logo="https://i.imgur.com/DED8EXs.png" group-title="news" tvg-language="fra" tvg-country="FR" tvg-chno="28",LCI
+https://viamotionhsi.netplus.ch/live/eds/lci/browser-HLS8/lci.m3u8
+#EXTINF:-1 tvg-id="La.Chaîne.parlementaire.ch" tvg-name="LCP" tvg-logo="https://i.imgur.com/k7UImOJ.png" group-title="legislative" tvg-language="fra" tvg-country="FR" tvg-chno="15",LCP
+https://viamotionhsi.netplus.ch/live/eds/lcp/browser-HLS8/lcp.m3u8
+#EXTINF:-1 tvg-id="Euronews.F.ch" tvg-name="Euronews French" tvg-logo="https://i.imgur.com/5A0Wnrv.png" group-title="news" tvg-language="fra" tvg-country="FR" tvg-chno="80",Euronews French
+https://viamotionhsi.netplus.ch/live/eds/euronews/browser-HLS8/euronews.m3u8
+#EXTINF:-1 tvg-id="France.24.ch" tvg-name="France 24" tvg-logo="https://dtil.tmsimg.com/assets/s159111_ld_h15_aa.png?lock=720x540" group-title="news" tvg-language="fra" tvg-country="FR" tvg-chno="63",France 24
+https://live.france24.com/hls/live/2037179/F24_FR_HI_HLS/master_500.m3u8
+#EXTINF:-1 tvg-id="TV5MondeInfo.fr" tvg-name="TV5MONDE Info" tvg-logo="https://i.imgur.com/AJx5Fy2.png" group-title="news" tvg-language="fra" tvg-country="FR",TV5MONDE Info
+https://ott.tv5monde.com/Content/HLS/Live/channel(info)/variant.m3u8
+#EXTINF:-1 tvg-id="Léman.Bleu.Télévision.ch" tvg-name="Léman Bleu" tvg-logo="https://i.imgur.com/6ijbSTr.png" group-title="news" tvg-language="fra" tvg-country="CH" tvg-chno="76",Léman Bleu
+https://naxoo.vedge.infomaniak.com/livecast/ik:naxoo/manifest.m3u8
+#EXTINF:-1 tvg-id="TV8.Mont.Blanc.ch" tvg-name="TV8 Mont-Blanc" tvg-logo="https://i.imgur.com/dOXRNVj.png" group-title="unknown" tvg-language="fra" tvg-country="FR" tvg-chno="75",TV8 Mont-Blanc
+https://viamotionhsi.netplus.ch/live/eds/tv8montblanc/browser-HLS8/tv8montblanc.m3u8
+#EXTINF:-1 tvg-id="Canal.9.ch" tvg-name="Canal 9" tvg-logo="https://i.imgur.com/TNciMh2.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="74",Canal 9
+https://livehd.vedge.infomaniak.com/livecast/ik:livehd/playlist.m3u8
+#EXTINF:-1 tvg-id="Canal.Alpha.JU.ch" tvg-name="Canal Alpha Jura" tvg-logo="https://i.imgur.com/eQ8xHK9.jpg" group-title="CH Regional JU" tvg-language="fra" tvg-country="CH" tvg-chno="78",Canal Alpha Jura
+https://canalalphaju.vedge.infomaniak.com/livecast/ik:canalalphaju/manifest.m3u8
+#EXTINF:-1 tvg-id="Canal.Alpha.NE.ch" tvg-name="Canal Alpha Neuchâtel" tvg-logo="https://i.imgur.com/eQ8xHK9.jpg" group-title="CH Regional NE" tvg-language="fra" tvg-country="CH" tvg-chno="79",Canal Alpha Neuchâtel
+https://canalalpha.vedge.infomaniak.com/livecast/ik:canalalpha/playlist.m3u8
+#EXTINF:-1 tvg-id="La.Télé.ch" tvg-name="La Télé" tvg-logo="https://i.imgur.com/DdCfl4n.png" group-title="general" tvg-language="fra" tvg-country="CH" tvg-chno="73",La Télé
+https://latele2.vedge.infomaniak.com/livecast/ik:latele2/manifest.m3u8?DVR
+#EXTINF:-1 tvg-id="Tele.Bielingue.ch" tvg-name="TeleBielingue" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/TeleBielingue_Logo.svg/960px-TeleBielingue_Logo.svg.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="303",TeleBielingue
+https://viamotionhsi.netplus.ch/live/eds/telebielingue/browser-HLS8/telebielingue.m3u8
+#EXTINF:-1 tvg-id="canalbfr.ch" tvg-name="Canal B français" tvg-logo="https://picserve.netplus.ch/channels/canalbfr.png" group-title="CH Regional" tvg-language="fra" tvg-country="CH",Canal B français
+https://viamotionhsi.netplus.ch/live/eds/canalbfr/browser-HLS8/canalbfr.m3u8
+#EXTINF:-1 tvg-id="Max.TV.ch" tvg-name="MaxTV / DieuTV" tvg-logo="https://i.imgur.com/13PjEk8.png" group-title="general" tvg-language="fra" tvg-country="CH" tvg-chno="81",MaxTV / DieuTV
+https://viamotionhsi.netplus.ch/live/eds/maxtv/browser-HLS8/maxtv.m3u8
+#EXTINF:-1 tvg-id="NRTV.ch" tvg-name="NRTV" tvg-logo="https://i.imgur.com/sXiFPfk.png" group-title="general" tvg-language="fra" tvg-country="CH" tvg-chno="82",NRTV
+https://viamotionhsi.netplus.ch/live/eds/nrtv/browser-HLS8/nrtv.m3u8
+#EXTINF:-1 tvg-id="valtv.ch" tvg-name="Val TV" tvg-logo="https://i.imgur.com/kanMGTD.png" group-title="general" tvg-language="fra" tvg-country="CH",Val TV
+https://viamotionhsi.netplus.ch/live/eds/valtv/browser-HLS8/valtv.m3u8
+#EXTINF:-1 tvg-id="CARAC.1.ch" tvg-name="Carac 1" tvg-logo="https://i.imgur.com/TSc35U6.png" group-title="entertainment" tvg-language="fra" tvg-country="CH" tvg-chno="83",Carac 1
+https://rougetv.vedge.infomaniak.com/livecast/ik:rougetv/playlist.m3u8
+#EXTINF:-1 tvg-id="CARAC.2.ch" tvg-name="Carac 2" tvg-logo="https://i.imgur.com/hCoIPen.png" group-title="entertainment" tvg-language="fra" tvg-country="CH" tvg-chno="84",Carac 2
+https://onefmmd.vedge.infomaniak.com/livecast/ik:onefmmd/manifest.m3u8
+#EXTINF:-1 tvg-id="CARAC.3.ch" tvg-name="Carac 3" tvg-logo="https://i.imgur.com/C4e8cjt.png" group-title="entertainment" tvg-language="fra" tvg-country="CH" tvg-chno="85",Carac 3
+https://lfmmd.vedge.infomaniak.com/livecast/ik:lfmmd/playlist.m3u8
+#EXTINF:-1 tvg-id="CARAC.4.ch" tvg-name="Carac 4" tvg-logo="https://i.imgur.com/Dj5LPy3.png" group-title="entertainment" tvg-language="fra" tvg-country="CH" tvg-chno="87",Carac 4
+https://edge17.vedge.infomaniak.com/livecast/ik:compack_media_1/playlist.m3u8
+#EXTINF:-1 tvg-id="CARAC.5.ch" tvg-name="Carac 5" tvg-logo="https://i.imgur.com/0D4CvYp.png" group-title="entertainment" tvg-language="fra" tvg-country="CH" tvg-chno="88",Carac 5
+https://carac5.vedge.infomaniak.com/livecast/ik:carac5/playlist.m3u8
+#EXTINF:-1 tvg-id="Rhône.TV.ch" tvg-name="Rhône TV" tvg-logo="https://i.imgur.com/YyXJaBN.png" group-title="general" tvg-language="fra" tvg-country="CH",Rhône TV
+https://rhonetv.vedge.infomaniak.com/livecast/ik%3Arhonetv/manifest.m3u8
+#EXTINF:-1 tvg-id="TVM3.ch" tvg-name="TVM3" tvg-logo="https://i.imgur.com/zNJlFMg.png" group-title="unknown" tvg-language="fra" tvg-country="CH",TVM3
+https://tvm3.vedge.infomaniak.com/livecast/ik:tvm3/manifest.m3u8
+#EXTINF:-1 tvg-id="blue.Zoom.F.ch" tvg-name="Blue Zoom F" tvg-logo="https://i.imgur.com/A5iwahB.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="89",Blue Zoom F
+https://viamotionhsi.netplus.ch/live/eds/bluezoomfr/browser-HLS8/bluezoomfr.m3u8
+#EXTINF:-1 tvg-id="L'Equipe.ch" tvg-name="L'Équipe" tvg-logo="https://i.imgur.com/t35zhM9.png" group-title="sports" tvg-language="fra" tvg-country="FR" tvg-chno="23",L'Équipe
+https://viamotionhsi.netplus.ch/live/eds/lequipe21/browser-HLS8/lequipe21.m3u8
+#EXTINF:-1 tvg-id="Gulli.ch" tvg-name="Gulli" tvg-logo="https://i.imgur.com/kqYssbW.png" group-title="kids" tvg-language="fra" tvg-country="FR" tvg-chno="20",Gulli
+https://viamotionhsi.netplus.ch/live/eds/gulli/browser-HLS8/gulli.m3u8

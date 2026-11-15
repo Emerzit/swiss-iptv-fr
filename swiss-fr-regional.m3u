@@ -1,0 +1,22 @@
+#EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz" x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz"
+# Generated 2026-11-15T14:33:16.594959+00:00; audience=public; sample playback only
+#EXTINF:-1 tvg-id="Léman.Bleu.Télévision.ch" tvg-name="Léman Bleu" tvg-logo="https://i.imgur.com/6ijbSTr.png" group-title="news" tvg-language="fra" tvg-country="CH" tvg-chno="76",Léman Bleu
+https://naxoo.vedge.infomaniak.com/livecast/ik:naxoo/manifest.m3u8
+#EXTINF:-1 tvg-id="Canal.9.ch" tvg-name="Canal 9" tvg-logo="https://i.imgur.com/TNciMh2.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="74",Canal 9
+https://livehd.vedge.infomaniak.com/livecast/ik:livehd/playlist.m3u8
+#EXTINF:-1 tvg-id="Canal.Alpha.JU.ch" tvg-name="Canal Alpha Jura" tvg-logo="https://i.imgur.com/eQ8xHK9.jpg" group-title="CH Regional JU" tvg-language="fra" tvg-country="CH" tvg-chno="78",Canal Alpha Jura
+https://canalalphaju.vedge.infomaniak.com/livecast/ik:canalalphaju/manifest.m3u8
+#EXTINF:-1 tvg-id="Canal.Alpha.NE.ch" tvg-name="Canal Alpha Neuchâtel" tvg-logo="https://i.imgur.com/eQ8xHK9.jpg" group-title="CH Regional NE" tvg-language="fra" tvg-country="CH" tvg-chno="79",Canal Alpha Neuchâtel
+https://canalalpha.vedge.infomaniak.com/livecast/ik:canalalpha/playlist.m3u8
+#EXTINF:-1 tvg-id="La.Télé.ch" tvg-name="La Télé" tvg-logo="https://i.imgur.com/DdCfl4n.png" group-title="general" tvg-language="fra" tvg-country="CH" tvg-chno="73",La Télé
+https://latele2.vedge.infomaniak.com/livecast/ik:latele2/manifest.m3u8?DVR
+#EXTINF:-1 tvg-id="Tele.Bielingue.ch" tvg-name="TeleBielingue" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/TeleBielingue_Logo.svg/960px-TeleBielingue_Logo.svg.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="303",TeleBielingue
+https://viamotionhsi.netplus.ch/live/eds/telebielingue/browser-HLS8/telebielingue.m3u8
+#EXTINF:-1 tvg-id="canalbfr.ch" tvg-name="Canal B français" tvg-logo="https://picserve.netplus.ch/channels/canalbfr.png" group-title="CH Regional" tvg-language="fra" tvg-country="CH",Canal B français
+https://viamotionhsi.netplus.ch/live/eds/canalbfr/browser-HLS8/canalbfr.m3u8
+#EXTINF:-1 tvg-id="NRTV.ch" tvg-name="NRTV" tvg-logo="https://i.imgur.com/sXiFPfk.png" group-title="general" tvg-language="fra" tvg-country="CH" tvg-chno="82",NRTV
+https://viamotionhsi.netplus.ch/live/eds/nrtv/browser-HLS8/nrtv.m3u8
+#EXTINF:-1 tvg-id="valtv.ch" tvg-name="Val TV" tvg-logo="https://i.imgur.com/kanMGTD.png" group-title="general" tvg-language="fra" tvg-country="CH",Val TV
+https://viamotionhsi.netplus.ch/live/eds/valtv/browser-HLS8/valtv.m3u8
+#EXTINF:-1 tvg-id="Rhône.TV.ch" tvg-name="Rhône TV" tvg-logo="https://i.imgur.com/YyXJaBN.png" group-title="general" tvg-language="fra" tvg-country="CH",Rhône TV
+https://rhonetv.vedge.infomaniak.com/livecast/ik%3Arhonetv/manifest.m3u8

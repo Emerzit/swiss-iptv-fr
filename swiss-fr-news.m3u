@@ -1,0 +1,22 @@
+#EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz" x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz"
+# Generated 2026-11-15T14:33:16.596956+00:00; audience=public; sample playback only
+#EXTINF:-1 tvg-id="RTSInfo.ch" tvg-name="RTS Info" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/switzerland/rts-info-ch.png" group-title="news" tvg-language="fra" tvg-country="CH",RTS Info
+https://rtsinfo-d.akamaized.net/out/v1/lsvs/rts-info/cmaf/hls-master.m3u8?dw=7201
+#EXTINF:-1 tvg-id="franceinfo.ch" tvg-name="Franceinfo" tvg-logo="https://i.imgur.com/eITXz6A.png" group-title="news" tvg-language="fra" tvg-country="FR" tvg-chno="16",Franceinfo
+https://viamotionhsi.netplus.ch/live/eds/franceinfo/browser-HLS8/franceinfo.m3u8
+#EXTINF:-1 tvg-id="BFM.TV.ch" tvg-name="BFM TV" tvg-logo="https://i.imgur.com/YJCcczD.png" group-title="news" tvg-language="fra" tvg-country="FR" tvg-chno="17",BFM TV
+https://viamotionhsi.netplus.ch/live/eds/bfmtv/browser-HLS8/bfmtv.m3u8
+#EXTINF:-1 tvg-id="bfmbusiness.fr" tvg-name="BFM Business" tvg-logo="https://i.imgur.com/psqIHn4.png" group-title="business,news" tvg-language="fra" tvg-country="FR",BFM Business
+https://viamotionhsi.netplus.ch/live/eds/bfmbusiness/browser-HLS8/bfmbusiness.m3u8
+#EXTINF:-1 tvg-id="CNEWS.ch" tvg-name="CNews" tvg-logo="https://i.imgur.com/sSNhk2g.png" group-title="news" tvg-language="fra" tvg-country="FR" tvg-chno="18",CNews
+https://viamotionhsi.netplus.ch/live/eds/itele/browser-HLS8/itele.m3u8
+#EXTINF:-1 tvg-id="La.Chaine.Info.-.LCI.ch" tvg-name="LCI" tvg-logo="https://i.imgur.com/DED8EXs.png" group-title="news" tvg-language="fra" tvg-country="FR" tvg-chno="28",LCI
+https://viamotionhsi.netplus.ch/live/eds/lci/browser-HLS8/lci.m3u8
+#EXTINF:-1 tvg-id="Euronews.F.ch" tvg-name="Euronews French" tvg-logo="https://i.imgur.com/5A0Wnrv.png" group-title="news" tvg-language="fra" tvg-country="FR" tvg-chno="80",Euronews French
+https://viamotionhsi.netplus.ch/live/eds/euronews/browser-HLS8/euronews.m3u8
+#EXTINF:-1 tvg-id="France.24.ch" tvg-name="France 24" tvg-logo="https://dtil.tmsimg.com/assets/s159111_ld_h15_aa.png?lock=720x540" group-title="news" tvg-language="fra" tvg-country="FR" tvg-chno="63",France 24
+https://live.france24.com/hls/live/2037179/F24_FR_HI_HLS/master_500.m3u8
+#EXTINF:-1 tvg-id="TV5MondeInfo.fr" tvg-name="TV5MONDE Info" tvg-logo="https://i.imgur.com/AJx5Fy2.png" group-title="news" tvg-language="fra" tvg-country="FR",TV5MONDE Info
+https://ott.tv5monde.com/Content/HLS/Live/channel(info)/variant.m3u8
+#EXTINF:-1 tvg-id="Léman.Bleu.Télévision.ch" tvg-name="Léman Bleu" tvg-logo="https://i.imgur.com/6ijbSTr.png" group-title="news" tvg-language="fra" tvg-country="CH" tvg-chno="76",Léman Bleu
+https://naxoo.vedge.infomaniak.com/livecast/ik:naxoo/manifest.m3u8
