@@ -203,7 +203,7 @@ def explore(db, config, anchors, country, isp, evidence_dir='data/evidence/auton
     configured = set(pages)
     current_channels = {r[0] for r in db.execute("SELECT DISTINCT s.channel_id FROM reviews r JOIN sources s ON s.id=r.source_id WHERE r.decision='approved'")}
     countries = {r['id']: r['country'] for r in db.execute('SELECT id,country FROM channels')}
-    for channel in db.execute("SELECT * FROM channels WHERE languages='fra' AND website LIKE 'http%' "):
+    for channel in db.execute("SELECT * FROM channels WHERE (',' || COALESCE(languages,'') || ',') LIKE '%,fra,%' AND website LIKE 'http%'"):
         if (site_host(channel['website']) not in SHARED_SITES and
                 not any(re.search(pattern, channel['id'], re.I) for pattern in config.get('excluded_channel_patterns', []))):
             pages.setdefault(channel['id'], {'channel_id': channel['id'], 'url': channel['website'],

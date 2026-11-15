@@ -97,6 +97,10 @@ class AutonomousPolicyTests(unittest.TestCase):
         result = export_playlists(self.db, self.cfg, self.root / 'site')
         self.assertEqual(result['playlists']['swiss-fr-internet'], 0)
         self.assertEqual(result['exclusions']['unconfirmed_french_audio'], 1)
+        cfg = {**self.cfg, 'discovery': {'official_pages_per_run': 1}}
+        with patch('swiss_iptv.autonomy.discover', return_value=[{'channel_id': 'TV.fr', 'streams': []}]) as discovery:
+            explore(self.db, cfg, [], 'CH', 'sunrise', self.root / 'evidence', budget_seconds=2)
+        discovery.assert_called_once()  # Mixed services remain candidates for a confirmed French track.
         self.db.execute("UPDATE channels SET languages='fra' WHERE id='TV.fr'")
         self.proof(language='eng')
         result = export_playlists(self.db, self.cfg, self.root / 'site')
