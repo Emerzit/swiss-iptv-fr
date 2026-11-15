@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-15T18:28:14.505965+00:00",
+  "generated_at": "2026-11-15T18:39:57.939614+00:00",
   "audience": "public",
   "playlists": {
-    "swiss-fr": 62,
-    "swiss-fr-internet": 62,
+    "swiss-fr": 64,
+    "swiss-fr-internet": 64,
     "swiss-fr-multicast": 0,
     "swiss-fr-regional": 10,
     "swiss-fr-news": 14
@@ -1296,7 +1296,7 @@
     },
     {
       "id": "CPACFrench.ca",
-      "name": "CPAC French",
+      "name": "CPAC (fran\u00e7ais / anglais)",
       "source_id": "3a0503425819093595d8c89b",
       "url": "https://cpac-ca-live.cdn.vustreams.com/groupa/live/f9809cea-1e07-47cd-a94d-2ddd3e1351db/live.isml/.m3u8",
       "checked_at": "2026-11-15T18:24:25.517030+00:00",
@@ -1383,6 +1383,50 @@
       }
     },
     {
+      "id": "MontrealGreekTV.ca",
+      "name": "Montreal Greek TV",
+      "source_id": "56acfade4d70e1c2d6830cd8",
+      "url": "https://live.greektv.ca/hls1/greektv.m3u8",
+      "checked_at": "2026-11-15T18:39:26.104445+00:00",
+      "width": 640,
+      "height": 480,
+      "fps": 29.97,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 146,
+      "language_evidence": null,
+      "decoded_seconds": 5.0,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 0,
+        "failed_higher_variants": []
+      }
+    },
+    {
+      "id": "RadioTeleEvangileSansLimite.ca",
+      "name": "Radio Tele Evangile Sans Limite",
+      "source_id": "90751c03772fe7ea13da74fd",
+      "url": "https://5790d294af2dc.streamlock.net/8124/8124/chunklist.m3u8",
+      "checked_at": "2026-11-15T18:39:33.935959+00:00",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 150,
+      "language_evidence": null,
+      "decoded_seconds": 5.0,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 4560880,
+        "failed_higher_variants": []
+      }
+    },
+    {
       "id": "ZitataTV.mq",
       "name": "Zitata TV",
       "source_id": "b662337c55347ec8d7a94bae",
@@ -1407,9 +1451,8 @@
   ],
   "changes": {
     "added": [
-      "CPACFrench.ca",
-      "Gong.fr",
-      "i24NEWSFrench.il"
+      "MontrealGreekTV.ca",
+      "RadioTeleEvangileSansLimite.ca"
     ],
     "removed": [],
     "source_changed": []
@@ -1428,8 +1471,10 @@
       "Gong.fr",
       "Matele.be",
       "MonacoInfo.mc",
+      "MontrealGreekTV.ca",
       "NOVO19.fr",
       "RTSInfo.ch",
+      "RadioTeleEvangileSansLimite.ca",
       "TV5MondeInfo.fr",
       "ValTV.ch",
       "ZitataTV.mq"
@@ -1445,7 +1490,6 @@
       {
         "name": "RTS 1 FHD",
         "channel_id": "RTS1.ch",
-        "reference_url": "rtp://239.186.76.26:10000",
         "malformed_reference_row": false,
         "declared_quality": "FHD",
         "present": true,
@@ -1455,13 +1499,24 @@
         "published_checked_at": "2026-11-15T15:58:51.771958+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "4d9eb61bd00f4d3f44838397",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:58:51.771958+00:00"
+          },
+          {
+            "id": "218289ee890e1d06fcf16b5e",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:11:12.941437+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "RTS 2 FHD",
         "channel_id": "RTS2.ch",
-        "reference_url": "rtp://239.186.76.27:10000",
         "malformed_reference_row": false,
         "declared_quality": "FHD",
         "present": true,
@@ -1471,13 +1526,24 @@
         "published_checked_at": "2026-11-15T15:58:57.750892+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "0ee08bc1f5ddd22a952ec6b6",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:58:57.750892+00:00"
+          },
+          {
+            "id": "68a77099a93bdd620f6fe76e",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:11:17.514751+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "TF1 CH HD",
         "channel_id": "TF1Switzerland.ch",
-        "reference_url": "rtp://239.186.68.21:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1487,13 +1553,24 @@
         "published_checked_at": "2026-11-15T15:59:02.715003+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "22811cdd90e328bc40bd9a13",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:59:02.715003+00:00"
+          },
+          {
+            "id": "62554a9e47a86bea027536f0",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:10:04.616884+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "France2 HD",
         "channel_id": "France2.fr",
-        "reference_url": "rtp://239.186.68.19:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1503,13 +1580,24 @@
         "published_checked_at": "2026-11-15T15:59:07.678286+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "ceef4b9da74aafda1fcd7a7c",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:59:07.678286+00:00"
+          },
+          {
+            "id": "b055d639896831c9efe3f076",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:08:38.987930+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "France3 HD",
         "channel_id": "France3.fr",
-        "reference_url": "rtp://239.186.70.25:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1519,13 +1607,24 @@
         "published_checked_at": "2026-11-15T15:59:13.705362+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "0ade8f85e65121d6419a94e5",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:59:13.705362+00:00"
+          },
+          {
+            "id": "9d93c855ceb2e7d25275aa7a",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:08:46.197569+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "France4 HD / culturebox HD",
         "channel_id": "France4.fr",
-        "reference_url": "rtp://239.186.84.55:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1535,13 +1634,24 @@
         "published_checked_at": "2026-11-15T15:59:18.568166+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "ebdb4cbcb7a3dd2b73caa890",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:59:18.568166+00:00"
+          },
+          {
+            "id": "a57e729b00946a2489052a51",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:08:52.098035+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "France5 HD",
         "channel_id": "France5.fr",
-        "reference_url": "rtp://239.186.70.27:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1551,13 +1661,24 @@
         "published_checked_at": "2026-11-15T15:59:23.540483+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "ee34dcf391bdf5b67f2efed7",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:59:23.540483+00:00"
+          },
+          {
+            "id": "f981375cfcf822545f5b5d6a",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:08:56.845051+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "M6 CH HD",
         "channel_id": "M6.ch",
-        "reference_url": "rtp://239.186.68.20:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1567,13 +1688,24 @@
         "published_checked_at": "2026-11-15T15:59:29.510152+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "93908f069b4b06b89f54d568",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:59:29.510152+00:00"
+          },
+          {
+            "id": "25f73cfe7e35a78cf25ddf32",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:09:24.265943+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "arte F HD",
         "channel_id": "arte.fr",
-        "reference_url": "rtp://239.186.68.18:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1583,13 +1715,24 @@
         "published_checked_at": "2026-11-15T15:59:34.532201+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "b17e15a11f751ec393a961d0",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:59:34.532201+00:00"
+          },
+          {
+            "id": "f145d9045150fdde1da1e32d",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:10:42.148721+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "W9 CH HD",
         "channel_id": "W9Switzerland.ch",
-        "reference_url": "rtp://239.186.70.38:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1599,13 +1742,24 @@
         "published_checked_at": "2026-11-15T15:59:40.358212+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "1d930c5dc1ed6c40e5180478",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:59:40.358212+00:00"
+          },
+          {
+            "id": "a3b7a8dc3791589b101235fe",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:10:36.793354+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "TMC CH HD",
         "channel_id": "TMC.fr",
-        "reference_url": "rtp://239.186.70.37:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1615,13 +1769,24 @@
         "published_checked_at": "2026-11-15T15:59:45.297531+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "d230a54f3e0ad6ac83e0d67c",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:59:45.297531+00:00"
+          },
+          {
+            "id": "0a052de8b4d576b1468a2b21",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:10:13.539486+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": "La r\u00e9f\u00e9rence indique une variante CH ; l\u2019\u00e9quivalence de variante publicitaire ne d\u00e9coule pas du seul nom TMC."
       },
       {
         "name": "TFX CH HD",
         "channel_id": "TFXSwitzerland.ch",
-        "reference_url": "rtp://239.186.70.34:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1631,13 +1796,24 @@
         "published_checked_at": "2026-11-15T15:59:50.317471+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "077f8b810459aa4bed74a826",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:59:50.317471+00:00"
+          },
+          {
+            "id": "e1e04727e50566b4125c2f90",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:10:09.135279+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "6ter HD",
         "channel_id": "6terSwitzerland.ch",
-        "reference_url": "rtp://239.186.68.134:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1647,13 +1823,24 @@
         "published_checked_at": "2026-11-15T15:59:56.173040+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "f060fc89f8501746eeebb696",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:59:56.173040+00:00"
+          },
+          {
+            "id": "3e4c547bc83ae802695a586c",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:08:12.778474+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "TV5 MONDE FBSM HD",
         "channel_id": "TV5MondeFranceBelgiumSwitzerlandMonaco.fr",
-        "reference_url": "rtp://239.186.70.41:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1663,13 +1850,19 @@
         "published_checked_at": "2026-11-15T15:58:14.408870+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "a63bb4a421430855a1adc40a",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:58:14.408870+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "TV5 MONDE EUROPE HD",
         "channel_id": "TV5MondeEurope.fr",
-        "reference_url": "rtp://239.186.84.54:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": false,
@@ -1679,13 +1872,24 @@
         "published_checked_at": null,
         "meets_declared_height_floor": null,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "772bc092289fec115892b029",
+            "status": "http_forbidden",
+            "checked_at": "2026-11-15T18:31:42.956782+00:00"
+          },
+          {
+            "id": "5108964d29414e1ead3a826c",
+            "status": "http_forbidden",
+            "checked_at": "2026-11-15T18:31:54.236459+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": "Refus HTTP 403 constat\u00e9 depuis CH. La variante Europe ne doit pas \u00eatre remplac\u00e9e silencieusement par FBS."
       },
       {
         "name": "KtO",
         "channel_id": "KTO.fr",
-        "reference_url": "rtp://239.186.64.148:10000",
         "malformed_reference_row": false,
         "declared_quality": null,
         "present": true,
@@ -1695,13 +1899,19 @@
         "published_checked_at": "2026-11-15T15:58:22.981786+00:00",
         "meets_declared_height_floor": null,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "f2466ab0cfbedc1ad594cb44",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:58:22.981786+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "ortb",
         "channel_id": "ORTBTV.bj",
-        "reference_url": "rtp://239.186.74.97:10000",
         "malformed_reference_row": false,
         "declared_quality": null,
         "present": false,
@@ -1711,13 +1921,19 @@
         "published_checked_at": null,
         "meets_declared_height_floor": null,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "be1c2c58b4bf99662bbcfacd",
+            "status": "http_forbidden",
+            "checked_at": "2026-11-15T18:12:59.008864+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": "Ancien nom ORTB ; le lecteur actuel B\u00e9nin TV est identifi\u00e9, mais r\u00e9pond HTTP 403 lors du contr\u00f4le CH."
       },
       {
         "name": "TV MONACO HD",
         "channel_id": "TVMonaco.mc",
-        "reference_url": "rtp://239.186.68.167:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1727,13 +1943,24 @@
         "published_checked_at": "2026-11-15T16:01:20.873865+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "755edb10f7b4654cf89737b5",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:01:20.873865+00:00"
+          },
+          {
+            "id": "f318658ac8992b57dcf98033",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:10:24.201541+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "T18 HD",
         "channel_id": "T18.fr",
-        "reference_url": "rtp://239.186.70.24:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1743,13 +1970,24 @@
         "published_checked_at": "2026-11-15T16:01:04.441300+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "ed6a0dc3971ff5e82cbfa56d",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:01:04.441300+00:00"
+          },
+          {
+            "id": "3ec1362e65a47eeeb3a36895",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:09:54.323312+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "TF1 Series Films HD",
         "channel_id": "TF1SeriesFilms.fr",
-        "reference_url": "rtp://239.186.68.133:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1759,13 +1997,24 @@
         "published_checked_at": "2026-11-15T16:00:01.055803+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "b45bc3c97dc0eaf452856440",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:00:01.055803+00:00"
+          },
+          {
+            "id": "8b7d5f69a5b57ad29d214618",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:09:58.965905+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "RMC Life HD",
         "channel_id": "RMCLife.fr",
-        "reference_url": "rtp://239.186.68.131:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1775,13 +2024,24 @@
         "published_checked_at": "2026-11-15T16:00:06.171975+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "65b501f7989d821f16e9355a",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:00:06.171975+00:00"
+          },
+          {
+            "id": "fe5cea52dd508d788fc52053",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:09:45.979326+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "AB3 CH",
         "channel_id": "AB3.be",
-        "reference_url": "rtp://239.186.66.229:10000",
         "malformed_reference_row": false,
         "declared_quality": null,
         "present": true,
@@ -1791,13 +2051,24 @@
         "published_checked_at": "2026-11-15T16:01:47.826970+00:00",
         "meets_declared_height_floor": null,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "cd139b13d00fb110eb54db87",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:01:47.826970+00:00"
+          },
+          {
+            "id": "c1e71311a44296838f6b0648",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:08:16.774807+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "RMC Decouvertes HD",
         "channel_id": "RMCDecouverte.fr",
-        "reference_url": "rtp://239.186.68.130:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1807,13 +2078,24 @@
         "published_checked_at": "2026-11-15T16:00:12.038036+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "1c2e93906f36f2bdd1da26ec",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:00:12.038036+00:00"
+          },
+          {
+            "id": "fe00971781020e9d77ec7363",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:09:41.881687+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "RMC Story HD",
         "channel_id": "RMCStory.fr",
-        "reference_url": "rtp://239.186.68.135:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1823,13 +2105,24 @@
         "published_checked_at": "2026-11-15T16:00:16.965182+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "62a6081a9ae6dbe0aa2525d0",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:00:16.965182+00:00"
+          },
+          {
+            "id": "7a3a6412a80acbcf52160d88",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:09:50.216199+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "Franceinfo HD",
         "channel_id": "Franceinfo.fr",
-        "reference_url": "rtp://239.186.70.121:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1839,13 +2132,24 @@
         "published_checked_at": "2026-11-15T16:00:21.969568+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "832354b9cc6c467c013fb99d",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:00:21.969568+00:00"
+          },
+          {
+            "id": "ef8a89ad4b9406af8aa11a80",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:09:00.927076+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "BFMTV CH HD",
         "channel_id": "BFMTV.fr",
-        "reference_url": "rtp://239.186.68.196:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1855,13 +2159,24 @@
         "published_checked_at": "2026-11-15T16:00:27.928656+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "e946a5956c5de3b38a0120e1",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:00:27.928656+00:00"
+          },
+          {
+            "id": "436182546629ec2e96623500",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:08:25.454444+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "CNEWS HD",
         "channel_id": "CNews.fr",
-        "reference_url": "rtp://239.186.70.30:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1871,13 +2186,24 @@
         "published_checked_at": "2026-11-15T16:00:32.824355+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "9669e293bb02aaf422d17eec",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:00:32.824355+00:00"
+          },
+          {
+            "id": "f9aa7f290a2f1563c300242d",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:08:34.514665+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "LCI HD La Chaine Info HD",
         "channel_id": "LCI.fr",
-        "reference_url": "rtp://239.186.68.241:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1887,13 +2213,24 @@
         "published_checked_at": "2026-11-15T16:00:37.680022+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "0f99c997998d290dfb551388",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:00:37.680022+00:00"
+          },
+          {
+            "id": "9e2282710970e6bc22436cff",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:09:10.245321+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "LCP Public S\u00e9nat HD",
         "channel_id": "LCP.fr",
-        "reference_url": "rtp://239.186.84.35:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1903,13 +2240,24 @@
         "published_checked_at": "2026-11-15T16:00:43.681297+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "6cd09ab290e5c73df8409956",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:00:43.681297+00:00"
+          },
+          {
+            "id": "d15681990aa4543640bb7bfc",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:09:15.185328+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": "La r\u00e9f\u00e9rence nomme le multiplex LCP/Public S\u00e9nat ; l\u2019identit\u00e9 pr\u00e9cise du service partag\u00e9 reste \u00e0 distinguer des cha\u00eenes parlementaires 24h/24."
       },
       {
         "name": "euronews. F HD",
         "channel_id": "EuronewsFrench.fr",
-        "reference_url": "rtp://239.186.70.148:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1919,13 +2267,19 @@
         "published_checked_at": "2026-11-15T16:01:57.729192+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "1f95d41ffa750e32cc417041",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:01:57.729192+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "France24 HD",
         "channel_id": "France24.fr",
-        "reference_url": "rtp://239.186.70.125:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1935,13 +2289,54 @@
         "published_checked_at": "2026-11-15T16:08:41.422297+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "1b52d6f485c1a5002b41a9ee",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:11:21.133637+00:00"
+          },
+          {
+            "id": "c7b725fc8b2d6cf7a5fbf756",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:11:33.442717+00:00"
+          },
+          {
+            "id": "07f9ff4d9e581b63108710d1",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:08:41.422297+00:00"
+          },
+          {
+            "id": "46e5fcf874dd082d08c4a2c9",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:11:26.120660+00:00"
+          },
+          {
+            "id": "c4dc9c6df6151be72f93fe9f",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:11:30.960468+00:00"
+          },
+          {
+            "id": "5b622cff32aaf7d06fb02a0f",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:57:36.346294+00:00"
+          },
+          {
+            "id": "3f99462c1b079b61ff038ed5",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:11:23.565449+00:00"
+          },
+          {
+            "id": "4746cc06e17672aee0b0fa62",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:11:28.543710+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "i24 NEWS F HD",
         "channel_id": "i24NEWSFrench.il",
-        "reference_url": "rtp://239.186.70.102:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1951,13 +2346,19 @@
         "published_checked_at": "2026-11-15T18:13:03.361709+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "44e2e8a0f6417e3fd924673e",
+            "status": "playable",
+            "checked_at": "2026-11-15T18:13:03.361709+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "Conseil National Suisse",
         "channel_id": "ConseilNational.ch",
-        "reference_url": "rtp://239.186.70.127:10000",
         "malformed_reference_row": false,
         "declared_quality": null,
         "present": false,
@@ -1967,13 +2368,19 @@
         "published_checked_at": null,
         "meets_declared_height_floor": null,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "0fdef5594c66e65d9dc5b637",
+            "status": "unavailable",
+            "checked_at": "2026-11-15T18:18:41.484197+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": "Service \u00e9v\u00e9nementiel selon les s\u00e9ances ; la pr\u00e9sence du lecteur ne prouve pas une diffusion active."
       },
       {
         "name": "Conseil Etats Suisse",
         "channel_id": "ConseilEtats.ch",
-        "reference_url": "rtp://239.186.70.128:10000",
         "malformed_reference_row": false,
         "declared_quality": null,
         "present": false,
@@ -1983,13 +2390,19 @@
         "published_checked_at": null,
         "meets_declared_height_floor": null,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "69ece6c0d170a857e9c28aba",
+            "status": "unavailable",
+            "checked_at": "2026-11-15T18:18:29.916949+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": "D\u00e9bats en langues originales, \u00e9v\u00e9nementiels ; ce service n\u2019est pas exclusivement francophone."
       },
       {
         "name": "leman bleu HD",
         "channel_id": "LemanBleu.ch",
-        "reference_url": "rtp://239.186.70.39:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -1999,13 +2412,19 @@
         "published_checked_at": "2026-11-15T15:57:46.948305+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "f143761543372297f59eade1",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:57:46.948305+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "8 Mont-Blanc HD",
         "channel_id": "TV8MontBlanc.fr",
-        "reference_url": "rtp://239.186.70.106:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -2015,13 +2434,24 @@
         "published_checked_at": "2026-11-15T16:01:15.852536+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "96643867a2ba87d16a54834f",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:01:15.852536+00:00"
+          },
+          {
+            "id": "4b03f67e7c9ba2c40bf9c883",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:10:17.936738+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "Canal9 HD",
         "channel_id": "Canal9.ch",
-        "reference_url": "rtp://239.186.68.144:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -2031,13 +2461,24 @@
         "published_checked_at": "2026-11-15T15:57:50.563707+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "b1e0475bf94c100af97317e2",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:10:56.090022+00:00"
+          },
+          {
+            "id": "03e456deb8e36117bd0e8af1",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:57:50.563707+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "CanalAlpha JU HD",
         "channel_id": "CanalAlphaJura.ch",
-        "reference_url": "rtp://239.186.68.193:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -2047,13 +2488,24 @@
         "published_checked_at": "2026-11-15T15:57:55.272572+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "e5c9d4c1c2e76a698dfe12f2",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:57:55.272572+00:00"
+          },
+          {
+            "id": "2dc60f1fde3534cfb328bf14",
+            "status": "playable",
+            "checked_at": "2026-11-15T09:40:43.063258+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "Canal Alpha NE HD",
         "channel_id": "CanalAlphaNeuchatel.ch",
-        "reference_url": "rtp://239.186.68.194:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -2063,13 +2515,19 @@
         "published_checked_at": "2026-11-15T15:57:58.947930+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "6d3289f3f24ee85fdad3743b",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:57:58.947930+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "LA TELE HD",
         "channel_id": "LaTele.ch",
-        "reference_url": "rtp://239.186.68.107:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -2079,13 +2537,24 @@
         "published_checked_at": "2026-11-15T15:57:43.093462+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "83c542eaf4251d7c654acbd0",
+            "status": "playable",
+            "checked_at": "2026-11-15T09:40:38.441325+00:00"
+          },
+          {
+            "id": "d7c5f990686f0bade7c0c73e",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:57:43.093462+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "TeleBielingue HD",
         "channel_id": "TeleBielingue.ch",
-        "reference_url": "rtp://239.186.70.82:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -2095,13 +2564,24 @@
         "published_checked_at": "2026-11-15T16:01:26.819670+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "7992f8b8df3b3379f9c45703",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:01:26.819670+00:00"
+          },
+          {
+            "id": "25b3a1af8de6a70380986fdc",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:10:27.937660+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "Ici TV HD",
         "channel_id": "local.icitvch.unknown",
-        "reference_url": "rtp://239.186.70.133:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": false,
@@ -2111,13 +2591,13 @@
         "published_checked_at": null,
         "meets_declared_height_floor": null,
         "reference_decode": null,
+        "internet_checks": [],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "maxtv HD/DieuTV HD",
         "channel_id": "MaxTV.ch",
-        "reference_url": "rtp://239.186.68.199:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -2127,13 +2607,24 @@
         "published_checked_at": "2026-11-15T16:01:36.861368+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "9fb7eb381dabdd17f4fcad3b",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:01:36.861368+00:00"
+          },
+          {
+            "id": "b104b9dde25d7c114f7fdab6",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:09:27.988871+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "nrtv HD",
         "channel_id": "NRTV.ch",
-        "reference_url": "rtp://239.186.70.66:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -2143,13 +2634,24 @@
         "published_checked_at": "2026-11-15T16:01:31.907505+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "4f1371a306e073603df05733",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:01:31.907505+00:00"
+          },
+          {
+            "id": "b6f77e020488b75cc398d473",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:09:37.227252+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "GRTV Geneve R\u00e9gion TV HD / T\u00e9l\u00e9Versoix HD",
         "channel_id": "GeneveRegionTelevision.fr",
-        "reference_url": "rtp://239.186.70.155:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": false,
@@ -2159,13 +2661,13 @@
         "published_checked_at": null,
         "meets_declared_height_floor": null,
         "reference_decode": null,
+        "internet_checks": [],
         "quality_comparison": "reference_not_measured",
         "note": "Site officiel en maintenance au contr\u00f4le ; aucun flux Internet lin\u00e9aire v\u00e9rifi\u00e9."
       },
       {
         "name": "TV Onex HD",
         "channel_id": "TVOnex.ch",
-        "reference_url": "rtp://239.186.70.132:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": false,
@@ -2175,13 +2677,13 @@
         "published_checked_at": null,
         "meets_declared_height_floor": null,
         "reference_decode": null,
+        "internet_checks": [],
         "quality_comparison": "reference_not_measured",
         "note": "Le site officiel propose des rediffusions ; aucun manifeste lin\u00e9aire Internet v\u00e9rifi\u00e9."
       },
       {
         "name": "carac1 HD",
         "channel_id": "Carac1.ch",
-        "reference_url": "rtp://239.186.68.253:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -2191,13 +2693,24 @@
         "published_checked_at": "2026-11-15T15:58:27.725125+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "753d7d71761e992c952b47db",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:10:45.849333+00:00"
+          },
+          {
+            "id": "5562de0193398a4b8d51d011",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:58:27.725125+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "carac2 HD",
         "channel_id": "Carac2.ch",
-        "reference_url": "rtp://239.186.70.12:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -2207,13 +2720,24 @@
         "published_checked_at": "2026-11-15T15:58:31.561857+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "ceb1843be78274f74c25bf04",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:58:31.561857+00:00"
+          },
+          {
+            "id": "dd19350797cf5f9f4f113003",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:11:03.501885+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "carac3 HD",
         "channel_id": "Carac3.ch",
-        "reference_url": "rtp://239.186.70.11:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -2223,13 +2747,24 @@
         "published_checked_at": "2026-11-15T15:58:35.308951+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "f1f9c692ec579c0728b3d192",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:11:08.246516+00:00"
+          },
+          {
+            "id": "1337221547b8f1d7d759b0b1",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:58:35.308951+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "carac4 HD",
         "channel_id": "Carac4.ch",
-        "reference_url": "rtp://239.186.70.104:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -2239,13 +2774,29 @@
         "published_checked_at": "2026-11-15T15:58:38.944133+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "a46a942a7647fd6cf43e53bf",
+            "status": "network_error",
+            "checked_at": "2026-11-15T10:17:17.627893+00:00"
+          },
+          {
+            "id": "c618e33053d6d242ca28b917",
+            "status": "network_error",
+            "checked_at": "2026-11-15T10:18:12.396695+00:00"
+          },
+          {
+            "id": "43b1c6c2811d7375324e78be",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:58:38.944133+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "carac5 HD",
         "channel_id": "Carac5.ch",
-        "reference_url": "rtp://239.186.68.208:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -2255,13 +2806,24 @@
         "published_checked_at": "2026-11-15T15:58:42.666926+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "d9f267888e3f3fe8b34eeb93",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:10:59.795143+00:00"
+          },
+          {
+            "id": "3a4c94ee15153d59e0e130e4",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:58:42.666926+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "Rhone TV HD",
         "channel_id": "RhoneTV.ch",
-        "reference_url": "rtp://239.186.84.172:10000",
         "malformed_reference_row": true,
         "declared_quality": "HD",
         "present": true,
@@ -2271,13 +2833,19 @@
         "published_checked_at": "2026-11-15T15:58:46.703059+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "c80f48bc314b4b8cdba7b6b5",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:58:46.703059+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "tvm3 HD",
         "channel_id": "TVM3.ch",
-        "reference_url": "rtp://239.186.70.21:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -2287,13 +2855,24 @@
         "published_checked_at": "2026-11-15T15:58:18.133566+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "88ede18d59093729cc740dfc",
+            "status": "playable",
+            "checked_at": "2026-11-15T15:58:18.133566+00:00"
+          },
+          {
+            "id": "c12516f72f85ee70e5423c9c",
+            "status": "playable",
+            "checked_at": "2026-11-15T10:17:26.141110+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "canalb F HD",
         "channel_id": "CanalBFr.ch",
-        "reference_url": "rtp://239.186.70.174:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -2303,13 +2882,19 @@
         "published_checked_at": "2026-11-15T16:02:03.166869+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "c7e7b9dd2d7590a9c43ad9d3",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:02:03.166869+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "blue zoom F HD",
         "channel_id": "BlueZoomF.ch",
-        "reference_url": "rtp://239.186.68.244:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -2319,13 +2904,24 @@
         "published_checked_at": "2026-11-15T16:01:42.842703+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "ebaf7ca5260efb589d0b81a9",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:01:42.842703+00:00"
+          },
+          {
+            "id": "c4853eee8f9375ae65715f3d",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:08:29.482474+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "L'Equipe HD",
         "channel_id": "LEquipe.fr",
-        "reference_url": "rtp://239.186.68.132:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -2335,13 +2931,24 @@
         "published_checked_at": "2026-11-15T16:00:53.604329+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "af9851922f007fd8fd17c2d3",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:00:53.604329+00:00"
+          },
+          {
+            "id": "072ad4c1fed0dd50498e20e3",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:09:20.344021+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       },
       {
         "name": "gulli HD",
         "channel_id": "Gulli.fr",
-        "reference_url": "rtp://239.186.70.29:10000",
         "malformed_reference_row": false,
         "declared_quality": "HD",
         "present": true,
@@ -2351,6 +2958,18 @@
         "published_checked_at": "2026-11-15T16:00:59.542388+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
+        "internet_checks": [
+          {
+            "id": "2d58d9a2ca982dde2df9ca30",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:00:59.542388+00:00"
+          },
+          {
+            "id": "1033979356e89b4c36612efd",
+            "status": "playable",
+            "checked_at": "2026-11-15T16:09:06.451219+00:00"
+          }
+        ],
         "quality_comparison": "reference_not_measured",
         "note": null
       }
