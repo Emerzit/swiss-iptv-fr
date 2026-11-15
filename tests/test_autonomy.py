@@ -97,6 +97,11 @@ class AutonomousPolicyTests(unittest.TestCase):
         result = export_playlists(self.db, self.cfg, self.root / 'site')
         self.assertEqual(result['playlists']['swiss-fr-internet'], 0)
         self.assertEqual(result['exclusions']['unconfirmed_french_audio'], 1)
+        self.db.execute("UPDATE channels SET languages='fra' WHERE id='TV.fr'")
+        self.proof(language='eng')
+        result = export_playlists(self.db, self.cfg, self.root / 'site')
+        self.assertEqual(result['playlists']['swiss-fr-internet'], 0)
+        self.assertEqual(result['exclusions']['non_french_audio'], 1)
 
     def test_service_replacement_is_bound_to_channel_and_service(self):
         source = {**dict(self.source), 'url': 'https://viamotionhsi.netplus.ch/live/eds/test/browser-DASH/test.mpd', 'protocol': 'dash'}

@@ -62,10 +62,13 @@ def eligible(db, source, cfg, audience='public'):
     details = json.loads(check['details'])
     if review['reviewer'] == 'Swiss IPTV FR policy v1':
         languages = db.execute('SELECT languages FROM channels WHERE id=?', (source['channel_id'],)).fetchone()[0].split(',')
+        audio_language = details.get('decode', {}).get('audio_language') or next((m['audio_language'] for m in details.get('manifests', []) if m.get('audio_language')), '')
+        evidence = json.loads(review['notes']).get('language_evidence') or {}
+        corrected = evidence.get('url') == source['url'] and evidence.get('language') in {'fr', 'fra', 'fre'}
+        if audio_language not in {'', 'und', 'fr', 'fra', 'fre'} and not corrected:
+            return None, 'non_french_audio'
         if len(languages) > 1:
-            audio_language = details.get('decode', {}).get('audio_language') or next((m['audio_language'] for m in details.get('manifests', []) if m.get('audio_language')), '')
-            evidence = json.loads(review['notes']).get('language_evidence') or {}
-            if audio_language not in {'fr', 'fra', 'fre'} and not (evidence.get('url') == source['url'] and evidence.get('language') in {'fr', 'fra', 'fre'}):
+            if audio_language not in {'fr', 'fra', 'fre'} and not corrected:
                 return None, 'unconfirmed_french_audio'
     if details.get('is_live') is False:
         return None, 'not_linear_live'
