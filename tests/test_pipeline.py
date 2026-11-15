@@ -102,13 +102,14 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(eligible(self.db, {**dict(source), 'protocol': 'rtp'}, CONFIG['publication'], 'domestic')[1], 'operator_mismatch')
 
     def test_cdn_session_urls_are_not_persisted_in_check_reports(self):
-        proof = {'decode': {'frames': 125}, 'manifests': [{'url': 'https://cdn.example.org/tok_private-session/live/master.m3u8?session=private-query', 'sha256': 'a' * 64}]}
+        proof = {'decode': {'frames': 125}, 'manifests': [{'url': 'https://cdn.example.org/tok_private-session/live/master.m3u8?session=private-query&nimblesessionid=private-nimble', 'sha256': 'a' * 64}]}
         cfg = {**CONFIG['verification'], 'request_delay': 0}
         with patch('swiss_iptv.verify.check_once', return_value=proof):
             verify(self.db, cfg, source_id=self.sid, country='CH', isp='sunrise')
         saved = self.db.execute('SELECT details FROM checks').fetchone()[0]
         self.assertNotIn('private-session', saved)
         self.assertNotIn('private-query', saved)
+        self.assertNotIn('private-nimble', saved)
         self.assertIn('/SESSION_REDACTED/live/master.m3u8', saved)
         self.assertIn('a' * 64, saved)
 
@@ -266,6 +267,37 @@ class PipelineTests(unittest.TestCase):
             result = discover(self.db, config, self.root / 'evidence')
         self.assertEqual(result[0]['access_status'], 'ambiguous_channel_identity')
         self.assertEqual(result[0]['streams'], [])
+
+    def test_literal_dynamically_loaded_player_script(self):
+        page = 'https://example.org/direct'
+        asset = 'https://cdn.example.org/player-live.js'
+        cfg = {**CONFIG, 'official_pages': [{'channel_id': 'TV.ch', 'url': page,
+            'script_patterns': ['player'], 'script_limit': 1}]}
+        document = f'<script>let script = document.createElement("script"); script.src = "{asset}";</script>'
+        def download(url, *args, **kwargs):
+            return (document if url == page else 'const live="https://cdn.example.org/live.m3u8";').encode(), url
+        with patch('swiss_iptv.discover.fetch', side_effect=download) as fetcher:
+            result = discover(self.db, cfg, self.root / 'dynamic-player')
+        self.assertEqual(result[0]['streams'], ['https://cdn.example.org/live.m3u8'])
+        self.assertEqual([call.args[0] for call in fetcher.call_args_list], [page, asset])
+
+    def test_hdr_visio_reads_only_same_site_live_configuration(self):
+        page = 'https://example.org/Direct.html'
+        player = 'https://example.org/visionneuse/visio_v9_js.php?key=live1&habillage=0&mode=html'
+        document = ('<div class="HDR_VISIO" data-url="/visionneuse/visio_v9_js.php?key=replay"></div>'
+                    '<div class="HDR_VISIO" data-url="https://other.example.org/visionneuse/visio_v9_js.php?key=live1"></div>'
+                    '<div class="HDR_VISIO" data-url="/visionneuse/visio_v9_js.php?key=live1&amp;habillage=0"></div>')
+        cfg = {**CONFIG, 'official_pages': [{'channel_id': 'TV.ch', 'url': page, 'hdr_visio': True}]}
+        def download(url, *args, **kwargs):
+            if url == page:
+                return document.encode(), url
+            self.assertEqual(url, player)
+            return json.dumps({'files': [{'url': 'https://cdn.example.org/live.mpd'}],
+                'advertisement': 'https://cdn.example.org/advert.m3u8'}).encode(), url
+        with patch('swiss_iptv.discover.fetch', side_effect=download) as fetcher:
+            result = discover(self.db, cfg, self.root / 'hdr-player')
+        self.assertEqual(result[0]['streams'], ['https://cdn.example.org/live.mpd'])
+        self.assertEqual(fetcher.call_count, 2)
 
     def test_optional_browser_dom_is_recorded_without_session_extraction(self):
         browser = self.root / 'obscura.exe'

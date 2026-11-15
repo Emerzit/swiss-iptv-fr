@@ -35,7 +35,7 @@ def site_payload(directory):
         for entry in entries:
             url = urlparse(entry['url'].replace('://@', '://'))
             if url.username or url.password or '/tok_' in url.path or re.search(
-                r'(?:^|&)(?:session|token|auth|signature|sig|key|expires|z32)=', url.query, re.I
+                r'(?:^|&)(?:session|nimblesessionid|token|auth|signature|sig|key|expires|z32)=', url.query, re.I
             ):
                 raise ValueError('Credentials or temporary sessions must not be published')
             if url.scheme in {'rtp', 'udp'}:

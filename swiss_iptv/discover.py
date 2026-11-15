@@ -153,7 +153,7 @@ def discover(db, config, dest):
                 if resources and not allowed_srg:
                     record['access_status'] = 'drm_required' if record['drm_resources'] else 'token_required'
                 documents.append((api_url, json.dumps(sorted(allowed_srg)), api_sha))
-            assets = re.findall(r'(?:src|href)=["\x27]([^"\x27]+\.(?:jsx?|mjs)(?:\?[^"\x27]*)?)["\x27]', body, re.I)
+            assets = re.findall(r'\b(?:src|href)\s*=\s*["\x27]([^"\x27]+\.(?:jsx?|mjs)(?:\?[^"\x27]*)?)["\x27]', body, re.I)
             assets = list(dict.fromkeys(a for a in assets if any(re.search(p, a) for p in page.get('script_patterns', []))))
             if page.get('follow_live_links'):
                 assets.sort(key=lambda a: (not bool(re.search('player|lecteur|stream|direct|webtv', a, re.I)),
@@ -177,6 +177,24 @@ def discover(db, config, dest):
                     child_sha = hashlib.sha256(child_data).hexdigest()
                     (dest / f'{child_sha}.js').write_bytes(child_data)
                     documents.append((child_url, document_text(child_data), child_sha))
+            if page.get('hdr_visio'):
+                # Public HDR VISIO live1 configuration, as requested by its ordinary HTML player.
+                for tag in re.findall(r'<div\b[^>]*\bHDR_VISIO\b[^>]*>', body, re.I):
+                    location = re.search(r'\bdata-url=["\x27]([^"\x27]+)', tag, re.I)
+                    if not location:
+                        continue
+                    player_url = urljoin(final_url, html.unescape(location[1]))
+                    parsed_url = urlparse(player_url)
+                    if (parsed_url.hostname != urlparse(final_url).hostname or
+                            parsed_url.path != '/visionneuse/visio_v9_js.php' or
+                            dict(parse_qsl(parsed_url.query)).get('key') != 'live1'):
+                        continue
+                    data, player_url = read(player_url + '&mode=html')
+                    settings = json.loads(data)
+                    settings_sha = hashlib.sha256(data).hexdigest()
+                    (dest / f'{settings_sha}.json').write_bytes(data)
+                    documents.append((player_url, json.dumps(settings.get('files', [])), settings_sha))
+                    break
             if page.get('follow_live_links'):
                 # Only literal, public player configuration files, never license/key/token APIs.
                 for document_url, document, _ in list(documents):

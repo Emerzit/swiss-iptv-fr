@@ -338,7 +338,7 @@ def verify(db, cfg, channel=None, source_id=None, limit=10, country='unknown', n
             # Transparent CDN redirects can contain short-lived sessions bound to the viewer IP.
             # Keep the stable entry URL and manifest hashes, not reusable session URLs in reports.
             recorded_details = re.sub(r'/tok_[^/\s"\\]+/', '/SESSION_REDACTED/', json.dumps(details))
-            recorded_details = re.sub(r'([?&](?:session|token|auth|signature|sig|expires|key|z32)=[^&\s"\\]*)',
+            recorded_details = re.sub(r'([?&](?:session|nimblesessionid|token|auth|signature|sig|expires|key|z32)=[^&\s"\\]*)',
                                       lambda m: m[0].split('=')[0] + '=SESSION_REDACTED', recorded_details, flags=re.I)
             db.execute('INSERT INTO checks (source_id,run_id,checked_at,country,network,attempt,status,details) VALUES (?,?,?,?,?,?,?,?)',
                        (source['id'], run_id, now(), country, network, attempt, status, recorded_details))

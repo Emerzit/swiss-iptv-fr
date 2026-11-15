@@ -46,7 +46,8 @@ class RemotePublicationTests(unittest.TestCase):
 
     def test_temporary_session_and_repository_credentials_rejected(self):
         for url in ['https://cdn.example.org/tok_session/live.m3u8', 'https://user:secret@example.org/live.m3u8',
-                    'https://example.org/live.m3u8?token=secret', 'https://example.org/live.m3u8?session=secret']:
+                    'https://example.org/live.m3u8?token=secret', 'https://example.org/live.m3u8?session=secret',
+                    'https://example.org/live.m3u8?nimblesessionid=secret']:
             (self.site / 'swiss-fr.m3u').write_text('#EXTM3U\n#EXTINF:-1,TV\n' + url + '\n', encoding='utf-8')
             with self.assertRaises(ValueError):
                 site_payload(self.site)

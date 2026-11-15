@@ -15,6 +15,10 @@ publication:
   seed_file: data/curated-sources.yaml
   review_files: [data/domestic-reviews.yaml, data/public-reviews.yaml]
   access_holds:
+    viaTelePaese.fr:
+      status: identity_unresolved
+      evidence_url: 'https://viatelepaese.tv/'
+      reason: 'Le domaine historique présente désormais des articles de casino ; identité actuelle du diffuseur non établie.'
     NRJHits.fr:
       status: account_required
       evidence_url: 'https://www.nrj.fr/nrj-hits'
@@ -386,6 +390,10 @@ official_pages:
   - {<<: *public_player, channel_id: TVOnex.ch, url: 'https://tvonex.ch/', regional: true}
   - {<<: *public_player, channel_id: GeneveRegionTelevision.fr, url: 'https://grtv.news/', country: CH, regional: true}
   - {<<: *public_player, channel_id: CPACFrench.ca, url: 'https://www.cpac.ca/fr/', languages: [fra, eng], content_store: '/site/components/cpac-item-lists/livestreams.xml'}
+  - {<<: *public_player, channel_id: TV7Colmar.fr, url: 'https://www.tv7.fr/Direct.html', hdr_visio: true, stream_pattern: '^https://tv7\.live-kd\.com/live/tv7/'}
+  - {<<: *public_player, channel_id: VosgesTV.fr, url: 'https://www.viavosges.tv/Direct.html', hdr_visio: true, stream_pattern: '^https://vosgestv\.live-kd\.com/live/vosgestv/'}
+  - {<<: *public_player, channel_id: TebeoTV.fr, url: 'https://www.tebeo.bzh/direct/', stream_pattern: '^https://tebeo\.streamakaci\.tv/tebeo/'}
+  - {<<: *public_player, channel_id: TVDecouverte.ch, url: 'https://tvdecouverte.ch/live/', regional: true, stream_pattern: '^https://tvdecouverte\.vedge\.infomaniak\.com/livecast/ik:tvdecouverte/manifest\.m3u8$'}
   - {<<: *public_player, channel_id: HANDICAPTV.fr, url: 'https://www.handicaptv.fr/', stream_pattern: '^https://srv\.webtvmanager\.fr:3697/stream/'}
   - {<<: *public_player, channel_id: NRJHits.fr, url: 'https://www.nrj.fr/nrj-hits', stream_pattern: '^https://nrjhits\.nrjaudio\.fm/'}
   - <<: *public_player
