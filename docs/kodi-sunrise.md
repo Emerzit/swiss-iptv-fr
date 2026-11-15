@@ -34,17 +34,11 @@ Le PC n’est pas un serveur vidéo. Kodi contacte directement les infrastructur
 
 La sélection initiale de 54 chaînes avec image et son a été élargie automatiquement. Le [site publié](https://emerzit.github.io/swiss-iptv-fr/) donne le nombre actuel et la qualité décodée de chaque chaîne. RTS 1/2, TF1 Suisse, France 2–5, M6 Suisse et ARTE restent dans l’ordre romand demandé ; les variantes CH sont préférées et les chaînes non validées sont omises. France 24 a été améliorée vers une source Full HD. Kodi garde le choix d’une variante adaptée au matériel et au débit du foyer.
 
-| Liste | Chaînes à la livraison | Guide vérifié |
-|---|---:|---:|
-| `swiss-fr.m3u` | 54 | 45 |
-| `swiss-fr-internet.m3u` | 54 | 45 |
-| `swiss-fr-regional.m3u` | 10 | 8 |
-| `swiss-fr-news.m3u` | 10 | 7 |
-| `swiss-fr-multicast.m3u` | 0 | 0 |
+Les nombres de chaînes et de correspondances EPG de chaque fichier sont actualisés dans le [rapport public](https://emerzit.github.io/swiss-iptv-fr/status.json), afin de suivre les ajouts et retraits automatiques. La liste multicast reste vide tant qu’aucune lecture sur le réseau opérateur correspondant n’est validée.
 
-Sans correspondance EPG validée dans le guide actuel : T18, NOVO19, RMC Life, AB3, RTS Info, BFM Business, TV5MONDE Info, Canal B français et Val TV. Les programmes futurs ont été contrôlés pour les 45 autres chaînes ; leur exactitude éditoriale n’est pas garantie.
+Les correspondances EPG ne sont déclarées que si l’identifiant existe réellement dans le guide et possède des programmes futurs. Les nouveaux rapprochements par nom nécessitent une correspondance exacte et unique, sans remplacer les mappings explicites de variantes. L’exactitude éditoriale des programmes n’est pas garantie.
 
-Les sources peuvent changer. Une panne ou un changement de droits peut réduire la liste au prochain contrôle. Aucun lien nouveau n’est approuvé automatiquement et les décisions existantes ne sont pas prolongées sans revue. La collecte autonome des guides reste à développer ; l’EPG actuel dépend d’EPGSHARE01.
+Les sources peuvent changer. Une panne ou un changement de droits peut réduire la liste au prochain contrôle. Les nouveaux liens et renouvellements automatiques suivent les [contrôles de provenance, d’accès et de lecture](automatisation.md). Le guide est vérifié automatiquement, tandis que l’EPG actuel reste fourni par EPGSHARE01.
 
 Les anciens guides XMLTV.ch et XMLTV.fr restent des replis non fonctionnels au dernier contrôle (HTTP 503 et certificat TLS non conforme). Aucune validation TLS n’est désactivée. Les URL de session CDN temporaires ne sont jamais copiées dans la playlist : le lecteur utilise l’entrée publique stable pour obtenir sa propre redirection.
 

@@ -95,7 +95,7 @@ La publication exige une provenance, une décision positive pour le périmètre 
 
 Les décisions expirent après 90 jours, les lectures après 48 h et les contrôles EPG après 24 h. Les décisions automatiques sont réévaluées sur des preuves actuelles ; la date n’est pas simplement repoussée. Une décision éditoriale publique arrivée à échéance ne peut être renouvelée que si elle satisfait à nouveau les mêmes contrôles de provenance et d’accès. La revue concerne un annuaire de liens externes, sans licence des programmes ni permission écrite de chaque titulaire. [Règles, rotation et limites](docs/automatisation.md).
 
-Le guide CH1 d’[EPGSHARE01](https://epgshare01.online/) a des programmes futurs pour 45 chaînes de la sélection courante. Il reste fourni par ce tiers, sans copie des grilles sur GitHub. XMLTV.ch (HTTP 503) et XMLTV.fr (certificat TLS non conforme) restent des replis non fonctionnels au dernier contrôle. Aucune vérification TLS n’est désactivée.
+La couverture actuelle du guide CH1 d’[EPGSHARE01](https://epgshare01.online/) est indiquée sur le site et dans `status.json`. Il reste fourni par ce tiers, sans copie des grilles sur GitHub. XMLTV.ch (HTTP 503) et XMLTV.fr (certificat TLS non conforme) restent des replis non fonctionnels au dernier contrôle. Aucune vérification TLS n’est désactivée.
 
 ## Développement et audit
 
