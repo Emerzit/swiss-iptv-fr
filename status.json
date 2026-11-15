@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-15T16:16:08.496736+00:00",
+  "generated_at": "2026-11-15T16:20:57.354519+00:00",
   "audience": "public",
   "playlists": {
-    "swiss-fr": 56,
-    "swiss-fr-internet": 56,
+    "swiss-fr": 57,
+    "swiss-fr-internet": 57,
     "swiss-fr-multicast": 0,
     "swiss-fr-regional": 10,
-    "swiss-fr-news": 11
+    "swiss-fr-news": 12
   },
   "exclusions": {
     "rights_pending": 865
@@ -1190,6 +1190,27 @@
       }
     },
     {
+      "id": "BFMTechCo.fr",
+      "name": "BFM Tech & Co",
+      "source_id": "abc95b6524f911e651f29311",
+      "url": "https://live-cdn-technco-euw1.bfmb.bct.nextradiotv.com/master.m3u8",
+      "checked_at": "2026-11-15T16:20:34.478422+00:00",
+      "width": 960,
+      "height": 540,
+      "fps": 25.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 125,
+      "decoded_seconds": 5.0,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 1700000,
+        "failed_higher_variants": []
+      }
+    },
+    {
       "id": "ZitataTV.mq",
       "name": "Zitata TV",
       "source_id": "b662337c55347ec8d7a94bae",
@@ -1213,8 +1234,7 @@
   ],
   "changes": {
     "added": [
-      "7Info.ci",
-      "ZitataTV.mq"
+      "BFMTechCo.fr"
     ],
     "removed": [],
     "source_changed": []
