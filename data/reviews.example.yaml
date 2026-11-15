@@ -1,0 +1,13 @@
+# Exemple non applicable : renseigner une vraie preuve et une décision motivée.
+# Le SHA doit être celui du document de preuve archivé, pas celui de la playlist.
+reviews:
+  - source_id: "REMPLACER_PAR_ID_SOURCE"
+    decision: pending
+    evidence_url: "https://diffuseur.example/conditions"
+    evidence_sha256: "REMPLACER_PAR_SHA256_DU_DOCUMENT"
+    reviewer: "Nom du responsable de la revue"
+    reviewed_at: "2026-11-15T00:00:00+01:00"
+    scope: domestic_links # public_links exige aussi une revue de publication publique du lien et du logo
+    notes: "Vérifier gratuité, droits d'accès CH, lecteur externe, publication du lien, logo et restrictions opérateur."
+    access_ch: false
+    operator: "" # swisscom, init7, citycable ou netplus si applicable

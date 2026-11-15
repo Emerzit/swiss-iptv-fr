@@ -1,0 +1,32 @@
+name: Audit Internet manuel
+on:
+  workflow_dispatch:
+# Phase 1 : pas de schedule avant revue des résultats et du budget de requêtes.
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: python -m pip install .
+      - run: python tools/acquire.py
+      - run: python -m swiss_iptv bootstrap
+      - run: python -m swiss_iptv discover
+      - run: python -m swiss_iptv epg-check
+      - run: python tools/sample.py
+      - run: python -m swiss_iptv report
+      # Aucun catalogue de liens non approuvés dans les artefacts publics.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rapport-internet
+          path: |
+            output/audit/verification.md
+            output/audit/summary.json
+      # Le runner ne prouve ni une IP CH, ni un accès aux réseaux opérateur.
+      # Il ne met pas à jour les décisions éditoriales ou GitHub Pages.

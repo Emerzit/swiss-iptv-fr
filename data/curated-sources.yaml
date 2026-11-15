@@ -1,0 +1,1272 @@
+description: Sources publiques exactes examinées ; aucune approbation n’est créée
+  par le chargement de ce catalogue.
+sources:
+- source_id: 4d9eb61bd00f4d3f44838397
+  channel:
+    id: RTS1.ch
+    name: RTS 1
+    country: CH
+    languages: fra
+    category: unknown
+    logo: https://i.imgur.com/OP5lHv9.png
+    epg_id: RTS1.ch
+    website: https://www.rts.ch/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/rts1hd/browser-HLS8/rts1hd.m3u8
+  official: false
+  priority: 50
+  epg_id: RTS1.ch
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 0ee08bc1f5ddd22a952ec6b6
+  channel:
+    id: RTS2.ch
+    name: RTS 2
+    country: CH
+    languages: fra
+    category: unknown
+    logo: https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/RTS_2_logo_2019.svg/960px-RTS_2_logo_2019.svg.png
+    epg_id: RTS2.ch
+    website: https://www.rts.ch/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/rts2hd/browser-HLS8/rts2hd.m3u8
+  official: false
+  priority: 50
+  epg_id: RTS2.ch
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 22811cdd90e328bc40bd9a13
+  channel:
+    id: TF1Switzerland.ch
+    name: TF1 Suisse
+    country: CH
+    languages: fra
+    category: unknown
+    logo: https://i.imgur.com/4JynpVF.png
+    epg_id: TF1Switzerland.ch
+    website: https://www.tf1.fr/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/tf1hd/browser-HLS8/tf1hd.m3u8
+  official: false
+  priority: 50
+  epg_id: TF1.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: ceef4b9da74aafda1fcd7a7c
+  channel:
+    id: France2.fr
+    name: France 2
+    country: FR
+    languages: fra
+    category: general
+    logo: https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/France_2_2018.svg/960px-France_2_2018.svg.png
+    epg_id: France2.fr
+    website: https://www.france.tv/france-2/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/france2hd/browser-HLS8/france2hd.m3u8
+  official: false
+  priority: 50
+  epg_id: France2.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 0ade8f85e65121d6419a94e5
+  channel:
+    id: France3.fr
+    name: France 3
+    country: FR
+    languages: fra
+    category: general
+    logo: https://upload.wikimedia.org/wikipedia/commons/2/2b/France_3_Alsace_-_Logo_2018.svg
+    epg_id: France3.fr
+    website: https://www.france.tv/france-3/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/france3hd/browser-HLS8/france3hd.m3u8
+  official: false
+  priority: 50
+  epg_id: France3.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: ebdb4cbcb7a3dd2b73caa890
+  channel:
+    id: France4.fr
+    name: France 4
+    country: FR
+    languages: fra
+    category: kids
+    logo: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/France_4_2018.svg/960px-France_4_2018.svg.png
+    epg_id: France4.fr
+    website: https://www.france.tv/france-4/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/france4hd/browser-HLS8/france4hd.m3u8
+  official: false
+  priority: 50
+  epg_id: France4.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: ee34dcf391bdf5b67f2efed7
+  channel:
+    id: France5.fr
+    name: France 5
+    country: FR
+    languages: fra
+    category: general
+    logo: https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/France_5_2018.svg/960px-France_5_2018.svg.png
+    epg_id: France5.fr
+    website: https://www.france.tv/france-5/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/france5hd/browser-HLS8/france5hd.m3u8
+  official: false
+  priority: 50
+  epg_id: France5.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 93908f069b4b06b89f54d568
+  channel:
+    id: M6.ch
+    name: M6 Suisse
+    country: CH
+    languages: fra
+    category: entertainment
+    logo: https://i.imgur.com/7GVp3fW.png
+    epg_id: M6.ch
+    website: https://www.6play.fr/m6
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/m6hd/browser-HLS8/m6hd.m3u8
+  official: false
+  priority: 50
+  epg_id: m6.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: b17e15a11f751ec393a961d0
+  channel:
+    id: arte.fr
+    name: arte
+    country: FR
+    languages: fra
+    category: entertainment
+    logo: https://i.imgur.com/ecXMjNl.png
+    epg_id: arte.fr
+    website: https://www.arte.tv/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/artehd/browser-HLS8/artehd.m3u8
+  official: false
+  priority: 50
+  epg_id: arte.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 1d930c5dc1ed6c40e5180478
+  channel:
+    id: W9Switzerland.ch
+    name: W9 Suisse
+    country: CH
+    languages: fra
+    category: unknown
+    logo: https://i.imgur.com/rLYQCBS.png
+    epg_id: W9Switzerland.ch
+    website: https://www.6play.fr/w9
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/w9/browser-HLS8/w9.m3u8
+  official: false
+  priority: 50
+  epg_id: w9.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: d230a54f3e0ad6ac83e0d67c
+  channel:
+    id: TMC.fr
+    name: TMC
+    country: FR
+    languages: fra
+    category: general
+    logo: https://upload.wikimedia.org/wikipedia/en/thumb/5/54/TMC_logo.svg/960px-TMC_logo.svg.png
+    epg_id: TMC.fr
+    website: https://www.tf1.fr/tmc
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/tmc/browser-HLS8/tmc.m3u8
+  official: false
+  priority: 50
+  epg_id: tmc.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 077f8b810459aa4bed74a826
+  channel:
+    id: TFXSwitzerland.ch
+    name: TFX Suisse
+    country: CH
+    languages: fra
+    category: unknown
+    logo: https://i.imgur.com/bA1pma2.png
+    epg_id: TFXSwitzerland.ch
+    website: https://www.tf1.fr/tfx
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/nt1/browser-HLS8/nt1.m3u8
+  official: false
+  priority: 50
+  epg_id: tfx.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: f060fc89f8501746eeebb696
+  channel:
+    id: 6terSwitzerland.ch
+    name: 6ter Suisse
+    country: CH
+    languages: fra
+    category: entertainment
+    logo: https://i.imgur.com/PUL07KK.png
+    epg_id: 6terSwitzerland.ch
+    website: https://www.6play.fr/6ter
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/6ter/browser-HLS8/6ter.m3u8
+  official: false
+  priority: 50
+  epg_id: 6ter.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: a63bb4a421430855a1adc40a
+  channel:
+    id: TV5MondeFranceBelgiumSwitzerlandMonaco.fr
+    name: TV5MONDE FBS
+    country: FR
+    languages: fra
+    category: general
+    logo: https://i.imgur.com/WmRbudc.png
+    epg_id: TV5MondeFranceBelgiumSwitzerlandMonaco.fr
+    website: https://live.tv5monde.com/fbs.html
+    regional: 0
+  url: https://ott.tv5monde.com/Content/HLS/Live/channel(fbs)/variant.m3u8
+  official: true
+  priority: 10
+  epg_id: TV5MondeFranceBelgiumSwitzerlandMonaco.fr@SD
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-org/iptv/568ba9b9d6f1d476e0ecf206d83e71c171568d81/streams/fr.m3u
+    sha256: 03b8a2cb1625ea8a6112d549ffa643ec378aa4d2d9550f65053baece3cb4696e
+    observed_at: '2026-11-15T08:50:16.190050+00:00'
+  - url: https://iptv-org.github.io/iptv/languages/fra.m3u
+    sha256: aa95a5ec6472328217b2f0a47770a0319cf990b9a6a5d80e8246036497117aef
+    observed_at: '2026-11-15T08:50:31.785489+00:00'
+  - url: https://ott.tv5monde.com/Content/HLS/Live/channel(fbs)/variant.m3u8
+    sha256: 19220324fe697aa238814dbe1c0c3eb1eb45d3be94111d174289b14d35a6ff52
+    observed_at: '2026-11-15T10:24:11.415760+00:00'
+- source_id: f2466ab0cfbedc1ad594cb44
+  channel:
+    id: KTO.fr
+    name: KTO
+    country: FR
+    languages: fra
+    category: religious
+    logo: https://i.imgur.com/EY6TsdV.png
+    epg_id: KTO.fr
+    website: https://www.ktotv.com/
+    regional: 0
+  url: https://livekto.akamaized.net/hls/live/20000018/ktotv/master.m3u8
+  official: true
+  priority: 10
+  epg_id: kto.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+  - url: https://www.ktotv.com/
+    sha256: 6f74a2089f92c06722fab1f93a900dac215205173ea86b0ed3186bb6cd682154
+    observed_at: '2026-11-15T10:06:35.671083+00:00'
+  - url: https://www.ktotv.com/
+    sha256: 7e8a7d72713058a78d8117ae63fe7756629c5c38c9e6f6a28017462b4d6f076f
+    observed_at: '2026-11-15T10:34:11.729931+00:00'
+  - url: https://www.ktotv.com/
+    sha256: 43eee4c5670220c34231f2d114cc1d0499e66240db4ac89e017f2e7ba7086b25
+    observed_at: '2026-11-15T11:32:58.507535+00:00'
+- source_id: 755edb10f7b4654cf89737b5
+  channel:
+    id: TVMonaco.mc
+    name: TV Monaco
+    country: MC
+    languages: fra
+    category: general
+    logo: https://upload.wikimedia.org/wikipedia/commons/4/4b/TVMonaco_2023.svg
+    epg_id: TVMonaco.mc
+    website: https://www.tvmonaco.com
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/monacotv/browser-HLS8/monacotv.m3u8
+  official: false
+  priority: 50
+  epg_id: monacotv.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: ed6a0dc3971ff5e82cbfa56d
+  channel:
+    id: T18.fr
+    name: T18
+    country: FR
+    languages: fra
+    category: general
+    logo: https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Logo_de_la_chaine_T18.svg/500px-Logo_de_la_chaine_T18.svg.png
+    epg_id: T18.fr
+    website: null
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/t18/browser-HLS8/t18.m3u8
+  official: false
+  priority: 50
+  epg_id: t18.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 50b29937ba5df9dbfc50f2e9
+  channel:
+    id: NOVO19.fr
+    name: NOVO19
+    country: FR
+    languages: fra
+    category: general
+    logo: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Logo_NOVO19_-_2025.svg/960px-Logo_NOVO19_-_2025.svg.png
+    epg_id: NOVO19.fr
+    website: null
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/novo19/browser-HLS8/novo19.m3u8
+  official: false
+  priority: 50
+  epg_id: novo19.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: b45bc3c97dc0eaf452856440
+  channel:
+    id: TF1SeriesFilms.fr
+    name: TF1 Series Films
+    country: FR
+    languages: fra
+    category: movies
+    logo: https://i.imgur.com/4CJIDKQ.png
+    epg_id: TF1SeriesFilms.fr
+    website: https://www.tf1.fr/tf1-series-films
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/hd1/browser-HLS8/hd1.m3u8
+  official: false
+  priority: 50
+  epg_id: tf1seriesfilms.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 65b501f7989d821f16e9355a
+  channel:
+    id: RMCLife.fr
+    name: RMC Life
+    country: FR
+    languages: fra
+    category: entertainment,interactive
+    logo: https://img1.dc2.oqee.net/channel_pictures/3606/w512
+    epg_id: RMCLife.fr
+    website: https://www.rmcbfmplay.com/chaine/rmc-life
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/cherie25/browser-HLS8/cherie25.m3u8
+  official: false
+  priority: 50
+  epg_id: rmclife.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: cd139b13d00fb110eb54db87
+  channel:
+    id: AB3.be
+    name: AB3
+    country: BE
+    languages: fra
+    category: entertainment
+    logo: https://upload.wikimedia.org/wikipedia/commons/5/5d/AB3_2025.svg
+    epg_id: AB3.be
+    website: https://www.ab3.be/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/ab3/browser-HLS8/ab3.m3u8
+  official: false
+  priority: 50
+  epg_id: ab3.tv
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 1c2e93906f36f2bdd1da26ec
+  channel:
+    id: RMCDecouverte.fr
+    name: RMC Decouverte
+    country: FR
+    languages: fra
+    category: unknown
+    logo: https://upload.wikimedia.org/wikipedia/fr/thumb/b/b3/RMC_D%C3%A9couverte_logo_2017.svg/960px-RMC_D%C3%A9couverte_logo_2017.svg.png
+    epg_id: RMCDecouverte.fr
+    website: http://rmcdecouverte.bfmtv.com/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/rmcdecouverte/browser-HLS8/rmcdecouverte.m3u8
+  official: false
+  priority: 50
+  epg_id: rmcdecouverte.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 62a6081a9ae6dbe0aa2525d0
+  channel:
+    id: RMCStory.fr
+    name: RMC Story
+    country: FR
+    languages: fra
+    category: unknown
+    logo: https://upload.wikimedia.org/wikipedia/fr/thumb/4/43/Logo_RMC_Story_2025.png/960px-Logo_RMC_Story_2025.png
+    epg_id: RMCStory.fr
+    website: http://www.numero23.fr/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/numero23/browser-HLS8/numero23.m3u8
+  official: false
+  priority: 50
+  epg_id: numero23.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: e40eecb4573d947b6cdf67f9
+  channel:
+    id: RTSInfo.ch
+    name: RTS Info
+    country: CH
+    languages: fra
+    category: news
+    logo: https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/switzerland/rts-info-ch.png
+    epg_id: RTSInfo.ch
+    website: https://www.rts.ch/
+    regional: 0
+  url: https://rtsinfo-d.akamaized.net/out/v1/lsvs/rts-info/cmaf/hls-master.m3u8?dw=7201
+  official: true
+  priority: 10
+  epg_id: ''
+  origins:
+  - url: https://il.srgssr.ch/integrationlayer/2.0/mediaComposition/byUrn/urn:rts:video:1967124.json
+    sha256: 11ce1f937e16c53250ffcd750054d768032d76f98e7b1d4bafaa75229dfb8063
+    observed_at: '2026-11-15T10:06:02.567320+00:00'
+  - url: https://www.rts.ch/play/tv/direct/rts-info?tvLiveId=1967124
+    sha256: 6d9744a3349a2597c5ca7f8a8f7ec08a04def8965f3aad54beae119c824f267e
+    observed_at: '2026-11-15T10:06:02.567320+00:00'
+  - url: https://il.srgssr.ch/integrationlayer/2.0/mediaComposition/byUrn/urn:rts:video:1967124.json
+    sha256: 8860286d009376604b47a5a9abc064fbe7b7009204f6f7e072b06b414ca71185
+    observed_at: '2026-11-15T10:33:38.156932+00:00'
+  - url: https://www.rts.ch/play/tv/direct/rts-info?tvLiveId=1967124
+    sha256: 248f5282fc92792192eb0897c2adab109206511d061e64be3c87de4d3b0399b0
+    observed_at: '2026-11-15T10:33:38.156932+00:00'
+  - url: https://il.srgssr.ch/integrationlayer/2.0/mediaComposition/byUrn/urn:rts:video:1967124.json
+    sha256: 44f027a85f8e80b10b52fa839d13ce3f5e7e8f6d2a77334452a08c61099c0682
+    observed_at: '2026-11-15T11:32:18.766555+00:00'
+  - url: https://www.rts.ch/play/tv/direct/rts-info?tvLiveId=1967124
+    sha256: 68df8e5a41db97c9cd86284ed696102604fc58b4d82474fd35ef441f03f8c2de
+    observed_at: '2026-11-15T11:32:18.766555+00:00'
+- source_id: 832354b9cc6c467c013fb99d
+  channel:
+    id: Franceinfo.fr
+    name: Franceinfo
+    country: FR
+    languages: fra
+    category: news
+    logo: https://i.imgur.com/eITXz6A.png
+    epg_id: Franceinfo.fr
+    website: https://www.francetvinfo.fr/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/franceinfo/browser-HLS8/franceinfo.m3u8
+  official: false
+  priority: 50
+  epg_id: franceinfo.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: e946a5956c5de3b38a0120e1
+  channel:
+    id: BFMTV.fr
+    name: BFM TV
+    country: FR
+    languages: fra
+    category: news
+    logo: https://i.imgur.com/YJCcczD.png
+    epg_id: BFMTV.fr
+    website: https://www.bfmtv.com/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/bfmtv/browser-HLS8/bfmtv.m3u8
+  official: false
+  priority: 50
+  epg_id: bfmtv.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 4d549754821b12b8dcc3d07b
+  channel:
+    id: BFMBusiness.fr
+    name: BFM Business
+    country: FR
+    languages: fra
+    category: business,news
+    logo: https://i.imgur.com/psqIHn4.png
+    epg_id: BFMBusiness.fr
+    website: https://www.bfmtv.com/economie/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/bfmbusiness/browser-HLS8/bfmbusiness.m3u8
+  official: false
+  priority: 50
+  epg_id: bfmbusiness.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 9669e293bb02aaf422d17eec
+  channel:
+    id: CNews.fr
+    name: CNews
+    country: FR
+    languages: fra
+    category: news
+    logo: https://i.imgur.com/sSNhk2g.png
+    epg_id: CNews.fr
+    website: https://www.cnews.fr/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/itele/browser-HLS8/itele.m3u8
+  official: false
+  priority: 50
+  epg_id: itele.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 0f99c997998d290dfb551388
+  channel:
+    id: LCI.fr
+    name: LCI
+    country: FR
+    languages: fra
+    category: news
+    logo: https://i.imgur.com/DED8EXs.png
+    epg_id: LCI.fr
+    website: https://www.lci.fr/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/lci/browser-HLS8/lci.m3u8
+  official: false
+  priority: 50
+  epg_id: lci.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 6cd09ab290e5c73df8409956
+  channel:
+    id: LCP.fr
+    name: LCP
+    country: FR
+    languages: fra
+    category: legislative
+    logo: https://i.imgur.com/k7UImOJ.png
+    epg_id: LCP.fr
+    website: http://www.lcp.fr/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/lcp/browser-HLS8/lcp.m3u8
+  official: false
+  priority: 50
+  epg_id: lcp.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 1f95d41ffa750e32cc417041
+  channel:
+    id: EuronewsFrench.fr
+    name: Euronews French
+    country: FR
+    languages: fra
+    category: news
+    logo: https://i.imgur.com/5A0Wnrv.png
+    epg_id: EuronewsFrench.fr
+    website: https://fr.euronews.com/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/euronews/browser-HLS8/euronews.m3u8
+  official: false
+  priority: 50
+  epg_id: euronews.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 5b622cff32aaf7d06fb02a0f
+  channel:
+    id: France24.fr
+    name: France 24
+    country: FR
+    languages: fra
+    category: news
+    logo: https://dtil.tmsimg.com/assets/s159111_ld_h15_aa.png?lock=720x540
+    epg_id: France24.fr
+    website: https://www.france24.com/
+    regional: 0
+  url: https://live.france24.com/hls/live/2037179/F24_FR_HI_HLS/master_500.m3u8
+  official: true
+  priority: 10
+  epg_id: France24.fr@French
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-org/iptv/568ba9b9d6f1d476e0ecf206d83e71c171568d81/streams/fr.m3u
+    sha256: 03b8a2cb1625ea8a6112d549ffa643ec378aa4d2d9550f65053baece3cb4696e
+    observed_at: '2026-11-15T08:50:16.190050+00:00'
+  - url: https://live.france24.com/hls/live/2037179/F24_FR_HI_HLS/master_500.m3u8
+    sha256: 4d9fddcc225312b224ae448ad27d56daf5fe9e422070f4d2fed27bfa1588f055
+    observed_at: '2026-11-15T10:20:21.618971+00:00'
+- source_id: 6b42c435fbed3a8e6b1d2be7
+  channel:
+    id: TV5MondeInfo.fr
+    name: TV5MONDE Info
+    country: FR
+    languages: fra
+    category: news
+    logo: https://i.imgur.com/AJx5Fy2.png
+    epg_id: TV5MondeInfo.fr
+    website: https://maghreb-orient.tv5monde.com/en/direct-tv5monde-info
+    regional: 0
+  url: https://ott.tv5monde.com/Content/HLS/Live/channel(info)/variant.m3u8
+  official: true
+  priority: 10
+  epg_id: TV5MondeInfo.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+  - url: https://raw.githubusercontent.com/iptv-org/iptv/568ba9b9d6f1d476e0ecf206d83e71c171568d81/streams/fr.m3u
+    sha256: 03b8a2cb1625ea8a6112d549ffa643ec378aa4d2d9550f65053baece3cb4696e
+    observed_at: '2026-11-15T08:50:16.190050+00:00'
+  - url: https://ott.tv5monde.com/Content/HLS/Live/channel(info)/variant.m3u8
+    sha256: 414b8ad2c851ec9d1579872e77d90d24899a14dbbcdc8b972ad7b9d249f880b7
+    observed_at: '2026-11-15T10:20:25.255107+00:00'
+- source_id: f143761543372297f59eade1
+  channel:
+    id: LemanBleu.ch
+    name: Léman Bleu
+    country: CH
+    languages: fra
+    category: news
+    logo: https://i.imgur.com/6ijbSTr.png
+    epg_id: LemanBleu.ch
+    website: https://www.lemanbleu.ch/fr/Direct/Direct.html
+    regional: 1
+  url: https://naxoo.vedge.infomaniak.com/livecast/ik:naxoo/manifest.m3u8
+  official: true
+  priority: 10
+  epg_id: lemanbleu.ch
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/iktv.m3u8
+    sha256: bcc75869386840dd1d5f422f3c0e16a7c574e8f246a398c987e33ec44ca6e408
+    observed_at: '2026-11-15T08:50:00.220390+00:00'
+  - url: https://assets.lemanbleu.ch/js_js20221109_v33_7F40BE217DC11E41900EF2EFA9158118.jsx
+    sha256: e6f7cbdf70f76b0dbdbdb12fdba1e3003ef5f988b1a6f9470d5beb49c3bb93c2
+    observed_at: '2026-11-15T10:08:50.307605+00:00'
+  - url: https://www.lemanbleu.ch/fr/Direct/Direct.html
+    sha256: 5bb4511aa3ee91428dd2dd6e751b3418dd0f0a3e62cb4881a7d7c61bd05c95ee
+    observed_at: '2026-11-15T10:08:50.307605+00:00'
+  - url: https://www.lemanbleu.ch/fr/Direct/Direct.html
+    sha256: e2daa301fec768518eb04ae6f9b1aee5ed8ace1ce9a0075052999757bf011032
+    observed_at: '2026-11-15T10:33:41.726125+00:00'
+  - url: https://www.lemanbleu.ch/fr/Direct/Direct.html
+    sha256: b3d4df23ea0eddcc2131189d7f07d03cba4c5b62224f566d00f74b810729c07d
+    observed_at: '2026-11-15T11:32:21.249642+00:00'
+- source_id: 96643867a2ba87d16a54834f
+  channel:
+    id: TV8MontBlanc.fr
+    name: TV8 Mont-Blanc
+    country: FR
+    languages: fra
+    category: unknown
+    logo: https://i.imgur.com/dOXRNVj.png
+    epg_id: TV8MontBlanc.fr
+    website: http://www.tv8montblanc.fr/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/tv8montblanc/browser-HLS8/tv8montblanc.m3u8
+  official: false
+  priority: 50
+  epg_id: tv8montblanc.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 03e456deb8e36117bd0e8af1
+  channel:
+    id: Canal9.ch
+    name: Canal 9
+    country: CH
+    languages: fra
+    category: unknown
+    logo: https://i.imgur.com/TNciMh2.png
+    epg_id: Canal9.ch
+    website: https://canal9.ch/fr/direct/
+    regional: 1
+  url: https://livehd.vedge.infomaniak.com/livecast/ik:livehd/playlist.m3u8
+  official: true
+  priority: 10
+  epg_id: ''
+  origins:
+  - url: https://canal9.ch/fr/
+    sha256: b3cca39a001490e090abccf12421e90c9e8e59d52ef5345b491b709ecbab2d7c
+    observed_at: '2026-11-15T10:08:53.758702+00:00'
+  - url: https://player.infomaniak.com/playerConfig.php?channel=4310&player=2814
+    sha256: d2ba68e4f343c40067e0e0be64d2381b8d8b4afae4e97901298b7e2744c42c60
+    observed_at: '2026-11-15T10:08:53.758702+00:00'
+  - url: https://canal9.ch/fr/
+    sha256: 9a4e0096cd5db5b32f350cf499b3e757cdf977186f09ea392b6085e57e84947c
+    observed_at: '2026-11-15T10:33:47.335202+00:00'
+  - url: https://canal9.ch/fr/
+    sha256: aece6a957f21a8c3c56470b6a07b37bdaa8de2c64b16be4d8c66c4b176216946
+    observed_at: '2026-11-15T11:32:27.830107+00:00'
+- source_id: e5c9d4c1c2e76a698dfe12f2
+  channel:
+    id: CanalAlphaJura.ch
+    name: Canal Alpha Jura
+    country: CH
+    languages: fra
+    category: CH Regional JU
+    logo: https://i.imgur.com/eQ8xHK9.jpg
+    epg_id: CanalAlphaJura.ch
+    website: null
+    regional: 1
+  url: https://canalalphaju.vedge.infomaniak.com/livecast/ik:canalalphaju/manifest.m3u8
+  official: true
+  priority: 10
+  epg_id: ''
+  origins:
+  - url: https://www.canalalpha.ch/_next/static/chunks/654-df54721f9df81155.js
+    sha256: 7c3ad7d251ea59ee62d6443daa4469deea9e4e746c00db98e1747a547bb513cc
+    observed_at: '2026-11-15T10:06:30.478097+00:00'
+  - url: https://www.canalalpha.ch/tv
+    sha256: 1b62b104adcee1c0e6016affdff6c9f80b708d8f7aa6ec164eb926588ad97b8d
+    observed_at: '2026-11-15T10:06:30.478097+00:00'
+- source_id: 6d3289f3f24ee85fdad3743b
+  channel:
+    id: CanalAlphaNeuchatel.ch
+    name: Canal Alpha Neuchâtel
+    country: CH
+    languages: fra
+    category: CH Regional NE
+    logo: https://i.imgur.com/eQ8xHK9.jpg
+    epg_id: CanalAlphaNeuchatel.ch
+    website: null
+    regional: 1
+  url: https://canalalpha.vedge.infomaniak.com/livecast/ik:canalalpha/playlist.m3u8
+  official: true
+  priority: 10
+  epg_id: CanalAlphaNeuchatel.ch@SD
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-org/iptv/568ba9b9d6f1d476e0ecf206d83e71c171568d81/streams/ch.m3u
+    sha256: 82d130dfe67daaaa5c5cfd7b1f774fc51ef0c9c1e99598253ce8abdadc80bb3a
+    observed_at: '2026-11-15T08:50:15.720200+00:00'
+  - url: https://www.canalalpha.ch/_next/static/chunks/654-df54721f9df81155.js
+    sha256: 7c3ad7d251ea59ee62d6443daa4469deea9e4e746c00db98e1747a547bb513cc
+    observed_at: '2026-11-15T10:06:16.293262+00:00'
+  - url: https://www.canalalpha.ch/tv
+    sha256: 1b62b104adcee1c0e6016affdff6c9f80b708d8f7aa6ec164eb926588ad97b8d
+    observed_at: '2026-11-15T10:06:16.293262+00:00'
+- source_id: d7c5f990686f0bade7c0c73e
+  channel:
+    id: LaTele.ch
+    name: La Télé
+    country: CH
+    languages: fra
+    category: general
+    logo: https://i.imgur.com/DdCfl4n.png
+    epg_id: LaTele.ch
+    website: https://latele.ch/
+    regional: 1
+  url: https://latele2.vedge.infomaniak.com/livecast/ik:latele2/manifest.m3u8?DVR
+  official: true
+  priority: 10
+  epg_id: ''
+  origins:
+  - url: https://latele.ch/build/assets/LiveTV-BW5-dQAC.js
+    sha256: 20ca68efda66180a0e2110ba92486ace101847112446842ab7627b977ad0ce7b
+    observed_at: '2026-11-15T09:09:06.117548+00:00'
+  - url: https://latele.ch/live
+    sha256: dd7a44edc9fc61fad3b8c62498136afd345aaad932e571711a18a2e701653cd0
+    observed_at: '2026-11-15T09:09:06.117548+00:00'
+  - url: https://latele.ch/live
+    sha256: d4f297cac3d1f2045a2ea34829ca3ab437c51a28bcfd7cc443b0b9b0a3d7470e
+    observed_at: '2026-11-15T10:06:07.854767+00:00'
+  - url: https://latele.ch/live
+    sha256: b3ceccf5a1872dfff23060b4323c85e74df8a80c1ad848c0b10f768d325c400e
+    observed_at: '2026-11-15T10:33:44.128632+00:00'
+  - url: https://latele.ch/live
+    sha256: 0de96f183f82185c3aebb3044359c3e78f6bcaeb91a48aa8f14cde0deb9c7e56
+    observed_at: '2026-11-15T11:32:24.561502+00:00'
+- source_id: 7992f8b8df3b3379f9c45703
+  channel:
+    id: TeleBielingue.ch
+    name: TeleBielingue
+    country: CH
+    languages: fra
+    category: unknown
+    logo: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/TeleBielingue_Logo.svg/960px-TeleBielingue_Logo.svg.png
+    epg_id: TeleBielingue.ch
+    website: null
+    regional: 1
+  url: https://viamotionhsi.netplus.ch/live/eds/telebielingue/browser-HLS8/telebielingue.m3u8
+  official: false
+  priority: 50
+  epg_id: telebielingue.ch
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: c7e7b9dd2d7590a9c43ad9d3
+  channel:
+    id: CanalBFr.ch
+    name: Canal B français
+    country: CH
+    languages: fra
+    category: CH Regional
+    logo: https://picserve.netplus.ch/channels/canalbfr.png
+    epg_id: CanalBFr.ch
+    website: ''
+    regional: 1
+  url: https://viamotionhsi.netplus.ch/live/eds/canalbfr/browser-HLS8/canalbfr.m3u8
+  official: false
+  priority: 50
+  epg_id: canalbfr.ch
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 9fb7eb381dabdd17f4fcad3b
+  channel:
+    id: MaxTV.ch
+    name: MaxTV / DieuTV
+    country: CH
+    languages: fra
+    category: general
+    logo: https://i.imgur.com/13PjEk8.png
+    epg_id: MaxTV.ch
+    website: http://www.maxtv.ch/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/maxtv/browser-HLS8/maxtv.m3u8
+  official: false
+  priority: 50
+  epg_id: maxtv.ch
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 4f1371a306e073603df05733
+  channel:
+    id: NRTV.ch
+    name: NRTV
+    country: CH
+    languages: fra
+    category: general
+    logo: https://i.imgur.com/sXiFPfk.png
+    epg_id: NRTV.ch
+    website: http://www.nrtv.ch/
+    regional: 1
+  url: https://viamotionhsi.netplus.ch/live/eds/nrtv/browser-HLS8/nrtv.m3u8
+  official: false
+  priority: 50
+  epg_id: nrtv.ch
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 3d129dc707b4cd77f1e22300
+  channel:
+    id: ValTV.ch
+    name: Val TV
+    country: CH
+    languages: fra
+    category: general
+    logo: https://i.imgur.com/kanMGTD.png
+    epg_id: ValTV.ch
+    website: https://www.valtv.ch/
+    regional: 1
+  url: https://viamotionhsi.netplus.ch/live/eds/valtv/browser-HLS8/valtv.m3u8
+  official: false
+  priority: 50
+  epg_id: valtv.ch
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 5562de0193398a4b8d51d011
+  channel:
+    id: Carac1.ch
+    name: Carac 1
+    country: CH
+    languages: fra
+    category: entertainment
+    logo: https://i.imgur.com/TSc35U6.png
+    epg_id: Carac1.ch
+    website: https://carac.tv/
+    regional: 0
+  url: https://rougetv.vedge.infomaniak.com/livecast/ik:rougetv/playlist.m3u8
+  official: true
+  priority: 10
+  epg_id: ''
+  origins:
+  - url: https://carac.tv/lives/carac-1
+    sha256: edd69cf90bcc6fc75257ace49a3ca7b26eb0d842590beafdf9fa6bf6ee86b014
+    observed_at: '2026-11-15T10:15:22.851972+00:00'
+  - url: https://player.infomaniak.com/playerConfig.php?channel=AH99617043325679864&player=12003
+    sha256: 3f15632b6d1d5f820d588d51f4f57907d0e8c5154a2476b2400af0517f901e73
+    observed_at: '2026-11-15T10:15:22.851972+00:00'
+- source_id: ceb1843be78274f74c25bf04
+  channel:
+    id: Carac2.ch
+    name: Carac 2
+    country: CH
+    languages: fra
+    category: entertainment
+    logo: https://i.imgur.com/hCoIPen.png
+    epg_id: Carac2.ch
+    website: https://carac.tv/lives/carac-2
+    regional: 0
+  url: https://onefmmd.vedge.infomaniak.com/livecast/ik:onefmmd/manifest.m3u8
+  official: true
+  priority: 10
+  epg_id: Carac2.ch@SD
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-org/iptv/568ba9b9d6f1d476e0ecf206d83e71c171568d81/streams/ch.m3u
+    sha256: 82d130dfe67daaaa5c5cfd7b1f774fc51ef0c9c1e99598253ce8abdadc80bb3a
+    observed_at: '2026-11-15T08:50:15.720200+00:00'
+  - url: https://carac.tv/lives/carac-2
+    sha256: 14a04d5cc67a55e5a9d38505c30046a6b471c00365bc93de04a68fe486fdcba0
+    observed_at: '2026-11-15T10:15:27.368154+00:00'
+  - url: https://player.infomaniak.com/playerConfig.php?channel=5243&player=12004
+    sha256: 92bef8d56e8c6edc8b5ab5cf7dd5a8bd86b8baa393c50f0ed9bc9c9c84c5cd4c
+    observed_at: '2026-11-15T10:15:27.368154+00:00'
+  - url: https://carac.tv/lives/carac-2
+    sha256: b16a2189fe39edd1a0c8732001ce898c1131a6d126ef84ea943e291436b06805
+    observed_at: '2026-11-15T10:34:18.658387+00:00'
+  - url: https://carac.tv/lives/carac-2
+    sha256: 826f630a9ec855e03e02a3a2c58ec80c70bd71386dcc9178a5118fbd7d687a2a
+    observed_at: '2026-11-15T11:33:04.765377+00:00'
+- source_id: 1337221547b8f1d7d759b0b1
+  channel:
+    id: Carac3.ch
+    name: Carac 3
+    country: CH
+    languages: fra
+    category: entertainment
+    logo: https://i.imgur.com/C4e8cjt.png
+    epg_id: Carac3.ch
+    website: https://carac.tv/lives/carac-3
+    regional: 0
+  url: https://lfmmd.vedge.infomaniak.com/livecast/ik:lfmmd/playlist.m3u8
+  official: true
+  priority: 10
+  epg_id: ''
+  origins:
+  - url: https://carac.tv/lives/carac-3
+    sha256: f860c1e1c6fce9228f3cf3f56d948df2565f15759aaa475790f9d5f036cb2f58
+    observed_at: '2026-11-15T10:15:33.664436+00:00'
+  - url: https://player.infomaniak.com/playerConfig.php?channel=5240&player=12005
+    sha256: 6b6e50ad8cd3fa9c108a747ede821a846d09f0a3507b028b8fb1fe8294de1285
+    observed_at: '2026-11-15T10:15:33.664436+00:00'
+  - url: https://carac.tv/lives/carac-3
+    sha256: e2b6047916c4d27ef548b3109d5ce5b6dc3fe3eda053405c2ace47d49f9e6ef2
+    observed_at: '2026-11-15T10:34:23.836853+00:00'
+  - url: https://carac.tv/lives/carac-3
+    sha256: 06144322ac5e3a6a7ee248e6831a468289b2ec6e020d0ab1d6a05aecef035aab
+    observed_at: '2026-11-15T11:33:10.915052+00:00'
+- source_id: 43b1c6c2811d7375324e78be
+  channel:
+    id: Carac4.ch
+    name: Carac 4
+    country: CH
+    languages: fra
+    category: entertainment
+    logo: https://i.imgur.com/Dj5LPy3.png
+    epg_id: Carac4.ch
+    website: https://carac.tv/lives/carac-4
+    regional: 0
+  url: https://edge17.vedge.infomaniak.com/livecast/ik:compack_media_1/playlist.m3u8
+  official: true
+  priority: 10
+  epg_id: Carac4.ch@SD
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-org/iptv/568ba9b9d6f1d476e0ecf206d83e71c171568d81/streams/ch.m3u
+    sha256: 82d130dfe67daaaa5c5cfd7b1f774fc51ef0c9c1e99598253ce8abdadc80bb3a
+    observed_at: '2026-11-15T08:50:15.720200+00:00'
+  - url: https://iptv-org.github.io/iptv/languages/fra.m3u
+    sha256: aa95a5ec6472328217b2f0a47770a0319cf990b9a6a5d80e8246036497117aef
+    observed_at: '2026-11-15T08:50:31.785489+00:00'
+  - url: https://player.infomaniak.com/playerConfig.php?channel=70764&player=12002
+    sha256: 96dcab1f333142a3897f7ea9f4b0b02ec2e36e21ee3916399d024e26e51175ea
+    observed_at: '2026-11-15T10:22:11.100561+00:00'
+- source_id: 3a4c94ee15153d59e0e130e4
+  channel:
+    id: Carac5.ch
+    name: Carac 5
+    country: CH
+    languages: fra
+    category: entertainment
+    logo: https://i.imgur.com/0D4CvYp.png
+    epg_id: Carac5.ch
+    website: https://carac.tv/lives/carac-5
+    regional: 0
+  url: https://carac5.vedge.infomaniak.com/livecast/ik:carac5/playlist.m3u8
+  official: true
+  priority: 10
+  epg_id: ''
+  origins:
+  - url: https://carac.tv/lives/carac-5
+    sha256: 0a029877b118c6d55de3a62f7c236e29720b29c9b170fbbc1e022a064d0c58da
+    observed_at: '2026-11-15T10:15:44.176810+00:00'
+  - url: https://player.infomaniak.com/playerConfig.php?channel=WM99617043325684605&player=12716
+    sha256: 4c890c12bcf67fefc29a582b4aec7f441c664eed1a61749c49b375d52f877855
+    observed_at: '2026-11-15T10:15:44.176810+00:00'
+  - url: https://carac.tv/lives/carac-5
+    sha256: d9977d043959b51f0b51f8914f25aaac59d9d81050c309962980ac0da24717f4
+    observed_at: '2026-11-15T10:34:35.371086+00:00'
+  - url: https://carac.tv/lives/carac-5
+    sha256: 94ece732d3c51683c205a524fc13027b6c86ad233d69606d793b651225020336
+    observed_at: '2026-11-15T11:33:21.088794+00:00'
+- source_id: c80f48bc314b4b8cdba7b6b5
+  channel:
+    id: RhoneTV.ch
+    name: Rhône TV
+    country: CH
+    languages: fra
+    category: general
+    logo: https://i.imgur.com/YyXJaBN.png
+    epg_id: RhoneTV.ch
+    website: https://www.rhonetv.ch/
+    regional: 1
+  url: https://rhonetv.vedge.infomaniak.com/livecast/ik%3Arhonetv/manifest.m3u8
+  official: true
+  priority: 10
+  epg_id: ''
+  origins:
+  - url: https://www.rhonetv.ch/
+    sha256: 250f35ce908966a3ef5d335717866098118a48550ed387b4ae8fd455f0f4e7a4
+    observed_at: '2026-11-15T10:30:39.343028+00:00'
+  - url: https://www.rhonetv.ch/
+    sha256: c50370d91b36ac1ef1fbed196ffe7dedcc2b58523240ca7df35daf95bf388711
+    observed_at: '2026-11-15T10:34:05.945755+00:00'
+  - url: https://www.rhonetv.ch/
+    sha256: 09f547372cae3f7a6864e01f84d56f9bb308d63069be38b79150b112e160c024
+    observed_at: '2026-11-15T11:32:52.716824+00:00'
+- source_id: 88ede18d59093729cc740dfc
+  channel:
+    id: TVM3.ch
+    name: TVM3
+    country: CH
+    languages: fra
+    category: unknown
+    logo: https://i.imgur.com/zNJlFMg.png
+    epg_id: TVM3.ch
+    website: null
+    regional: 0
+  url: https://tvm3.vedge.infomaniak.com/livecast/ik:tvm3/manifest.m3u8
+  official: true
+  priority: 10
+  epg_id: tvm3.ch
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/iktv.m3u8
+    sha256: bcc75869386840dd1d5f422f3c0e16a7c574e8f246a398c987e33ec44ca6e408
+    observed_at: '2026-11-15T08:50:00.220390+00:00'
+  - url: https://player.infomaniak.com/playerConfig.php?channel=WD99617043325679905&player=922
+    sha256: 531987f58dc9b291d867cc4ec535fc2c7a60e0f188ac1dbedbd6728af2885cb1
+    observed_at: '2026-11-15T10:09:00.674787+00:00'
+  - url: https://tvm3.ch/
+    sha256: 7a7abcb04243d4f0b2326eaa02b6002fbe4bfaeba77da9eaa6472fc40fb96b8c
+    observed_at: '2026-11-15T10:09:00.674787+00:00'
+- source_id: ebaf7ca5260efb589d0b81a9
+  channel:
+    id: BlueZoomF.ch
+    name: Blue Zoom F
+    country: CH
+    languages: fra
+    category: unknown
+    logo: https://i.imgur.com/A5iwahB.png
+    epg_id: BlueZoomF.ch
+    website: https://www.bluewin.ch/fr/index/livestream.html
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/bluezoomfr/browser-HLS8/bluezoomfr.m3u8
+  official: false
+  priority: 50
+  epg_id: bluezoom.ch
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: af9851922f007fd8fd17c2d3
+  channel:
+    id: LEquipe.fr
+    name: L'Équipe
+    country: FR
+    languages: fra
+    category: sports
+    logo: https://i.imgur.com/t35zhM9.png
+    epg_id: LEquipe.fr
+    website: https://www.lequipe.fr/lachainelequipe/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/lequipe21/browser-HLS8/lequipe21.m3u8
+  official: false
+  priority: 50
+  epg_id: lequipe.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'
+- source_id: 2d58d9a2ca982dde2df9ca30
+  channel:
+    id: Gulli.fr
+    name: Gulli
+    country: FR
+    languages: fra
+    category: kids
+    logo: https://i.imgur.com/kqYssbW.png
+    epg_id: Gulli.fr
+    website: http://www.gulli.fr/
+    regional: 0
+  url: https://viamotionhsi.netplus.ch/live/eds/gulli/browser-HLS8/gulli.m3u8
+  official: false
+  priority: 50
+  epg_id: gulli.fr
+  origins:
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/netplus.m3u8
+    sha256: cbcb34bf2a4aec1f43c5e3bec76633bed13a9bb2cbaea5f42553841390508a51
+    observed_at: '2026-11-15T08:50:02.861545+00:00'
+  - url: https://raw.githubusercontent.com/iptv-ch/iptv-ch.github.io/a1e970d8092bad06f65dcbbed7678bd97745cef1/webtv.m3u
+    sha256: aea3837e248bd969aa2a8e41e04bd92f9f2b147b77e28c12cc0f1c1d95f77d0d
+    observed_at: '2026-11-15T08:50:08.361254+00:00'

@@ -1,0 +1,133 @@
+# Revue éditoriale de liens uniquement ; aucune licence des programmes ou logos n’est accordée.
+review_defaults: &public_link_review
+  decision: approved
+  reviewer: Swiss IPTV FR — revue éditoriale du 15 novembre 2026
+  reviewed_at: '2026-11-15T12:17:22.216710+00:00'
+  scope: public_links
+  access_ch: true
+  operator: ''
+  evidence_url: https://www.ccdigitallaw.ch/les-liens-vers-des-contenus-de-tiers-constituent-ils-une-violation-de-droits-dauteur/?lang=fr
+  evidence_sha256: c086fb03ef29bd535bd625aeed84debef8543c8b6a26163fd1986bc099ba40ec
+  notes: 'Revue explicite de la publication d’un annuaire de liens identifiés vers les
+    infrastructures publiques du diffuseur ou de son distributeur, sur demande du propriétaire
+    du dépôt. Provenance et lecture CH/Sunrise documentées pour cette URL exacte ; chaîne
+    en clair hors bouquet premium, sans compte, clé DRM ou modification de contrôle
+    d’accès. Le site ne contient ni lecteur embarqué, ni copie de vidéo, de logo ou
+    de programmes XMLTV : les champs M3U sont des références externes pour les lecteurs
+    des utilisateurs. Fondement examiné : distinction des liens ordinaires et de l’incorporation
+    dans la source CCdigitallaw référencée ; les conditions des sources archivées restent
+    applicables. Ce classement éditorial ne constitue pas une licence des programmes,
+    une permission écrite des diffuseurs ou une certification juridique universelle.
+    Afficher le caractère externe des sources et limiter la description à une réception
+    personnelle en Suisse ; retirer le lien en cas de restriction ou demande fondée.
+    Ne publier aucune session CDN temporaire. Une URL nouvelle doit recevoir sa propre
+    revue.'
+reviews:
+  - <<: *public_link_review
+    source_id: 4d9eb61bd00f4d3f44838397
+  - <<: *public_link_review
+    source_id: 0ee08bc1f5ddd22a952ec6b6
+  - <<: *public_link_review
+    source_id: 22811cdd90e328bc40bd9a13
+  - <<: *public_link_review
+    source_id: ceef4b9da74aafda1fcd7a7c
+  - <<: *public_link_review
+    source_id: 0ade8f85e65121d6419a94e5
+  - <<: *public_link_review
+    source_id: ebdb4cbcb7a3dd2b73caa890
+  - <<: *public_link_review
+    source_id: ee34dcf391bdf5b67f2efed7
+  - <<: *public_link_review
+    source_id: 93908f069b4b06b89f54d568
+  - <<: *public_link_review
+    source_id: b17e15a11f751ec393a961d0
+  - <<: *public_link_review
+    source_id: 1d930c5dc1ed6c40e5180478
+  - <<: *public_link_review
+    source_id: d230a54f3e0ad6ac83e0d67c
+  - <<: *public_link_review
+    source_id: 077f8b810459aa4bed74a826
+  - <<: *public_link_review
+    source_id: f060fc89f8501746eeebb696
+  - <<: *public_link_review
+    source_id: a63bb4a421430855a1adc40a
+  - <<: *public_link_review
+    source_id: f2466ab0cfbedc1ad594cb44
+  - <<: *public_link_review
+    source_id: 755edb10f7b4654cf89737b5
+  - <<: *public_link_review
+    source_id: ed6a0dc3971ff5e82cbfa56d
+  - <<: *public_link_review
+    source_id: 50b29937ba5df9dbfc50f2e9
+  - <<: *public_link_review
+    source_id: b45bc3c97dc0eaf452856440
+  - <<: *public_link_review
+    source_id: 65b501f7989d821f16e9355a
+  - <<: *public_link_review
+    source_id: cd139b13d00fb110eb54db87
+  - <<: *public_link_review
+    source_id: 1c2e93906f36f2bdd1da26ec
+  - <<: *public_link_review
+    source_id: 62a6081a9ae6dbe0aa2525d0
+  - <<: *public_link_review
+    source_id: e40eecb4573d947b6cdf67f9
+  - <<: *public_link_review
+    source_id: 832354b9cc6c467c013fb99d
+  - <<: *public_link_review
+    source_id: e946a5956c5de3b38a0120e1
+  - <<: *public_link_review
+    source_id: 4d549754821b12b8dcc3d07b
+  - <<: *public_link_review
+    source_id: 9669e293bb02aaf422d17eec
+  - <<: *public_link_review
+    source_id: 0f99c997998d290dfb551388
+  - <<: *public_link_review
+    source_id: 6cd09ab290e5c73df8409956
+  - <<: *public_link_review
+    source_id: 1f95d41ffa750e32cc417041
+  - <<: *public_link_review
+    source_id: 5b622cff32aaf7d06fb02a0f
+  - <<: *public_link_review
+    source_id: 6b42c435fbed3a8e6b1d2be7
+  - <<: *public_link_review
+    source_id: f143761543372297f59eade1
+  - <<: *public_link_review
+    source_id: 96643867a2ba87d16a54834f
+  - <<: *public_link_review
+    source_id: 03e456deb8e36117bd0e8af1
+  - <<: *public_link_review
+    source_id: e5c9d4c1c2e76a698dfe12f2
+  - <<: *public_link_review
+    source_id: 6d3289f3f24ee85fdad3743b
+  - <<: *public_link_review
+    source_id: d7c5f990686f0bade7c0c73e
+  - <<: *public_link_review
+    source_id: 7992f8b8df3b3379f9c45703
+  - <<: *public_link_review
+    source_id: c7e7b9dd2d7590a9c43ad9d3
+  - <<: *public_link_review
+    source_id: 9fb7eb381dabdd17f4fcad3b
+  - <<: *public_link_review
+    source_id: 4f1371a306e073603df05733
+  - <<: *public_link_review
+    source_id: 3d129dc707b4cd77f1e22300
+  - <<: *public_link_review
+    source_id: 5562de0193398a4b8d51d011
+  - <<: *public_link_review
+    source_id: ceb1843be78274f74c25bf04
+  - <<: *public_link_review
+    source_id: 1337221547b8f1d7d759b0b1
+  - <<: *public_link_review
+    source_id: 43b1c6c2811d7375324e78be
+  - <<: *public_link_review
+    source_id: 3a4c94ee15153d59e0e130e4
+  - <<: *public_link_review
+    source_id: c80f48bc314b4b8cdba7b6b5
+  - <<: *public_link_review
+    source_id: 88ede18d59093729cc740dfc
+  - <<: *public_link_review
+    source_id: ebaf7ca5260efb589d0b81a9
+  - <<: *public_link_review
+    source_id: af9851922f007fd8fd17c2d3
+  - <<: *public_link_review
+    source_id: 2d58d9a2ca982dde2df9ca30

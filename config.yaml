@@ -1,0 +1,312 @@
+verification:
+  ffmpeg: ffmpeg
+  attempts: 3
+  sample_seconds: 5
+  http_timeout: 12
+  process_timeout: 30
+  request_delay: 1
+  retry_delay: 2
+publication:
+  check_max_hours: 48
+  review_max_days: 90
+  seed_file: data/curated-sources.yaml
+  review_files: [data/domestic-reviews.yaml, data/public-reviews.yaml]
+
+# Ordre personnalisé Suisse romande, inspiré de tvopenchfr.m3u.
+# Les variantes CH sont préférées quand plusieurs variantes approuvées sont disponibles.
+# Numéros inspirés de la référence et personnalisables, pas une norme de tous les opérateurs.
+lineup:
+  - {ids: [RTS1.ch], number: 1}
+  - {ids: [RTS2.ch], number: 2}
+  - {ids: [TF1Switzerland.ch, TF1.fr], number: 3}
+  - {ids: [France2.fr], number: 4}
+  - {ids: [France3.fr], number: 5}
+  - {ids: [France4.fr], number: 6}
+  - {ids: [France5.fr], number: 7}
+  - {ids: [M6.ch, M6.fr], number: 8}
+  - {ids: [arte.fr], number: 9}
+  - {ids: [W9Switzerland.ch, W9.fr], number: 11}
+  - {ids: [TMC.fr], number: 12}
+  - {ids: [TFXSwitzerland.ch, TFX.fr], number: 13}
+  - {ids: [6terSwitzerland.ch, 6ter.fr], number: 21}
+  - {ids: [TV5MondeFranceBelgiumSwitzerlandMonaco.fr], number: 30}
+  - {ids: [TV5MondeEurope.fr], number: 31}
+  - {ids: [KTO.fr], number: 32}
+  - {ids: [ORTBTV.bj], number: 90}
+  - {ids: [TVMonaco.mc]}
+  - {ids: [T18.fr]}
+  - {ids: [NOVO19.fr]}
+  - {ids: [TF1SeriesFilms.fr]}
+  - {ids: [RMCLife.fr], number: 27}
+  - {ids: [AB3.be], number: 35}
+  - {ids: [RMCDecouverte.fr]}
+  - {ids: [RMCStory.fr]}
+  - {ids: [RTSInfo.ch]}
+  - {ids: [Franceinfo.fr], number: 16}
+  - {ids: [BFMTV.fr], number: 17}
+  - {ids: [BFMBusiness.fr]}
+  - {ids: [CNews.fr], number: 18}
+  - {ids: [LCI.fr], number: 28}
+  - {ids: [LCP.fr], number: 15}
+  - {ids: [PublicSenat.fr]}
+  - {ids: [EuronewsFrench.fr], number: 80}
+  - {ids: [France24.fr], number: 63}
+  - {ids: [TV5MondeInfo.fr]}
+  - {ids: [i24NEWSFrench.il], number: 67}
+  - {ids: [LemanBleu.ch], number: 76}
+  - {ids: [TV8MontBlanc.fr], number: 75}
+  - {ids: [Canal9.ch], number: 74}
+  - {ids: [CanalAlphaJura.ch], number: 78}
+  - {ids: [CanalAlphaNeuchatel.ch], number: 79}
+  - {ids: [LaTele.ch], number: 73}
+  - {ids: [TeleBielingue.ch], number: 303}
+  - {ids: [CanalBFr.ch]}
+  - {ids: [MaxTV.ch], number: 81}
+  - {ids: [NRTV.ch], number: 82}
+  - {ids: [ValTV.ch]}
+  - {ids: [TVOnex.ch], number: 86}
+  - {ids: [Carac1.ch], number: 83}
+  - {ids: [Carac2.ch], number: 84}
+  - {ids: [Carac3.ch], number: 85}
+  - {ids: [Carac4.ch], number: 87}
+  - {ids: [Carac5.ch], number: 88}
+  - {ids: [RhoneTV.ch]}
+  - {ids: [TVM3.ch]}
+  - {ids: [BlueZoomF.ch], number: 89}
+  - {ids: [LEquipe.fr], number: 23}
+  - {ids: [Gulli.fr], number: 20}
+  - {ids: [BX1.be]}
+
+channel_names:
+  TF1Switzerland.ch: TF1 Suisse
+  M6.ch: M6 Suisse
+  W9Switzerland.ch: W9 Suisse
+  TFXSwitzerland.ch: TFX Suisse
+  6terSwitzerland.ch: 6ter Suisse
+  TV5MondeFranceBelgiumSwitzerlandMonaco.fr: TV5MONDE FBS
+  TV5MondeInfo.fr: TV5MONDE Info
+  LemanBleu.ch: Léman Bleu
+  LaTele.ch: La Télé
+  CanalAlphaNeuchatel.ch: Canal Alpha Neuchâtel
+  RhoneTV.ch: Rhône TV
+  TeleBielingue.ch: TeleBielingue
+  CanalBFr.ch: Canal B français
+  TVM3.ch: TVM3
+  MaxTV.ch: MaxTV / DieuTV
+  LEquipe.fr: L'Équipe
+
+epg:
+  check_max_hours: 24
+  request_delay: 1
+  http_timeout: 12
+  total_timeout: 60
+  max_download_bytes: 40000000
+  max_decoded_bytes: 200000000
+  # Sources de repli : un seul guide XMLTV par playlist pour Kodi IPTV Simple.
+  sources:
+    - url: 'https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz'
+      provenance: 'https://epgshare01.online/epgshare01/0_READ_ME_FIRST_AS_I_CONTAIN_VERY_HELPFUL_INFO.html'
+      enabled: true
+      link_scopes: [domestic_links, public_links]
+      # IDs du fichier CH1 publié par EPGSHARE01, utilisés seulement après contrôle XMLTV.
+      channel_ids:
+        RTS1.ch: RTS.1.ch
+        RTS2.ch: RTS.2.ch
+        TF1Switzerland.ch: TF1.ch
+        TF1.fr: TF1.ch
+        France2.fr: France.2.ch
+        France3.fr: France.3.ch
+        France4.fr: France.4.ch
+        France5.fr: France.5.ch
+        M6.ch: M6.ch
+        M6.fr: M6.ch
+        arte.fr: Arte.Français.ch
+        France24.fr: France.24.ch
+        Franceinfo.fr: franceinfo.ch
+        W9Switzerland.ch: W9.ch
+        TFXSwitzerland.ch: TFX.ch
+        6terSwitzerland.ch: 6ter.ch
+        TMC.fr: TMC.ch
+        TF1SeriesFilms.fr: TF1.Séries.Films.ch
+        RMCDecouverte.fr: RMC.Découverte.ch
+        RMCStory.fr: RMC.Story.ch
+        BFMTV.fr: BFM.TV.ch
+        CNews.fr: CNEWS.ch
+        LCI.fr: La.Chaine.Info.-.LCI.ch
+        LCP.fr: La.Chaîne.parlementaire.ch
+        EuronewsFrench.fr: Euronews.F.ch
+        LEquipe.fr: L'Equipe.ch
+        Gulli.fr: Gulli.ch
+        TV8MontBlanc.fr: TV8.Mont.Blanc.ch
+        TVMonaco.mc: TV.Monaco.ch
+        NRTV.ch: NRTV.ch
+        MaxTV.ch: Max.TV.ch
+        BlueZoomF.ch: blue.Zoom.F.ch
+        TV5MondeFranceBelgiumSwitzerlandMonaco.fr: TV5.Monde.FBS.ch
+        TV5MondeEurope.fr: TV5.MONDE.EUROPE.ch
+        LemanBleu.ch: Léman.Bleu.Télévision.ch
+        Canal9.ch: Canal.9.ch
+        CanalAlphaJura.ch: Canal.Alpha.JU.ch
+        CanalAlphaNeuchatel.ch: Canal.Alpha.NE.ch
+        LaTele.ch: La.Télé.ch
+        TeleBielingue.ch: Tele.Bielingue.ch
+        RhoneTV.ch: Rhône.TV.ch
+        TVM3.ch: TVM3.ch
+        KTO.fr: KTO.ch
+        Carac1.ch: CARAC.1.ch
+        Carac2.ch: CARAC.2.ch
+        Carac3.ch: CARAC.3.ch
+        Carac4.ch: CARAC.4.ch
+        Carac5.ch: CARAC.5.ch
+    - url: 'https://xmltv.ch/xmltv/xmltv-complet.xml'
+      provenance: 'https://github.com/iptv-ch/iptv-ch.github.io/blob/master/tvopenchfr.m3u'
+      enabled: true
+      link_scopes: [domestic_links] # Le lien public attend sa revue de conditions.
+      # Correspondances candidates issues de la référence ; jamais utilisées sans présence
+      # réelle de cet identifiant ET de programmes futurs dans un guide vérifié.
+      channel_ids: &xmltv_legacy_ids
+        RTS1.ch: C202.api.telerama.fr
+        RTS2.ch: C183.api.telerama.fr
+        TF1Switzerland.ch: C192.api.telerama.fr
+        TF1.fr: C192.api.telerama.fr
+        France2.fr: C4.api.telerama.fr
+        France3.fr: C80.api.telerama.fr
+        France4.fr: C78.api.telerama.fr
+        France5.fr: C47.api.telerama.fr
+        M6.ch: C118.api.telerama.fr
+        M6.fr: C118.api.telerama.fr
+        arte.fr: C111.api.telerama.fr
+        France24.fr: C529.api.telerama.fr
+        Franceinfo.fr: C2111.api.telerama.fr
+        BFMTV.fr: C481.api.telerama.fr
+        CNews.fr: C226.api.telerama.fr
+        LCI.fr: C112.api.telerama.fr
+        TV5MondeFranceBelgiumSwitzerlandMonaco.fr: C205.api.telerama.fr
+        TV5MondeEurope.fr: C232.api.telerama.fr
+        LemanBleu.ch: LemanBleu.ch
+        Canal9.ch: Canal9.ch
+        CanalAlphaJura.ch: CanalAlphaJU.ch
+        CanalAlphaNeuchatel.ch: CanalAlphaNE.ch
+        LaTele.ch: latele.ch
+        TeleBielingue.ch: telebielingue.ch
+    - url: 'https://xmltv.fr/xmltv/xmltv-complet.xml'
+      provenance: 'https://github.com/iptv-ch/iptv-ch.github.io/blob/master/swisscom-full.m3u'
+      enabled: true
+      link_scopes: [domestic_links]
+      channel_ids: *xmltv_legacy_ids
+
+# Rapprochements explicites, sans fusion approximative de variantes régionales.
+aliases:
+  rts1: RTS1.ch
+  rts2: RTS2.ch
+  rtsinfo: RTSInfo.ch
+  lemanbleu: LemanBleu.ch
+  latele: LaTele.ch
+  canal9: Canal9.ch
+  canalalpha: CanalAlphaNeuchatel.ch
+  canalalphaju: CanalAlphaJura.ch
+  canalalphane: CanalAlphaNeuchatel.ch
+  france2: France2.fr
+  france3: France3.fr
+  france4: France4.fr
+  france5: France5.fr
+  france24: France24.fr
+  tf1ch: TF1Switzerland.ch
+  m6ch: M6.ch
+
+canonical_ids:
+  CanalAlphaJU.ch: CanalAlphaJura.ch
+  CanalAlphaNE.ch: CanalAlphaNeuchatel.ch
+
+# Ces entrées du distributeur correspondent aux versions publicitaires suisses.
+# Conserver les versions françaises des autres sources comme identités distinctes.
+provider_channel_ids:
+  netplus:
+    TF1.fr: TF1Switzerland.ch
+    M6.fr: M6.ch
+    W9.fr: W9Switzerland.ch
+    TFX.fr: TFXSwitzerland.ch
+    6ter.fr: 6terSwitzerland.ch
+    TV5Monde.fr: TV5MondeFranceBelgiumSwitzerlandMonaco.fr
+    local.euronewsf.FR: EuronewsFrench.fr
+    local.canalbfr.CH: CanalBFr.ch
+
+# Anomalie observée dans l'API amont : ces deux feeds romands sont étiquetés deu.
+# Correction explicite fondée sur https://www.canalalpha.ch/chaine/ (programmes francophones).
+feed_language_overrides:
+  'CanalAlphaJura.ch@SD': [fra]
+  'CanalAlphaNeuchatel.ch@SD': [fra]
+
+excluded_channel_patterns:
+  - '^(CanalPlus|beIN|OCS|CinePlus|CineCinema|Eurosport|RMCSport|Teleclub|SkySport|TCM|PlanetePlus|MTVFrance)'
+  - '^local\.(tcm|canalplus|mtvfrance|canalenclair)'
+excluded_host_suffixes:
+  - zappr.stream
+  - zahs.tv
+
+channel_geo:
+  RTS1.ch: 'CH; droits par programme; à confirmer par lecture locale'
+  RTS2.ch: 'CH; droits par programme; à confirmer par lecture locale'
+  LaUne.be: 'BE; portabilité UE sous conditions RTBF, Suisse non couverte par cette exception'
+  Tipik.be: 'BE; portabilité UE sous conditions RTBF, Suisse non couverte par cette exception'
+
+# Pages de découverte, jamais des autorisations de publication.
+official_pages:
+  - {channel_id: RTS1.ch, url: 'https://www.rts.ch/play/tv/direct/rts-1?tvLiveId=3608506', srg_urn: 'urn:rts:video:3608506'}
+  - {channel_id: RTS2.ch, url: 'https://www.rts.ch/play/tv/direct/rts-2?tvLiveId=3608517', srg_urn: 'urn:rts:video:3608517'}
+  - {channel_id: RTSInfo.ch, url: 'https://www.rts.ch/play/tv/direct/rts-info?tvLiveId=1967124', srg_urn: 'urn:rts:video:1967124'}
+  - channel_id: LemanBleu.ch
+    url: 'https://www.lemanbleu.ch/fr/Direct/Direct.html'
+    regional: true
+    script_patterns: ['assets\.lemanbleu\.ch/']
+    stream_pattern: 'naxoo[./:]'
+  - channel_id: LaTele.ch
+    url: 'https://latele.ch/live'
+    regional: true
+    script_patterns: ['LiveTv-', 'LiveTV-']
+    stream_pattern: 'latele2[./:]'
+  - channel_id: Canal9.ch
+    url: 'https://canal9.ch/'
+    regional: true
+    script_patterns: ['canal9live\.js']
+    embed_pattern: 'channel=4310(?:&|$)'
+    allow_embed: true
+    stream_pattern: 'livehd[./:]'
+  - channel_id: CanalAlphaNeuchatel.ch
+    url: 'https://www.canalalpha.ch/tv'
+    regional: true
+    script_patterns: ['/_next/static/chunks/']
+    script_limit: 10
+    stream_pattern: 'canalalpha[./:]'
+  - channel_id: CanalAlphaJura.ch
+    url: 'https://www.canalalpha.ch/tv'
+    regional: true
+    script_patterns: ['/_next/static/chunks/']
+    script_limit: 10
+    stream_pattern: 'canalalphaju[./:]'
+  - {channel_id: TeleBielingue.ch, url: 'https://www.telebielingue.ch/fr', regional: true}
+  - {channel_id: CanalBFr.ch, url: 'https://www.canalb.ch/b/chaine/', name: 'Canal B français', country: CH, regional: true}
+  - {channel_id: NRTV.ch, url: 'https://www.nrtv.ch/', regional: true}
+  - {channel_id: ValTV.ch, url: 'https://www.valtv.ch/', regional: true}
+  - {channel_id: RhoneTV.ch, url: 'https://www.rhonetv.ch/', regional: true, stream_pattern: 'rhonetv[./:]'}
+  - {channel_id: TVM3.ch, url: 'https://www.tvm3.tv/', allow_embed: true}
+  - {channel_id: KTO.fr, url: 'https://www.ktotv.com/'}
+  - {channel_id: Carac1.ch, url: 'https://carac.tv/lives/carac-1', carac_slug: carac-1, allow_embed: true}
+  - {channel_id: Carac2.ch, url: 'https://carac.tv/lives/carac-2', carac_slug: carac-2, allow_embed: true}
+  - {channel_id: Carac3.ch, url: 'https://carac.tv/lives/carac-3', carac_slug: carac-3, allow_embed: true}
+  - {channel_id: Carac4.ch, url: 'https://carac.tv/lives/carac-4', carac_slug: carac-4, allow_embed: true}
+  - {channel_id: Carac5.ch, url: 'https://carac.tv/lives/carac-5', carac_slug: carac-5, allow_embed: true}
+  - {channel_id: France24.fr, url: 'https://www.france24.com/fr/direct'}
+  - {channel_id: TV5MondeEurope.fr, url: 'https://europe.tv5monde.com/fr/direct'}
+  - {channel_id: TV5MondeFranceBelgiumSwitzerlandMonaco.fr, url: 'https://www.tv5mondeplus.com/'}
+  - {channel_id: arte.fr, url: 'https://www.arte.tv/fr/direct/', json_url: 'https://api.arte.tv/api/player/v2/config/fr/LIVE'}
+  - {channel_id: Franceinfo.fr, url: 'https://www.franceinfo.fr/en-direct/tv.html'}
+  - {channel_id: France2.fr, url: 'https://www.france.tv/france-2/direct.html'}
+  - {channel_id: TF1.fr, url: 'https://www.tf1.fr/tf1/direct'}
+  - {channel_id: PublicSenat.fr, url: 'https://www.publicsenat.fr/direct'}
+  - {channel_id: LCPAN.fr, url: 'https://lcp.fr/'}
+  - {channel_id: TVMonaco.mc, url: 'https://www.tvmonaco.com/'}
+  - {channel_id: LaUne.be, url: 'https://auvio.rtbf.be/chaine/la-une-1'}
+  - {channel_id: Tipik.be, url: 'https://auvio.rtbf.be/chaine/tipik-2'}
+  - {channel_id: BX1.be, url: 'https://bx1.be/lives/direct-tv/'}
+  - {channel_id: TV5MondeInfo.fr, url: 'https://information.tv5monde.com/direct'}

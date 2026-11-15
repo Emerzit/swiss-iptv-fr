@@ -1,0 +1,3 @@
+# Copier vers data/github.local.yaml après création du dépôt et connexion Git.
+enabled: true
+repository: https://github.com/VOTRE_COMPTE/swiss-iptv-fr.git

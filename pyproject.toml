@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "swiss-iptv-fr"
+version = "0.1.0"
+description = "Catalogue traçable de télévision francophone pour la Suisse"
+requires-python = ">=3.11"
+dependencies = ["PyYAML>=6.0.2,<7"]
+license = {text = "MIT"}
+
+[project.scripts]
+swiss-iptv = "swiss_iptv.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["swiss_iptv*"]

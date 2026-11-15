@@ -1,0 +1,31 @@
+name: Contrôler les playlists publiées
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Vérifier les fichiers statiques servis par Pages
+        env:
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          python - <<'PY'
+          import json, os, urllib.request
+          owner, name = os.environ['REPOSITORY'].split('/')
+          base = f'https://{owner.lower()}.github.io/{name}/'
+          with urllib.request.urlopen(base + 'status.json', timeout=30) as response:
+              status = json.load(response)
+          assert status['audience'] == 'public'
+          for playlist, count in status['playlists'].items():
+              with urllib.request.urlopen(base + playlist + '.m3u', timeout=30) as response:
+                  text = response.read().decode('utf-8-sig')
+              assert text.startswith('#EXTM3U') and text.count('#EXTINF:') == count
+          print(status['generated_at'], status['playlists'])
+          PY
+      # La branche gh-pages est mise à jour depuis la connexion suisse.
+      # Pages publie automatiquement cette branche ; ce contrôle n’altère aucun flux.
