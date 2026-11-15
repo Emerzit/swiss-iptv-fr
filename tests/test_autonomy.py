@@ -143,6 +143,16 @@ class AutonomousPolicyTests(unittest.TestCase):
         self.assertEqual(second['sources_checked'], 0)
         self.assertEqual(controller.call_count, 1)
 
+    def test_known_account_requirement_blocks_discovery_and_previous_approval(self):
+        self.proof()
+        approve_playback(self.db, self.source, {'rule': 'official_page_reference',
+            'url': 'https://tele.example.org/direct', 'sha256': 'b' * 64}, self.cfg)
+        self.cfg['publication']['access_holds'] = {'TV.fr': {'status': 'account_required'}}
+        self.assertEqual(candidate_rule(self.db, self.source, self.cfg, [])[1], 'account_required')
+        result = export_playlists(self.db, self.cfg, self.root / 'site')
+        self.assertEqual(result['playlists']['swiss-fr-internet'], 0)
+        self.assertEqual(result['exclusions']['account_required'], 1)
+
     def test_reference_gap_due_for_retry_precedes_unvisited_background_channel(self):
         self.db.execute("INSERT INTO channels (id,name,languages,website) VALUES ('A.fr','A','fra','https://a.example.org/')")
         self.db.execute("INSERT INTO exploration VALUES ('page','TV.fr','2000-01-01T00:00:00+00:00','{}')")

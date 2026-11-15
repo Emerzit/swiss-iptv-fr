@@ -40,6 +40,9 @@ def load_reviews(db, records):
 
 
 def eligible(db, source, cfg, audience='public'):
+    hold = cfg.get('access_holds', {}).get(source['channel_id'])
+    if hold:
+        return None, hold['status']
     review = db.execute('SELECT * FROM reviews WHERE source_id=?', (source['id'],)).fetchone()
     if not review or review['decision'] != 'approved':
         return None, 'rights_pending'

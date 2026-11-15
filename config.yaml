@@ -14,6 +14,11 @@ publication:
   review_max_days: 90
   seed_file: data/curated-sources.yaml
   review_files: [data/domestic-reviews.yaml, data/public-reviews.yaml]
+  access_holds:
+    NRJHits.fr:
+      status: account_required
+      evidence_url: 'https://www.nrj.fr/nrj-hits'
+      reason: 'Le lecteur officiel demande une connexion pour regarder le direct ; aucun compte NRJ autorisé dans cette installation.'
 
 # Collecte mondiale : la langue du feed, et non le pays, détermine les candidates.
 # Ajouter une URL ici ne lui donne aucun droit de publication.
@@ -381,6 +386,8 @@ official_pages:
   - {<<: *public_player, channel_id: TVOnex.ch, url: 'https://tvonex.ch/', regional: true}
   - {<<: *public_player, channel_id: GeneveRegionTelevision.fr, url: 'https://grtv.news/', country: CH, regional: true}
   - {<<: *public_player, channel_id: CPACFrench.ca, url: 'https://www.cpac.ca/fr/', languages: [fra, eng], content_store: '/site/components/cpac-item-lists/livestreams.xml'}
+  - {<<: *public_player, channel_id: HANDICAPTV.fr, url: 'https://www.handicaptv.fr/', stream_pattern: '^https://srv\.webtvmanager\.fr:3697/stream/'}
+  - {<<: *public_player, channel_id: NRJHits.fr, url: 'https://www.nrj.fr/nrj-hits', stream_pattern: '^https://nrjhits\.nrjaudio\.fm/'}
   - <<: *public_player
     channel_id: ConseilNational.ch
     name: Conseil national (français)

@@ -71,6 +71,9 @@ def service_key(url):
 
 
 def candidate_rule(db, source, config, anchors):
+    hold = config.get('publication', {}).get('access_holds', {}).get(source['channel_id'])
+    if hold:
+        return None, hold['status']
     review = db.execute('SELECT * FROM reviews WHERE source_id=?', (source['id'],)).fetchone()
     if review and review['decision'] != 'approved' and review['reviewer'] != REVIEWER:
         return None, 'explicit_editorial_hold'
