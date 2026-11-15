@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-15T16:11:58.273655+00:00",
+  "generated_at": "2026-11-15T16:16:08.496736+00:00",
   "audience": "public",
   "playlists": {
-    "swiss-fr": 54,
-    "swiss-fr-internet": 54,
+    "swiss-fr": 56,
+    "swiss-fr-internet": 56,
     "swiss-fr-multicast": 0,
     "swiss-fr-regional": 10,
-    "swiss-fr-news": 10
+    "swiss-fr-news": 11
   },
   "exclusions": {
-    "rights_pending": 872
+    "rights_pending": 865
   },
   "epg": {
     "swiss-fr": {
@@ -1167,10 +1167,55 @@
         "bandwidth": 4581280,
         "failed_higher_variants": []
       }
+    },
+    {
+      "id": "7Info.ci",
+      "name": "7 Info",
+      "source_id": "db5ad596502f24e7c340cfc7",
+      "url": "https://stream.7info.net/live/7info/index.m3u8",
+      "checked_at": "2026-11-15T16:05:29.728807+00:00",
+      "width": 1920,
+      "height": 1080,
+      "fps": 25.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 118,
+      "decoded_seconds": 4.96,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 3250381,
+        "failed_higher_variants": []
+      }
+    },
+    {
+      "id": "ZitataTV.mq",
+      "name": "Zitata TV",
+      "source_id": "b662337c55347ec8d7a94bae",
+      "url": "https://live.zitata.tv/direct-hls/playlist.m3u8",
+      "checked_at": "2026-11-15T16:08:08.897419+00:00",
+      "width": 1920,
+      "height": 1080,
+      "fps": 25.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 125,
+      "decoded_seconds": 5.0,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 0,
+        "failed_higher_variants": []
+      }
     }
   ],
   "changes": {
-    "added": [],
+    "added": [
+      "7Info.ci",
+      "ZitataTV.mq"
+    ],
     "removed": [],
     "source_changed": []
   }
