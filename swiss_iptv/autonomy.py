@@ -169,6 +169,9 @@ def approve_playback(db, source, proof, config):
             language.lower() not in {'', 'und', 'fr', 'fra', 'fre'} or
             details.get('connection_isp') in {'', None, 'unknown'}):
         return False
+    channel_languages = db.execute('SELECT languages FROM channels WHERE id=?', (source['channel_id'],)).fetchone()[0].split(',')
+    if len(channel_languages) > 1 and language not in {'fr', 'fra', 'fre'}:
+        return False  # A mixed-language feed needs a positively identified French track.
     old = db.execute('SELECT * FROM reviews WHERE source_id=?', (source['id'],)).fetchone()
     if old and old['reviewer'] != REVIEWER:
         if old['decision'] != 'approved' or old['scope'] != 'public_links' or not old['access_ch']:

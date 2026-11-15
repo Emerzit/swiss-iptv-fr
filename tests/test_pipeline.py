@@ -59,6 +59,18 @@ class PipelineTests(unittest.TestCase):
         self.playback()
         self.assertEqual(eligible(self.db, self.source, CONFIG['publication'])[1], 'rights_pending')
 
+    def test_bootstrap_preserves_mixed_feed_languages_instead_of_relabelling_french_only(self):
+        folder = self.root / 'upstream'
+        (folder / 'api').mkdir(parents=True)
+        (folder / 'api/channels.json').write_text(json.dumps([{'id': 'Mixed.ca', 'name': 'Mixed TV', 'country': 'CA', 'website': 'https://example.org/'}]))
+        (folder / 'api/feeds.json').write_text(json.dumps([{'channel': 'Mixed.ca', 'id': 'SD', 'languages': ['ell', 'fra', 'eng']}]))
+        (folder / 'api/logos.json').write_text('[]')
+        text = '#EXTM3U\n#EXTINF:-1 tvg-id="Mixed.ca@SD",Mixed TV\nhttps://example.org/mixed.m3u8\n'
+        (folder / 'fra.m3u').write_text(text)
+        (folder / 'manifest.json').write_text(json.dumps([{'file': 'fra.m3u', 'url': 'https://example.org/list', 'sha256': digest(text), 'fetched_at': now()}]))
+        bootstrap(self.db, folder, {})
+        self.assertEqual(set(self.db.execute("SELECT languages FROM channels WHERE id='Mixed.ca'").fetchone()[0].split(',')), {'ell', 'eng', 'fra'})
+
     def test_approved_rights_require_swiss_playback(self):
         self.grant()
         self.playback(country='unknown')

@@ -380,7 +380,7 @@ official_pages:
   - {<<: *public_player, channel_id: i24NEWSFrench.il, url: 'https://www.i24news.tv/fr/', stream_pattern: '^https://i24newsfrench-cdn\.encoders\.immergo\.tv/'}
   - {<<: *public_player, channel_id: TVOnex.ch, url: 'https://tvonex.ch/', regional: true}
   - {<<: *public_player, channel_id: GeneveRegionTelevision.fr, url: 'https://grtv.news/', country: CH, regional: true}
-  - {<<: *public_player, channel_id: CPACFrench.ca, url: 'https://www.cpac.ca/fr/', content_store: '/site/components/cpac-item-lists/livestreams.xml'}
+  - {<<: *public_player, channel_id: CPACFrench.ca, url: 'https://www.cpac.ca/fr/', languages: [fra, eng], content_store: '/site/components/cpac-item-lists/livestreams.xml'}
   - <<: *public_player
     channel_id: ConseilNational.ch
     name: Conseil national (français)
@@ -392,6 +392,7 @@ official_pages:
   - <<: *public_player
     channel_id: ConseilEtats.ch
     name: Conseil des États (langues originales)
+    languages: [fra, deu, ita]
     country: CH
     url: 'https://www.parlament.ch/fr'
     embed_hosts: [par-pcache.simplex.tv]

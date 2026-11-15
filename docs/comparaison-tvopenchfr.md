@@ -8,7 +8,7 @@ La référence comporte **57 entrées**, toutes multicast RTP. Le parseur strict
 
 Après les recherches et lectures supplémentaires, **50 des 57 entrées** ont une chaîne correspondante dans notre sélection Internet. Les variantes publicitaires exactes ne sont pas garanties par le seul nom : TMC CH est signalée comme telle, et le multiplex LCP/Public Sénat reste distingué des services parlementaires 24h/24. Un rapprochement erroné de Canal Alpha NE dans certaines données amont est résolu par son identifiant explicite, en conservant séparément Neuchâtel et Jura.
 
-Le total de notre sélection est supérieur, mais elle ne couvre donc pas encore toute la référence. Les nouvelles chaînes contrôlées incluent i24NEWS français, CPAC avec piste française et GONG, toutes décodées en 1920 × 1080 depuis Sunrise en Suisse. GONG publie le lecteur de son direct sur son propre site ; il n’est pas assimilé à une autorisation de reprendre un flux payant GONG MAX.
+Le total de notre sélection est supérieur, mais elle ne couvre donc pas encore toute la référence. Les nouvelles chaînes contrôlées incluent i24NEWS français, CPAC avec piste française et GONG, toutes décodées en 1920 × 1080 depuis Sunrise en Suisse. GONG publie le lecteur de son direct sur son propre site ; il n’est pas assimilé à une autorisation de reprendre un flux payant GONG MAX. Les métadonnées d’un feed multilingue ne sont pas réécrites comme « français uniquement » : un feed grec/français/anglais dont la piste française n’est pas établie est écarté, même si sa lecture technique fonctionne et qu’une ancienne décision automatique était positive.
 
 ## Entrées encore manquantes au contrôle
 

@@ -86,6 +86,18 @@ class AutonomousPolicyTests(unittest.TestCase):
         self.assertTrue(approve_playback(self.db, self.source, proof, cfg))
         self.assertEqual(json.loads(self.db.execute('SELECT details FROM checks').fetchone()[0])['decode']['audio_language'], 'eng')
 
+    def test_mixed_language_service_needs_confirmed_french_track_even_after_old_approval(self):
+        self.db.execute("UPDATE channels SET languages='ell,eng,fra' WHERE id='TV.fr'")
+        proof = {'rule': 'official_page_reference', 'url': 'https://tele.example.org/direct', 'sha256': 'b' * 64}
+        self.proof(language=None)
+        self.assertFalse(approve_playback(self.db, self.source, proof, self.cfg))
+        self.proof(language='fra')
+        self.assertTrue(approve_playback(self.db, self.source, proof, self.cfg))
+        self.proof(language=None)
+        result = export_playlists(self.db, self.cfg, self.root / 'site')
+        self.assertEqual(result['playlists']['swiss-fr-internet'], 0)
+        self.assertEqual(result['exclusions']['unconfirmed_french_audio'], 1)
+
     def test_service_replacement_is_bound_to_channel_and_service(self):
         source = {**dict(self.source), 'url': 'https://viamotionhsi.netplus.ch/live/eds/test/browser-DASH/test.mpd', 'protocol': 'dash'}
         anchor = {**source, 'url': 'https://viamotionhsi.netplus.ch/live/eds/test/browser-HLS/test.m3u8'}

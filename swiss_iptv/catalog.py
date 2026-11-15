@@ -135,8 +135,15 @@ def bootstrap(db, root, config):
     records = {r['file']: r for r in manifest if 'sha256' in r}
     metadata = {c['id']: c for c in json.loads((root / 'api/channels.json').read_text(encoding='utf-8'))}
     feeds = json.loads((root / 'api/feeds.json').read_text(encoding='utf-8'))
-    french = {f['channel'] for f in feeds if 'fra' in f.get('languages', [])}
-    feed_languages = {f"{f['channel']}@{f['id']}": f.get('languages', []) for f in feeds}
+    feed_languages = {f"{f['channel']}@{f['id']}": config.get('feed_language_overrides', {}).get(
+        f"{f['channel']}@{f['id']}", f.get('languages', [])) for f in feeds}
+    french_languages = {}
+    for feed in feeds:
+        languages = feed_languages[f"{feed['channel']}@{feed['id']}"]
+        if 'fra' in languages:
+            french_languages.setdefault(feed['channel'], set()).update(languages)
+    french_languages = {cid: sorted(languages) for cid, languages in french_languages.items()}
+    french = set(french_languages)
     logos = {}
     for logo in json.loads((root / 'api/logos.json').read_text(encoding='utf-8')):
         logos.setdefault(logo['channel'], logo['url'])
@@ -197,7 +204,7 @@ def bootstrap(db, root, config):
             db.execute('''INSERT OR IGNORE INTO channels
               (id,name,country,languages,category,logo,epg_id,website,regional)
               VALUES (?,?,?,?,?,?,?,?,?)''',
-              (cid, meta.get('name', entry['name']), meta.get('country', country), 'fra',
+              (cid, meta.get('name', entry['name']), meta.get('country', country), ','.join(langs or french_languages.get(cid, ['fra'])),
                ','.join(meta.get('categories', [])) or entry.get('group-title', 'unknown'),
                logos.get(cid, entry.get('tvg-logo', '')), cid, meta.get('website', ''),
                int(page.get('regional', False))))
@@ -214,21 +221,25 @@ def bootstrap(db, root, config):
         db.execute('''INSERT OR IGNORE INTO channels
           (id,name,country,languages,category,logo,epg_id,website,regional)
           VALUES (?,?,?,?,?,?,?,?,0)''',
-          (cid, meta['name'], meta.get('country', ''), 'fra', ','.join(meta.get('categories', [])) or 'general',
+          (cid, meta['name'], meta.get('country', ''), ','.join(french_languages[cid]), ','.join(meta.get('categories', [])) or 'general',
            logos.get(cid, ''), cid, meta['website']))
+    for cid, languages in french_languages.items():
+        db.execute('UPDATE channels SET languages=? WHERE id=?', (','.join(languages), cid))
     for cid, page in pages.items():
         meta = metadata.get(cid, {})
         db.execute('''INSERT OR IGNORE INTO channels
           (id,name,country,languages,category,logo,epg_id,website,regional)
           VALUES (?,?,?,?,?,?,?,?,?)''',
           (cid, meta.get('name', page.get('name', cid)), meta.get('country', page.get('country', '')),
-           'fra', ','.join(meta.get('categories', [])) or 'general', logos.get(cid, ''), cid,
+           ','.join(page.get('languages', ['fra'])), ','.join(meta.get('categories', [])) or 'general', logos.get(cid, ''), cid,
            page['url'], int(page.get('regional', False))))
         db.execute('UPDATE channels SET regional=? WHERE id=?', (int(page.get('regional', False)), cid))
         if page.get('country'):
             db.execute('UPDATE channels SET country=? WHERE id=?', (page['country'], cid))
         if page.get('name'):
             db.execute('UPDATE channels SET name=? WHERE id=?', (page['name'], cid))
+        if page.get('languages'):
+            db.execute('UPDATE channels SET languages=? WHERE id=?', (','.join(page['languages']), cid))
     for cid, name in config.get('channel_names', {}).items():
         db.execute('UPDATE channels SET name=? WHERE id=?', (name, cid))
     db.commit()
