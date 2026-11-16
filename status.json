@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-16T07:11:52.716887+00:00",
+  "generated_at": "2026-11-16T11:02:34.150540+00:00",
   "audience": "public",
   "playlists": {
-    "swiss-fr": 66,
-    "swiss-fr-internet": 66,
+    "swiss-fr": 68,
+    "swiss-fr-internet": 68,
     "swiss-fr-multicast": 0,
     "swiss-fr-regional": 11,
-    "swiss-fr-news": 14
+    "swiss-fr-news": 15
   },
   "exclusions": {
-    "rights_pending": 866,
+    "rights_pending": 865,
     "unconfirmed_french_audio": 1,
     "account_required": 2,
     "identity_unresolved": 1
@@ -1276,6 +1276,50 @@
       }
     },
     {
+      "id": "AfrikInfoTV.gn",
+      "name": "Afrik Info TV",
+      "source_id": "8d9a0f6a716ec1efb1f1eae9",
+      "url": "https://kali.vdopanel.com:3119/hybrid/play.m3u8",
+      "checked_at": "2026-11-16T11:01:43.791264+00:00",
+      "width": 854,
+      "height": 480,
+      "fps": 25.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 125,
+      "language_evidence": null,
+      "decoded_seconds": 5.0,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 0,
+        "failed_higher_variants": []
+      }
+    },
+    {
+      "id": "BenieTV.ci",
+      "name": "Benie TV",
+      "source_id": "86fc50f6484d264685ca7654",
+      "url": "https://tv.voozmedia.fun/benietv/index.m3u8",
+      "checked_at": "2026-11-16T11:02:09.919535+00:00",
+      "width": 1280,
+      "height": 720,
+      "fps": 25.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 124,
+      "language_evidence": null,
+      "decoded_seconds": 5.0,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 2790000,
+        "failed_higher_variants": []
+      }
+    },
+    {
       "id": "BFMTechCo.fr",
       "name": "BFM Tech & Co",
       "source_id": "abc95b6524f911e651f29311",
@@ -1497,7 +1541,10 @@
     }
   ],
   "changes": {
-    "added": [],
+    "added": [
+      "AfrikInfoTV.gn",
+      "BenieTV.ci"
+    ],
     "removed": [],
     "source_changed": []
   },
@@ -1509,8 +1556,10 @@
     "missing_entries": 7,
     "additional_channels": [
       "7Info.ci",
+      "AfrikInfoTV.gn",
       "BFMBusiness.fr",
       "BFMTechCo.fr",
+      "BenieTV.ci",
       "CPACFrench.ca",
       "Gong.fr",
       "HANDICAPTV.fr",
