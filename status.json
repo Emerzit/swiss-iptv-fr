@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-15T19:41:28.990653+00:00",
+  "generated_at": "2026-11-16T07:11:52.716887+00:00",
   "audience": "public",
   "playlists": {
     "swiss-fr": 66,
@@ -9,7 +9,7 @@
     "swiss-fr-news": 14
   },
   "exclusions": {
-    "rights_pending": 864,
+    "rights_pending": 866,
     "unconfirmed_french_audio": 1,
     "account_required": 2,
     "identity_unresolved": 1
@@ -1497,11 +1497,7 @@
     }
   ],
   "changes": {
-    "added": [
-      "HANDICAPTV.fr",
-      "TVDecouverte.ch",
-      "TebeoTV.fr"
-    ],
+    "added": [],
     "removed": [],
     "source_changed": []
   },
