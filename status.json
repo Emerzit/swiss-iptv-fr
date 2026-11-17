@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T07:08:59.258357+00:00",
+  "generated_at": "2026-11-17T11:03:08.199797+00:00",
   "audience": "public",
   "playlists": {
     "swiss-fr": 68,
@@ -9,7 +9,7 @@
     "swiss-fr-news": 15
   },
   "exclusions": {
-    "rights_pending": 889,
+    "rights_pending": 890,
     "unconfirmed_french_audio": 1,
     "account_required": 2,
     "identity_unresolved": 1
@@ -840,7 +840,7 @@
       "name": "Canal 9",
       "source_id": "b1e0475bf94c100af97317e2",
       "url": "https://livehd.vedge.infomaniak.com/livecast/ik:livehd/manifest.m3u8",
-      "checked_at": "2026-11-15T16:10:56.090022+00:00",
+      "checked_at": "2026-11-17T11:00:05.532368+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 25.0,
@@ -853,7 +853,7 @@
       "quality": {
         "mode": "best",
         "variant_rank": 0,
-        "bandwidth": 3422118,
+        "bandwidth": 3425209,
         "failed_higher_variants": []
       }
     },
@@ -1543,9 +1543,7 @@
   "changes": {
     "added": [],
     "removed": [],
-    "source_changed": [
-      "Canal9.ch"
-    ]
+    "source_changed": []
   },
   "reference": {
     "url": "https://github.com/iptv-ch/iptv-ch.github.io/blob/master/tvopenchfr.m3u",
@@ -2417,7 +2415,7 @@
           {
             "id": "3f99462c1b079b61ff038ed5",
             "status": "playable",
-            "checked_at": "2026-11-15T16:11:23.565449+00:00"
+            "checked_at": "2026-11-17T11:00:09.293689+00:00"
           },
           {
             "id": "4746cc06e17672aee0b0fa62",
@@ -2552,14 +2550,14 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 25.0,
-        "published_checked_at": "2026-11-15T16:10:56.090022+00:00",
+        "published_checked_at": "2026-11-17T11:00:05.532368+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "b1e0475bf94c100af97317e2",
             "status": "playable",
-            "checked_at": "2026-11-15T16:10:56.090022+00:00"
+            "checked_at": "2026-11-17T11:00:05.532368+00:00"
           },
           {
             "id": "03e456deb8e36117bd0e8af1",
