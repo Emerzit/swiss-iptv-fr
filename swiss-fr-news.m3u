@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz" x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz"
-# Generated 2026-11-17T11:03:08.197796+00:00; audience=public; sample playback only
+# Generated 2026-11-18T07:05:53.192655+00:00; audience=public; sample playback only
 #EXTINF:-1 tvg-id="RTSInfo.ch" tvg-name="RTS Info" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/switzerland/rts-info-ch.png" group-title="news" tvg-language="fra" tvg-country="CH",RTS Info
 https://rtsinfo-d.akamaized.net/out/v1/lsvs/rts-info/cmaf/hls-master.m3u8?dw=7201
 #EXTINF:-1 tvg-id="franceinfo.ch" tvg-name="Franceinfo" tvg-logo="https://i.imgur.com/eITXz6A.png" group-title="news" tvg-language="fra" tvg-country="FR" tvg-chno="16",Franceinfo
@@ -28,5 +28,7 @@ https://stream.7info.net/live/7info/index.m3u8
 https://kali.vdopanel.com:3119/hybrid/play.m3u8
 #EXTINF:-1 tvg-id="BFMTechCo.fr" tvg-name="BFM Tech & Co" tvg-logo="https://i.imgur.com/FQ0FpXV.png" group-title="science,news" tvg-language="fra" tvg-country="FR",BFM Tech & Co
 https://live-cdn-technco-euw1.bfmb.bct.nextradiotv.com/master.m3u8
+#EXTINF:-1 tvg-id="FilinfoTV.bf" tvg-name="Filinfo TV" tvg-logo="https://i.imgur.com/KG93Tvn.png" group-title="news" tvg-language="fra" tvg-country="BF",Filinfo TV
+https://d3t1ss6x7vm1uz.cloudfront.net/hls/master.m3u8
 #EXTINF:-1 tvg-id="MonacoInfo.mc" tvg-name="Monaco Info" tvg-logo="https://i.imgur.com/dIrKYH7.png" group-title="news" tvg-language="fra" tvg-country="MC",Monaco Info
 https://webtv.monacoinfo.com/live/master.m3u8
