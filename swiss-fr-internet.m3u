@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz" x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz"
-# Generated 2026-11-18T07:05:53.159606+00:00; audience=public; sample playback only
+# Generated 2026-11-18T11:03:23.596805+00:00; audience=public; sample playback only
 #EXTINF:-1 tvg-id="RTS.1.ch" tvg-name="RTS 1" tvg-logo="https://i.imgur.com/OP5lHv9.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="1",RTS 1
 https://viamotionhsi.netplus.ch/live/eds/rts1hd/browser-HLS8/rts1hd.m3u8
 #EXTINF:-1 tvg-id="RTS.2.ch" tvg-name="RTS 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/RTS_2_logo_2019.svg/960px-RTS_2_logo_2019.svg.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="2",RTS 2
@@ -128,6 +128,12 @@ https://amg01596-gongnetworks-gong-ono-vh5f2.amagi.tv/playlist.m3u8
 https://srv.webtvmanager.fr:3697/stream/play.m3u8
 #EXTINF:-1 tvg-id="I-TV.ch" tvg-name="ITV" tvg-logo="https://i.imgur.com/ciHDxv6.png" group-title="general" tvg-language="fra" tvg-country="SN",ITV
 https://rezopro.playerlive.nl/itv_senegal/itv_senegal/playlist.m3u8
+#EXTINF:-1 tvg-id="LeNouveauManagerTV.bj@SD" tvg-name="Le Nouveau Manager TV" tvg-logo="https://i.imgur.com/pEoOtEf.jpeg" group-title="business" tvg-language="fra" tvg-country="BJ",Le Nouveau Manager TV
+https://lnmlive.com/live/lnmtv.m3u8
+#EXTINF:-1 tvg-id="LougaTV.sn@SD" tvg-name="Louga TV" tvg-logo="https://i.ibb.co/xXZ5kFy/unnamed.jpg" group-title="general" tvg-language="fra" tvg-country="SN",Louga TV
+https://stream.sen-gt.com/Mbacke/myStream/playlist.m3u8
+#EXTINF:-1 tvg-id="ManaEgliseOnline.pt" tvg-name="Mana Eglise Online" tvg-logo="https://i.imgur.com/xQYly8O.png" group-title="religious" tvg-language="fra" tvg-country="PT",Mana Eglise Online
+https://w2.manasat.com:443/eglise-online/smil:eglise-online.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="Matele.be@SD" tvg-name="Matele" tvg-logo="https://i.imgur.com/rw72POr.png" group-title="general" tvg-language="fra" tvg-country="BE",Matele
 https://live.matele.be/hls/live.m3u8
 #EXTINF:-1 tvg-id="MonacoInfo.mc" tvg-name="Monaco Info" tvg-logo="https://i.imgur.com/dIrKYH7.png" group-title="news" tvg-language="fra" tvg-country="MC",Monaco Info

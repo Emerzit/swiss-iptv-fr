@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-18T07:05:53.194766+00:00",
+  "generated_at": "2026-11-18T11:03:23.635375+00:00",
   "audience": "public",
   "playlists": {
-    "swiss-fr": 70,
-    "swiss-fr-internet": 70,
+    "swiss-fr": 73,
+    "swiss-fr-internet": 73,
     "swiss-fr-multicast": 0,
     "swiss-fr-regional": 11,
     "swiss-fr-news": 16
   },
   "exclusions": {
-    "rights_pending": 890,
+    "rights_pending": 898,
     "check_expired": 45,
     "unconfirmed_french_audio": 1,
     "account_required": 2,
@@ -1453,6 +1453,72 @@
       }
     },
     {
+      "id": "LeNouveauManagerTV.bj",
+      "name": "Le Nouveau Manager TV",
+      "source_id": "028a3e37bd674614be6a821b",
+      "url": "https://lnmlive.com/live/lnmtv.m3u8",
+      "checked_at": "2026-11-18T11:02:47.844413+00:00",
+      "width": 1280,
+      "height": 720,
+      "fps": 25.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 123,
+      "language_evidence": null,
+      "decoded_seconds": 5.0,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 0,
+        "failed_higher_variants": []
+      }
+    },
+    {
+      "id": "LougaTV.sn",
+      "name": "Louga TV",
+      "source_id": "c715f8f42cd3d16ad486da5f",
+      "url": "https://stream.sen-gt.com/Mbacke/myStream/playlist.m3u8",
+      "checked_at": "2026-11-18T11:02:53.124722+00:00",
+      "width": 1280,
+      "height": 720,
+      "fps": 25.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 125,
+      "language_evidence": null,
+      "decoded_seconds": 5.0,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 1814238,
+        "failed_higher_variants": []
+      }
+    },
+    {
+      "id": "ManaEgliseOnline.pt",
+      "name": "Mana Eglise Online",
+      "source_id": "4ad8c23f970afe36cb5d467d",
+      "url": "https://w2.manasat.com:443/eglise-online/smil:eglise-online.smil/playlist.m3u8",
+      "checked_at": "2026-11-18T11:02:58.338433+00:00",
+      "width": 1920,
+      "height": 1080,
+      "fps": 25.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 124,
+      "language_evidence": null,
+      "decoded_seconds": 5.0,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 30048000,
+        "failed_higher_variants": []
+      }
+    },
+    {
       "id": "Matele.be",
       "name": "Matele",
       "source_id": "3863bd957b88d31994849e3f",
@@ -1587,16 +1653,12 @@
   ],
   "changes": {
     "added": [
-      "FilinfoTV.bf",
-      "ITV.sn"
+      "LeNouveauManagerTV.bj",
+      "LougaTV.sn",
+      "ManaEgliseOnline.pt"
     ],
     "removed": [],
-    "source_changed": [
-      "Carac5.ch",
-      "Carac2.ch",
-      "Carac1.ch",
-      "Carac3.ch"
-    ]
+    "source_changed": []
   },
   "reference": {
     "url": "https://github.com/iptv-ch/iptv-ch.github.io/blob/master/tvopenchfr.m3u",
@@ -1615,6 +1677,9 @@
       "Gong.fr",
       "HANDICAPTV.fr",
       "ITV.sn",
+      "LeNouveauManagerTV.bj",
+      "LougaTV.sn",
+      "ManaEgliseOnline.pt",
       "Matele.be",
       "MonacoInfo.mc",
       "NOVO19.fr",
