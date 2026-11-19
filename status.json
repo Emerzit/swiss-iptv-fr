@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-11-18T11:03:23.635375+00:00",
+  "generated_at": "2026-11-19T07:21:02.516671+00:00",
   "audience": "public",
   "playlists": {
-    "swiss-fr": 73,
-    "swiss-fr-internet": 73,
+    "swiss-fr": 74,
+    "swiss-fr-internet": 74,
     "swiss-fr-multicast": 0,
     "swiss-fr-regional": 11,
     "swiss-fr-news": 16
   },
   "exclusions": {
     "rights_pending": 898,
-    "check_expired": 45,
+    "check_expired": 47,
     "unconfirmed_french_audio": 1,
     "account_required": 2,
     "identity_unresolved": 1
@@ -43,7 +43,7 @@
       "name": "RTS 1",
       "source_id": "4d9eb61bd00f4d3f44838397",
       "url": "https://viamotionhsi.netplus.ch/live/eds/rts1hd/browser-HLS8/rts1hd.m3u8",
-      "checked_at": "2026-11-18T06:57:02.414136+00:00",
+      "checked_at": "2026-11-19T07:09:23.023826+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 50.0,
@@ -65,7 +65,7 @@
       "name": "RTS 2",
       "source_id": "0ee08bc1f5ddd22a952ec6b6",
       "url": "https://viamotionhsi.netplus.ch/live/eds/rts2hd/browser-HLS8/rts2hd.m3u8",
-      "checked_at": "2026-11-18T06:57:07.378026+00:00",
+      "checked_at": "2026-11-19T07:09:29.976061+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 50.0,
@@ -87,7 +87,7 @@
       "name": "TF1 Suisse",
       "source_id": "22811cdd90e328bc40bd9a13",
       "url": "https://viamotionhsi.netplus.ch/live/eds/tf1hd/browser-HLS8/tf1hd.m3u8",
-      "checked_at": "2026-11-18T06:57:14.287326+00:00",
+      "checked_at": "2026-11-19T07:09:34.927125+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -109,7 +109,7 @@
       "name": "France 2",
       "source_id": "ceef4b9da74aafda1fcd7a7c",
       "url": "https://viamotionhsi.netplus.ch/live/eds/france2hd/browser-HLS8/france2hd.m3u8",
-      "checked_at": "2026-11-18T06:57:19.156534+00:00",
+      "checked_at": "2026-11-19T07:09:39.845648+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -131,7 +131,7 @@
       "name": "France 3",
       "source_id": "0ade8f85e65121d6419a94e5",
       "url": "https://viamotionhsi.netplus.ch/live/eds/france3hd/browser-HLS8/france3hd.m3u8",
-      "checked_at": "2026-11-18T06:57:24.066708+00:00",
+      "checked_at": "2026-11-19T07:09:46.812883+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -153,7 +153,7 @@
       "name": "France 4",
       "source_id": "ebdb4cbcb7a3dd2b73caa890",
       "url": "https://viamotionhsi.netplus.ch/live/eds/france4hd/browser-HLS8/france4hd.m3u8",
-      "checked_at": "2026-11-18T06:57:30.911500+00:00",
+      "checked_at": "2026-11-19T07:09:51.768400+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -175,7 +175,7 @@
       "name": "France 5",
       "source_id": "ee34dcf391bdf5b67f2efed7",
       "url": "https://viamotionhsi.netplus.ch/live/eds/france5hd/browser-HLS8/france5hd.m3u8",
-      "checked_at": "2026-11-18T06:57:35.869193+00:00",
+      "checked_at": "2026-11-19T07:09:56.658682+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -197,7 +197,7 @@
       "name": "M6 Suisse",
       "source_id": "93908f069b4b06b89f54d568",
       "url": "https://viamotionhsi.netplus.ch/live/eds/m6hd/browser-HLS8/m6hd.m3u8",
-      "checked_at": "2026-11-18T06:57:40.849712+00:00",
+      "checked_at": "2026-11-19T07:10:03.651886+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -219,7 +219,7 @@
       "name": "arte",
       "source_id": "b17e15a11f751ec393a961d0",
       "url": "https://viamotionhsi.netplus.ch/live/eds/artehd/browser-HLS8/artehd.m3u8",
-      "checked_at": "2026-11-18T06:57:47.773853+00:00",
+      "checked_at": "2026-11-19T07:10:08.450108+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -241,7 +241,7 @@
       "name": "W9 Suisse",
       "source_id": "1d930c5dc1ed6c40e5180478",
       "url": "https://viamotionhsi.netplus.ch/live/eds/w9/browser-HLS8/w9.m3u8",
-      "checked_at": "2026-11-18T06:57:52.562013+00:00",
+      "checked_at": "2026-11-19T07:10:15.275112+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -263,7 +263,7 @@
       "name": "TMC",
       "source_id": "d230a54f3e0ad6ac83e0d67c",
       "url": "https://viamotionhsi.netplus.ch/live/eds/tmc/browser-HLS8/tmc.m3u8",
-      "checked_at": "2026-11-18T06:57:57.494066+00:00",
+      "checked_at": "2026-11-19T07:10:20.371792+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -285,7 +285,7 @@
       "name": "TFX Suisse",
       "source_id": "077f8b810459aa4bed74a826",
       "url": "https://viamotionhsi.netplus.ch/live/eds/nt1/browser-HLS8/nt1.m3u8",
-      "checked_at": "2026-11-18T06:58:04.443389+00:00",
+      "checked_at": "2026-11-19T07:10:25.299376+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -307,7 +307,7 @@
       "name": "6ter Suisse",
       "source_id": "f060fc89f8501746eeebb696",
       "url": "https://viamotionhsi.netplus.ch/live/eds/6ter/browser-HLS8/6ter.m3u8",
-      "checked_at": "2026-11-18T06:58:09.262769+00:00",
+      "checked_at": "2026-11-19T07:10:32.207820+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -329,7 +329,7 @@
       "name": "TV5MONDE FBS",
       "source_id": "a63bb4a421430855a1adc40a",
       "url": "https://ott.tv5monde.com/Content/HLS/Live/channel(fbs)/variant.m3u8",
-      "checked_at": "2026-11-18T06:56:37.621773+00:00",
+      "checked_at": "2026-11-19T07:08:51.731555+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 25.0,
@@ -351,14 +351,14 @@
       "name": "KTO",
       "source_id": "f2466ab0cfbedc1ad594cb44",
       "url": "https://livekto.akamaized.net/hls/live/20000018/ktotv/master.m3u8",
-      "checked_at": "2026-11-18T06:56:47.929454+00:00",
+      "checked_at": "2026-11-19T07:09:08.432805+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 50.0,
       "video_codec": "h264",
       "audio_codec": "aac",
       "audio_language": "fra",
-      "frames": 249,
+      "frames": 250,
       "language_evidence": null,
       "decoded_seconds": 5.0,
       "quality": {
@@ -373,7 +373,7 @@
       "name": "TV Monaco",
       "source_id": "755edb10f7b4654cf89737b5",
       "url": "https://viamotionhsi.netplus.ch/live/eds/monacotv/browser-HLS8/monacotv.m3u8",
-      "checked_at": "2026-11-18T06:59:37.118894+00:00",
+      "checked_at": "2026-11-19T07:12:02.265531+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -395,7 +395,7 @@
       "name": "T18",
       "source_id": "ed6a0dc3971ff5e82cbfa56d",
       "url": "https://viamotionhsi.netplus.ch/live/eds/t18/browser-HLS8/t18.m3u8",
-      "checked_at": "2026-11-18T06:59:20.932042+00:00",
+      "checked_at": "2026-11-19T07:11:46.057601+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -417,7 +417,7 @@
       "name": "NOVO19",
       "source_id": "50b29937ba5df9dbfc50f2e9",
       "url": "https://viamotionhsi.netplus.ch/live/eds/novo19/browser-HLS8/novo19.m3u8",
-      "checked_at": "2026-11-18T06:59:25.801763+00:00",
+      "checked_at": "2026-11-19T07:11:50.936726+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -439,7 +439,7 @@
       "name": "TF1 Series Films",
       "source_id": "b45bc3c97dc0eaf452856440",
       "url": "https://viamotionhsi.netplus.ch/live/eds/hd1/browser-HLS8/hd1.m3u8",
-      "checked_at": "2026-11-18T06:58:16.145788+00:00",
+      "checked_at": "2026-11-19T07:10:37.140042+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -461,7 +461,7 @@
       "name": "RMC Life",
       "source_id": "65b501f7989d821f16e9355a",
       "url": "https://viamotionhsi.netplus.ch/live/eds/cherie25/browser-HLS8/cherie25.m3u8",
-      "checked_at": "2026-11-18T06:58:21.005155+00:00",
+      "checked_at": "2026-11-19T07:10:44.073574+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -483,7 +483,7 @@
       "name": "AB3",
       "source_id": "cd139b13d00fb110eb54db87",
       "url": "https://viamotionhsi.netplus.ch/live/eds/ab3/browser-HLS8/ab3.m3u8",
-      "checked_at": "2026-11-18T07:00:06.010378+00:00",
+      "checked_at": "2026-11-19T07:12:30.098437+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -505,7 +505,7 @@
       "name": "RMC Decouverte",
       "source_id": "1c2e93906f36f2bdd1da26ec",
       "url": "https://viamotionhsi.netplus.ch/live/eds/rmcdecouverte/browser-HLS8/rmcdecouverte.m3u8",
-      "checked_at": "2026-11-18T06:58:25.814660+00:00",
+      "checked_at": "2026-11-19T07:10:48.843743+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -527,7 +527,7 @@
       "name": "RMC Story",
       "source_id": "62a6081a9ae6dbe0aa2525d0",
       "url": "https://viamotionhsi.netplus.ch/live/eds/numero23/browser-HLS8/numero23.m3u8",
-      "checked_at": "2026-11-18T06:58:32.743627+00:00",
+      "checked_at": "2026-11-19T07:10:53.753734+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -549,7 +549,7 @@
       "name": "RTS Info",
       "source_id": "e40eecb4573d947b6cdf67f9",
       "url": "https://rtsinfo-d.akamaized.net/out/v1/lsvs/rts-info/cmaf/hls-master.m3u8?dw=7201",
-      "checked_at": "2026-11-18T06:55:57.998908+00:00",
+      "checked_at": "2026-11-19T07:08:40.251868+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -571,7 +571,7 @@
       "name": "Franceinfo",
       "source_id": "832354b9cc6c467c013fb99d",
       "url": "https://viamotionhsi.netplus.ch/live/eds/franceinfo/browser-HLS8/franceinfo.m3u8",
-      "checked_at": "2026-11-18T06:58:37.596555+00:00",
+      "checked_at": "2026-11-19T07:11:00.746816+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -593,7 +593,7 @@
       "name": "BFM TV",
       "source_id": "e946a5956c5de3b38a0120e1",
       "url": "https://viamotionhsi.netplus.ch/live/eds/bfmtv/browser-HLS8/bfmtv.m3u8",
-      "checked_at": "2026-11-18T06:58:42.456432+00:00",
+      "checked_at": "2026-11-19T07:11:05.613404+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -615,7 +615,7 @@
       "name": "BFM Business",
       "source_id": "4d549754821b12b8dcc3d07b",
       "url": "https://viamotionhsi.netplus.ch/live/eds/bfmbusiness/browser-HLS8/bfmbusiness.m3u8",
-      "checked_at": "2026-11-18T06:59:04.104634+00:00",
+      "checked_at": "2026-11-19T07:11:29.212541+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -637,7 +637,7 @@
       "name": "CNews",
       "source_id": "9669e293bb02aaf422d17eec",
       "url": "https://viamotionhsi.netplus.ch/live/eds/itele/browser-HLS8/itele.m3u8",
-      "checked_at": "2026-11-18T06:58:47.372181+00:00",
+      "checked_at": "2026-11-19T07:11:10.502303+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -659,7 +659,7 @@
       "name": "LCI",
       "source_id": "0f99c997998d290dfb551388",
       "url": "https://viamotionhsi.netplus.ch/live/eds/lci/browser-HLS8/lci.m3u8",
-      "checked_at": "2026-11-18T06:58:52.238440+00:00",
+      "checked_at": "2026-11-19T07:11:17.364815+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -681,7 +681,7 @@
       "name": "LCP",
       "source_id": "6cd09ab290e5c73df8409956",
       "url": "https://viamotionhsi.netplus.ch/live/eds/lcp/browser-HLS8/lcp.m3u8",
-      "checked_at": "2026-11-18T06:58:57.126588+00:00",
+      "checked_at": "2026-11-19T07:11:22.303116+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -703,7 +703,7 @@
       "name": "Euronews French",
       "source_id": "1f95d41ffa750e32cc417041",
       "url": "https://viamotionhsi.netplus.ch/live/eds/euronews/browser-HLS8/euronews.m3u8",
-      "checked_at": "2026-11-18T07:00:17.781987+00:00",
+      "checked_at": "2026-11-19T07:12:40.013362+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -723,9 +723,9 @@
     {
       "id": "France24.fr",
       "name": "France 24",
-      "source_id": "07f9ff4d9e581b63108710d1",
-      "url": "https://live.france24.com/hls/live/2037179-b/F24_FR_HI_HLS/master_5000.m3u8",
-      "checked_at": "2026-11-17T07:04:21.816438+00:00",
+      "source_id": "3f99462c1b079b61ff038ed5",
+      "url": "https://live.france24.com/hls/live/2037179/F24_FR_HI_HLS/master_5000.m3u8",
+      "checked_at": "2026-11-19T07:14:23.802321+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 25.0,
@@ -747,7 +747,7 @@
       "name": "TV5MONDE Info",
       "source_id": "6b42c435fbed3a8e6b1d2be7",
       "url": "https://ott.tv5monde.com/Content/HLS/Live/channel(info)/variant.m3u8",
-      "checked_at": "2026-11-18T06:56:17.717348+00:00",
+      "checked_at": "2026-11-19T07:08:45.015907+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 29.97,
@@ -769,7 +769,7 @@
       "name": "i24NEWS French",
       "source_id": "44e2e8a0f6417e3fd924673e",
       "url": "https://i24newsfrench-cdn.encoders.immergo.tv/master.m3u8",
-      "checked_at": "2026-11-18T07:01:15.696154+00:00",
+      "checked_at": "2026-11-19T07:13:34.611118+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 30.0,
@@ -797,14 +797,14 @@
       "name": "L\u00e9man Bleu",
       "source_id": "f143761543372297f59eade1",
       "url": "https://naxoo.vedge.infomaniak.com/livecast/ik:naxoo/manifest.m3u8",
-      "checked_at": "2026-11-18T06:55:41.188729+00:00",
+      "checked_at": "2026-11-19T07:08:25.634378+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 25.0,
       "video_codec": "h264",
       "audio_codec": "aac",
       "audio_language": null,
-      "frames": 124,
+      "frames": 125,
       "language_evidence": null,
       "decoded_seconds": 5.0,
       "quality": {
@@ -819,7 +819,7 @@
       "name": "TV8 Mont-Blanc",
       "source_id": "96643867a2ba87d16a54834f",
       "url": "https://viamotionhsi.netplus.ch/live/eds/tv8montblanc/browser-HLS8/tv8montblanc.m3u8",
-      "checked_at": "2026-11-18T06:59:32.161770+00:00",
+      "checked_at": "2026-11-19T07:11:56.282742+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -841,20 +841,20 @@
       "name": "Canal 9",
       "source_id": "b1e0475bf94c100af97317e2",
       "url": "https://livehd.vedge.infomaniak.com/livecast/ik:livehd/manifest.m3u8",
-      "checked_at": "2026-11-18T07:02:03.562020+00:00",
+      "checked_at": "2026-11-19T07:14:21.309752+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 25.0,
       "video_codec": "h264",
       "audio_codec": "aac",
       "audio_language": null,
-      "frames": 125,
+      "frames": 124,
       "language_evidence": null,
       "decoded_seconds": 5.0,
       "quality": {
         "mode": "best",
         "variant_rank": 0,
-        "bandwidth": 3436038,
+        "bandwidth": 3444460,
         "failed_higher_variants": []
       }
     },
@@ -863,14 +863,14 @@
       "name": "Canal Alpha Jura",
       "source_id": "e5c9d4c1c2e76a698dfe12f2",
       "url": "https://canalalphaju.vedge.infomaniak.com/livecast/ik:canalalphaju/manifest.m3u8",
-      "checked_at": "2026-11-18T06:55:47.366490+00:00",
+      "checked_at": "2026-11-19T07:08:29.304568+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 50.0,
       "video_codec": "h264",
       "audio_codec": "aac",
       "audio_language": null,
-      "frames": 246,
+      "frames": 249,
       "language_evidence": null,
       "decoded_seconds": 5.0,
       "quality": {
@@ -885,14 +885,14 @@
       "name": "Canal Alpha Neuch\u00e2tel",
       "source_id": "6d3289f3f24ee85fdad3743b",
       "url": "https://canalalpha.vedge.infomaniak.com/livecast/ik:canalalpha/playlist.m3u8",
-      "checked_at": "2026-11-18T06:55:51.978035+00:00",
+      "checked_at": "2026-11-19T07:08:34.876572+00:00",
       "width": 854,
       "height": 480,
       "fps": 50.0,
       "video_codec": "h264",
       "audio_codec": "aac",
       "audio_language": null,
-      "frames": 249,
+      "frames": 246,
       "language_evidence": null,
       "decoded_seconds": 5.0,
       "quality": {
@@ -907,7 +907,7 @@
       "name": "La T\u00e9l\u00e9",
       "source_id": "d7c5f990686f0bade7c0c73e",
       "url": "https://latele2.vedge.infomaniak.com/livecast/ik:latele2/manifest.m3u8?DVR",
-      "checked_at": "2026-11-18T06:55:37.624502+00:00",
+      "checked_at": "2026-11-19T07:08:21.916053+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 50.0,
@@ -929,7 +929,7 @@
       "name": "TeleBielingue",
       "source_id": "7992f8b8df3b3379f9c45703",
       "url": "https://viamotionhsi.netplus.ch/live/eds/telebielingue/browser-HLS8/telebielingue.m3u8",
-      "checked_at": "2026-11-18T06:59:42.099213+00:00",
+      "checked_at": "2026-11-19T07:12:07.318821+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 50.0,
@@ -951,7 +951,7 @@
       "name": "Canal B fran\u00e7ais",
       "source_id": "c7e7b9dd2d7590a9c43ad9d3",
       "url": "https://viamotionhsi.netplus.ch/live/eds/canalbfr/browser-HLS8/canalbfr.m3u8",
-      "checked_at": "2026-11-18T07:00:23.100128+00:00",
+      "checked_at": "2026-11-19T07:12:47.400073+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 50.0,
@@ -973,7 +973,7 @@
       "name": "MaxTV / DieuTV",
       "source_id": "9fb7eb381dabdd17f4fcad3b",
       "url": "https://viamotionhsi.netplus.ch/live/eds/maxtv/browser-HLS8/maxtv.m3u8",
-      "checked_at": "2026-11-18T06:59:54.106020+00:00",
+      "checked_at": "2026-11-19T07:12:18.267817+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -995,7 +995,7 @@
       "name": "NRTV",
       "source_id": "4f1371a306e073603df05733",
       "url": "https://viamotionhsi.netplus.ch/live/eds/nrtv/browser-HLS8/nrtv.m3u8",
-      "checked_at": "2026-11-18T06:59:48.099565+00:00",
+      "checked_at": "2026-11-19T07:12:13.376192+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -1017,7 +1017,7 @@
       "name": "Val TV",
       "source_id": "3d129dc707b4cd77f1e22300",
       "url": "https://viamotionhsi.netplus.ch/live/eds/valtv/browser-HLS8/valtv.m3u8",
-      "checked_at": "2026-11-18T07:00:10.881682+00:00",
+      "checked_at": "2026-11-19T07:12:35.016228+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -1039,7 +1039,7 @@
       "name": "Carac 1",
       "source_id": "753d7d71761e992c952b47db",
       "url": "https://rougetv.vedge.infomaniak.com/livecast/ik:rougetv/manifest.m3u8",
-      "checked_at": "2026-11-18T07:00:39.798405+00:00",
+      "checked_at": "2026-11-19T07:13:02.675647+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 25.0,
@@ -1061,7 +1061,7 @@
       "name": "Carac 2",
       "source_id": "dd19350797cf5f9f4f113003",
       "url": "https://onefmmd.vedge.infomaniak.com/livecast/ik:onefmmd/playlist.m3u8",
-      "checked_at": "2026-11-18T07:00:49.134502+00:00",
+      "checked_at": "2026-11-19T07:13:09.890166+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 25.0,
@@ -1083,7 +1083,7 @@
       "name": "Carac 3",
       "source_id": "f1f9c692ec579c0728b3d192",
       "url": "https://lfmmd.vedge.infomaniak.com/livecast/ik:lfmmd/manifest.m3u8",
-      "checked_at": "2026-11-18T07:00:52.737872+00:00",
+      "checked_at": "2026-11-19T07:13:15.518668+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 25.0,
@@ -1105,7 +1105,7 @@
       "name": "Carac 4",
       "source_id": "43b1c6c2811d7375324e78be",
       "url": "https://edge17.vedge.infomaniak.com/livecast/ik:compack_media_1/playlist.m3u8",
-      "checked_at": "2026-11-18T06:56:51.407309+00:00",
+      "checked_at": "2026-11-19T07:09:14.105762+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 25.0,
@@ -1127,7 +1127,7 @@
       "name": "Carac 5",
       "source_id": "d9f267888e3f3fe8b34eeb93",
       "url": "https://carac5.vedge.infomaniak.com/livecast/ik:carac5/manifest.m3u8",
-      "checked_at": "2026-11-18T07:00:45.403330+00:00",
+      "checked_at": "2026-11-19T07:13:06.371643+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 25.0,
@@ -1149,20 +1149,20 @@
       "name": "Rh\u00f4ne TV",
       "source_id": "c80f48bc314b4b8cdba7b6b5",
       "url": "https://rhonetv.vedge.infomaniak.com/livecast/ik%3Arhonetv/manifest.m3u8",
-      "checked_at": "2026-11-18T06:56:55.431643+00:00",
+      "checked_at": "2026-11-19T07:09:17.975816+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 60.0,
       "video_codec": "h264",
       "audio_codec": "aac",
       "audio_language": null,
-      "frames": 298,
+      "frames": 300,
       "language_evidence": null,
-      "decoded_seconds": 5.0,
+      "decoded_seconds": 5.001667,
       "quality": {
         "mode": "best",
         "variant_rank": 0,
-        "bandwidth": 15845843,
+        "bandwidth": 15932595,
         "failed_higher_variants": []
       }
     },
@@ -1171,20 +1171,20 @@
       "name": "TVM3",
       "source_id": "88ede18d59093729cc740dfc",
       "url": "https://tvm3.vedge.infomaniak.com/livecast/ik:tvm3/manifest.m3u8",
-      "checked_at": "2026-11-18T06:56:43.158655+00:00",
+      "checked_at": "2026-11-19T07:08:55.352275+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 25.0,
       "video_codec": "h264",
       "audio_codec": "aac",
       "audio_language": null,
-      "frames": 125,
+      "frames": 124,
       "language_evidence": null,
       "decoded_seconds": 5.0,
       "quality": {
         "mode": "best",
         "variant_rank": 0,
-        "bandwidth": 3202266,
+        "bandwidth": 3232346,
         "failed_higher_variants": []
       }
     },
@@ -1193,7 +1193,7 @@
       "name": "Blue Zoom F",
       "source_id": "ebaf7ca5260efb589d0b81a9",
       "url": "https://viamotionhsi.netplus.ch/live/eds/bluezoomfr/browser-HLS8/bluezoomfr.m3u8",
-      "checked_at": "2026-11-18T07:00:01.049448+00:00",
+      "checked_at": "2026-11-19T07:12:23.228434+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -1215,7 +1215,7 @@
       "name": "L'\u00c9quipe",
       "source_id": "af9851922f007fd8fd17c2d3",
       "url": "https://viamotionhsi.netplus.ch/live/eds/lequipe21/browser-HLS8/lequipe21.m3u8",
-      "checked_at": "2026-11-18T06:59:09.036396+00:00",
+      "checked_at": "2026-11-19T07:11:34.188511+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -1237,7 +1237,7 @@
       "name": "Gulli",
       "source_id": "2d58d9a2ca982dde2df9ca30",
       "url": "https://viamotionhsi.netplus.ch/live/eds/gulli/browser-HLS8/gulli.m3u8",
-      "checked_at": "2026-11-18T06:59:15.983914+00:00",
+      "checked_at": "2026-11-19T07:11:39.082836+00:00",
       "width": 1280,
       "height": 720,
       "fps": 50.0,
@@ -1259,20 +1259,20 @@
       "name": "7 Info",
       "source_id": "db5ad596502f24e7c340cfc7",
       "url": "https://stream.7info.net/live/7info/index.m3u8",
-      "checked_at": "2026-11-18T07:00:31.579006+00:00",
+      "checked_at": "2026-11-19T07:12:52.340443+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 25.0,
       "video_codec": "h264",
       "audio_codec": "aac",
       "audio_language": null,
-      "frames": 125,
+      "frames": 121,
       "language_evidence": null,
       "decoded_seconds": 5.0,
       "quality": {
         "mode": "best",
         "variant_rank": 0,
-        "bandwidth": 3272925,
+        "bandwidth": 3283268,
         "failed_higher_variants": []
       }
     },
@@ -1281,7 +1281,7 @@
       "name": "Afrik Info TV",
       "source_id": "8d9a0f6a716ec1efb1f1eae9",
       "url": "https://kali.vdopanel.com:3119/hybrid/play.m3u8",
-      "checked_at": "2026-11-18T07:01:54.132025+00:00",
+      "checked_at": "2026-11-19T07:14:13.991248+00:00",
       "width": 854,
       "height": 480,
       "fps": 25.0,
@@ -1303,7 +1303,7 @@
       "name": "Benie TV",
       "source_id": "86fc50f6484d264685ca7654",
       "url": "https://tv.voozmedia.fun/benietv/index.m3u8",
-      "checked_at": "2026-11-18T07:01:59.953387+00:00",
+      "checked_at": "2026-11-19T07:14:17.799985+00:00",
       "width": 1280,
       "height": 720,
       "fps": 25.0,
@@ -1316,7 +1316,7 @@
       "quality": {
         "mode": "best",
         "variant_rank": 0,
-        "bandwidth": 2790000,
+        "bandwidth": 2810000,
         "failed_higher_variants": []
       }
     },
@@ -1325,7 +1325,7 @@
       "name": "BFM Tech & Co",
       "source_id": "abc95b6524f911e651f29311",
       "url": "https://live-cdn-technco-euw1.bfmb.bct.nextradiotv.com/master.m3u8",
-      "checked_at": "2026-11-18T07:00:58.544618+00:00",
+      "checked_at": "2026-11-19T07:13:19.220535+00:00",
       "width": 960,
       "height": 540,
       "fps": 25.0,
@@ -1347,7 +1347,7 @@
       "name": "CPAC (fran\u00e7ais / anglais)",
       "source_id": "3a0503425819093595d8c89b",
       "url": "https://cpac-ca-live.cdn.vustreams.com/groupa/live/f9809cea-1e07-47cd-a94d-2ddd3e1351db/live.isml/.m3u8",
-      "checked_at": "2026-11-18T07:01:22.949420+00:00",
+      "checked_at": "2026-11-19T07:13:41.819214+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 30.0,
@@ -1365,11 +1365,33 @@
       }
     },
     {
+      "id": "DigitalChannel.bj",
+      "name": "Digital Channel",
+      "source_id": "a1a3b941244a71d7426bb2da",
+      "url": "https://stream.digitalchannel.bj/live/ds_64de185c18c9d786a760f01e0e592348.m3u8",
+      "checked_at": "2026-11-19T07:17:54.483051+00:00",
+      "width": 1280,
+      "height": 720,
+      "fps": 25.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 82,
+      "language_evidence": null,
+      "decoded_seconds": 4.92,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 1,
+        "failed_higher_variants": []
+      }
+    },
+    {
       "id": "FilinfoTV.bf",
       "name": "Filinfo TV",
       "source_id": "58fe22ee7dac9f96c8676c0d",
       "url": "https://d3t1ss6x7vm1uz.cloudfront.net/hls/master.m3u8",
-      "checked_at": "2026-11-18T07:05:22.135323+00:00",
+      "checked_at": "2026-11-19T07:14:29.789466+00:00",
       "width": 1280,
       "height": 720,
       "fps": 30.0,
@@ -1391,7 +1413,7 @@
       "name": "Gong",
       "source_id": "d0a85785339f3a5fbec65a80",
       "url": "https://amg01596-gongnetworks-gong-ono-vh5f2.amagi.tv/playlist.m3u8",
-      "checked_at": "2026-11-18T07:01:26.743035+00:00",
+      "checked_at": "2026-11-19T07:13:47.692115+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 25.0,
@@ -1413,14 +1435,14 @@
       "name": "HANDICAP TV",
       "source_id": "774ea5d319fd5d10212bf4ab",
       "url": "https://srv.webtvmanager.fr:3697/stream/play.m3u8",
-      "checked_at": "2026-11-18T07:01:41.717772+00:00",
-      "width": 1280,
-      "height": 720,
-      "fps": 29.97,
+      "checked_at": "2026-11-19T07:14:02.616992+00:00",
+      "width": 1920,
+      "height": 1080,
+      "fps": 24.0,
       "video_codec": "h264",
       "audio_codec": "aac",
       "audio_language": null,
-      "frames": 146,
+      "frames": 119,
       "language_evidence": null,
       "decoded_seconds": 5.0,
       "quality": {
@@ -1435,14 +1457,14 @@
       "name": "ITV",
       "source_id": "c5e976d0c5e0b40df38aaba5",
       "url": "https://rezopro.playerlive.nl/itv_senegal/itv_senegal/playlist.m3u8",
-      "checked_at": "2026-11-18T07:05:27.869972+00:00",
+      "checked_at": "2026-11-19T07:14:32.552384+00:00",
       "width": 1280,
       "height": 720,
       "fps": 25.0,
       "video_codec": "h264",
       "audio_codec": "aac",
       "audio_language": null,
-      "frames": 122,
+      "frames": 121,
       "language_evidence": null,
       "decoded_seconds": 5.0,
       "quality": {
@@ -1457,7 +1479,7 @@
       "name": "Le Nouveau Manager TV",
       "source_id": "028a3e37bd674614be6a821b",
       "url": "https://lnmlive.com/live/lnmtv.m3u8",
-      "checked_at": "2026-11-18T11:02:47.844413+00:00",
+      "checked_at": "2026-11-19T07:14:35.280678+00:00",
       "width": 1280,
       "height": 720,
       "fps": 25.0,
@@ -1479,20 +1501,20 @@
       "name": "Louga TV",
       "source_id": "c715f8f42cd3d16ad486da5f",
       "url": "https://stream.sen-gt.com/Mbacke/myStream/playlist.m3u8",
-      "checked_at": "2026-11-18T11:02:53.124722+00:00",
+      "checked_at": "2026-11-19T07:14:39.296411+00:00",
       "width": 1280,
       "height": 720,
       "fps": 25.0,
       "video_codec": "h264",
       "audio_codec": "aac",
       "audio_language": null,
-      "frames": 125,
+      "frames": 124,
       "language_evidence": null,
       "decoded_seconds": 5.0,
       "quality": {
         "mode": "best",
         "variant_rank": 0,
-        "bandwidth": 1814238,
+        "bandwidth": 1713056,
         "failed_higher_variants": []
       }
     },
@@ -1501,7 +1523,7 @@
       "name": "Mana Eglise Online",
       "source_id": "4ad8c23f970afe36cb5d467d",
       "url": "https://w2.manasat.com:443/eglise-online/smil:eglise-online.smil/playlist.m3u8",
-      "checked_at": "2026-11-18T11:02:58.338433+00:00",
+      "checked_at": "2026-11-19T07:14:46.730431+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 25.0,
@@ -1523,7 +1545,7 @@
       "name": "Matele",
       "source_id": "3863bd957b88d31994849e3f",
       "url": "https://live.matele.be/hls/live.m3u8",
-      "checked_at": "2026-11-18T07:01:03.954603+00:00",
+      "checked_at": "2026-11-19T07:13:24.576686+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 25.0,
@@ -1536,7 +1558,7 @@
       "quality": {
         "mode": "best",
         "variant_rank": 0,
-        "bandwidth": 4477202,
+        "bandwidth": 4460742,
         "failed_higher_variants": []
       }
     },
@@ -1545,7 +1567,7 @@
       "name": "Monaco Info",
       "source_id": "80ae168269e8dd02ea264455",
       "url": "https://webtv.monacoinfo.com/live/master.m3u8",
-      "checked_at": "2026-11-18T07:01:09.532031+00:00",
+      "checked_at": "2026-11-19T07:13:30.331552+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 30.0,
@@ -1567,7 +1589,7 @@
       "name": "Radio Tele Evangile Sans Limite",
       "source_id": "90751c03772fe7ea13da74fd",
       "url": "https://5790d294af2dc.streamlock.net/8124/8124/chunklist.m3u8",
-      "checked_at": "2026-11-18T07:01:38.838973+00:00",
+      "checked_at": "2026-11-19T07:13:57.791328+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 30.0,
@@ -1580,7 +1602,7 @@
       "quality": {
         "mode": "best",
         "variant_rank": 0,
-        "bandwidth": 4703008,
+        "bandwidth": 4565016,
         "failed_higher_variants": []
       }
     },
@@ -1589,7 +1611,7 @@
       "name": "Tebeo TV",
       "source_id": "bce1dca0b5cee2acdb90123b",
       "url": "https://tebeo.streamakaci.tv/tebeo/tebeo-multi/playlist.m3u8",
-      "checked_at": "2026-11-18T07:01:51.098590+00:00",
+      "checked_at": "2026-11-19T07:14:10.965179+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 25.0,
@@ -1602,7 +1624,7 @@
       "quality": {
         "mode": "best",
         "variant_rank": 0,
-        "bandwidth": 2710681,
+        "bandwidth": 2804683,
         "failed_higher_variants": []
       }
     },
@@ -1611,7 +1633,7 @@
       "name": "TV Decouverte",
       "source_id": "361308eea549b8266555d858",
       "url": "https://tvdecouverte.vedge.infomaniak.com/livecast/ik:tvdecouverte/manifest.m3u8",
-      "checked_at": "2026-11-18T07:01:47.414270+00:00",
+      "checked_at": "2026-11-19T07:14:07.291151+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 25.0,
@@ -1633,7 +1655,7 @@
       "name": "Zitata TV",
       "source_id": "b662337c55347ec8d7a94bae",
       "url": "https://live.zitata.tv/direct-hls/playlist.m3u8",
-      "checked_at": "2026-11-18T07:00:36.169471+00:00",
+      "checked_at": "2026-11-19T07:12:57.019003+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 25.0,
@@ -1653,12 +1675,12 @@
   ],
   "changes": {
     "added": [
-      "LeNouveauManagerTV.bj",
-      "LougaTV.sn",
-      "ManaEgliseOnline.pt"
+      "DigitalChannel.bj"
     ],
     "removed": [],
-    "source_changed": []
+    "source_changed": [
+      "France24.fr"
+    ]
   },
   "reference": {
     "url": "https://github.com/iptv-ch/iptv-ch.github.io/blob/master/tvopenchfr.m3u",
@@ -1673,6 +1695,7 @@
       "BFMTechCo.fr",
       "BenieTV.ci",
       "CPACFrench.ca",
+      "DigitalChannel.bj",
       "FilinfoTV.bf",
       "Gong.fr",
       "HANDICAPTV.fr",
@@ -1708,14 +1731,14 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:57:02.414136+00:00",
+        "published_checked_at": "2026-11-19T07:09:23.023826+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "4d9eb61bd00f4d3f44838397",
             "status": "playable",
-            "checked_at": "2026-11-18T06:57:02.414136+00:00"
+            "checked_at": "2026-11-19T07:09:23.023826+00:00"
           },
           {
             "id": "218289ee890e1d06fcf16b5e",
@@ -1735,14 +1758,14 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:57:07.378026+00:00",
+        "published_checked_at": "2026-11-19T07:09:29.976061+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "0ee08bc1f5ddd22a952ec6b6",
             "status": "playable",
-            "checked_at": "2026-11-18T06:57:07.378026+00:00"
+            "checked_at": "2026-11-19T07:09:29.976061+00:00"
           },
           {
             "id": "68a77099a93bdd620f6fe76e",
@@ -1762,14 +1785,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:57:14.287326+00:00",
+        "published_checked_at": "2026-11-19T07:09:34.927125+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "22811cdd90e328bc40bd9a13",
             "status": "playable",
-            "checked_at": "2026-11-18T06:57:14.287326+00:00"
+            "checked_at": "2026-11-19T07:09:34.927125+00:00"
           },
           {
             "id": "62554a9e47a86bea027536f0",
@@ -1789,14 +1812,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:57:19.156534+00:00",
+        "published_checked_at": "2026-11-19T07:09:39.845648+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "ceef4b9da74aafda1fcd7a7c",
             "status": "playable",
-            "checked_at": "2026-11-18T06:57:19.156534+00:00"
+            "checked_at": "2026-11-19T07:09:39.845648+00:00"
           },
           {
             "id": "b055d639896831c9efe3f076",
@@ -1816,14 +1839,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:57:24.066708+00:00",
+        "published_checked_at": "2026-11-19T07:09:46.812883+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "0ade8f85e65121d6419a94e5",
             "status": "playable",
-            "checked_at": "2026-11-18T06:57:24.066708+00:00"
+            "checked_at": "2026-11-19T07:09:46.812883+00:00"
           },
           {
             "id": "9d93c855ceb2e7d25275aa7a",
@@ -1843,14 +1866,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:57:30.911500+00:00",
+        "published_checked_at": "2026-11-19T07:09:51.768400+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "ebdb4cbcb7a3dd2b73caa890",
             "status": "playable",
-            "checked_at": "2026-11-18T06:57:30.911500+00:00"
+            "checked_at": "2026-11-19T07:09:51.768400+00:00"
           },
           {
             "id": "a57e729b00946a2489052a51",
@@ -1870,14 +1893,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:57:35.869193+00:00",
+        "published_checked_at": "2026-11-19T07:09:56.658682+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "ee34dcf391bdf5b67f2efed7",
             "status": "playable",
-            "checked_at": "2026-11-18T06:57:35.869193+00:00"
+            "checked_at": "2026-11-19T07:09:56.658682+00:00"
           },
           {
             "id": "f981375cfcf822545f5b5d6a",
@@ -1897,14 +1920,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:57:40.849712+00:00",
+        "published_checked_at": "2026-11-19T07:10:03.651886+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "93908f069b4b06b89f54d568",
             "status": "playable",
-            "checked_at": "2026-11-18T06:57:40.849712+00:00"
+            "checked_at": "2026-11-19T07:10:03.651886+00:00"
           },
           {
             "id": "25f73cfe7e35a78cf25ddf32",
@@ -1924,14 +1947,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:57:47.773853+00:00",
+        "published_checked_at": "2026-11-19T07:10:08.450108+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "b17e15a11f751ec393a961d0",
             "status": "playable",
-            "checked_at": "2026-11-18T06:57:47.773853+00:00"
+            "checked_at": "2026-11-19T07:10:08.450108+00:00"
           },
           {
             "id": "f145d9045150fdde1da1e32d",
@@ -1951,14 +1974,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:57:52.562013+00:00",
+        "published_checked_at": "2026-11-19T07:10:15.275112+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "1d930c5dc1ed6c40e5180478",
             "status": "playable",
-            "checked_at": "2026-11-18T06:57:52.562013+00:00"
+            "checked_at": "2026-11-19T07:10:15.275112+00:00"
           },
           {
             "id": "a3b7a8dc3791589b101235fe",
@@ -1978,14 +2001,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:57:57.494066+00:00",
+        "published_checked_at": "2026-11-19T07:10:20.371792+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "d230a54f3e0ad6ac83e0d67c",
             "status": "playable",
-            "checked_at": "2026-11-18T06:57:57.494066+00:00"
+            "checked_at": "2026-11-19T07:10:20.371792+00:00"
           },
           {
             "id": "0a052de8b4d576b1468a2b21",
@@ -2005,14 +2028,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:58:04.443389+00:00",
+        "published_checked_at": "2026-11-19T07:10:25.299376+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "077f8b810459aa4bed74a826",
             "status": "playable",
-            "checked_at": "2026-11-18T06:58:04.443389+00:00"
+            "checked_at": "2026-11-19T07:10:25.299376+00:00"
           },
           {
             "id": "e1e04727e50566b4125c2f90",
@@ -2032,14 +2055,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:58:09.262769+00:00",
+        "published_checked_at": "2026-11-19T07:10:32.207820+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "f060fc89f8501746eeebb696",
             "status": "playable",
-            "checked_at": "2026-11-18T06:58:09.262769+00:00"
+            "checked_at": "2026-11-19T07:10:32.207820+00:00"
           },
           {
             "id": "3e4c547bc83ae802695a586c",
@@ -2059,14 +2082,14 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 25.0,
-        "published_checked_at": "2026-11-18T06:56:37.621773+00:00",
+        "published_checked_at": "2026-11-19T07:08:51.731555+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "a63bb4a421430855a1adc40a",
             "status": "playable",
-            "checked_at": "2026-11-18T06:56:37.621773+00:00"
+            "checked_at": "2026-11-19T07:08:51.731555+00:00"
           }
         ],
         "quality_comparison": "reference_not_measured",
@@ -2108,14 +2131,14 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:56:47.929454+00:00",
+        "published_checked_at": "2026-11-19T07:09:08.432805+00:00",
         "meets_declared_height_floor": null,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "f2466ab0cfbedc1ad594cb44",
             "status": "playable",
-            "checked_at": "2026-11-18T06:56:47.929454+00:00"
+            "checked_at": "2026-11-19T07:09:08.432805+00:00"
           }
         ],
         "quality_comparison": "reference_not_measured",
@@ -2137,7 +2160,7 @@
           {
             "id": "be1c2c58b4bf99662bbcfacd",
             "status": "http_forbidden",
-            "checked_at": "2026-11-15T18:12:59.008864+00:00"
+            "checked_at": "2026-11-19T07:19:48.129618+00:00"
           }
         ],
         "quality_comparison": "reference_not_measured",
@@ -2152,14 +2175,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:59:37.118894+00:00",
+        "published_checked_at": "2026-11-19T07:12:02.265531+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "755edb10f7b4654cf89737b5",
             "status": "playable",
-            "checked_at": "2026-11-18T06:59:37.118894+00:00"
+            "checked_at": "2026-11-19T07:12:02.265531+00:00"
           },
           {
             "id": "f318658ac8992b57dcf98033",
@@ -2179,14 +2202,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:59:20.932042+00:00",
+        "published_checked_at": "2026-11-19T07:11:46.057601+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "ed6a0dc3971ff5e82cbfa56d",
             "status": "playable",
-            "checked_at": "2026-11-18T06:59:20.932042+00:00"
+            "checked_at": "2026-11-19T07:11:46.057601+00:00"
           },
           {
             "id": "3ec1362e65a47eeeb3a36895",
@@ -2206,14 +2229,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:58:16.145788+00:00",
+        "published_checked_at": "2026-11-19T07:10:37.140042+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "b45bc3c97dc0eaf452856440",
             "status": "playable",
-            "checked_at": "2026-11-18T06:58:16.145788+00:00"
+            "checked_at": "2026-11-19T07:10:37.140042+00:00"
           },
           {
             "id": "8b7d5f69a5b57ad29d214618",
@@ -2233,14 +2256,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:58:21.005155+00:00",
+        "published_checked_at": "2026-11-19T07:10:44.073574+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "65b501f7989d821f16e9355a",
             "status": "playable",
-            "checked_at": "2026-11-18T06:58:21.005155+00:00"
+            "checked_at": "2026-11-19T07:10:44.073574+00:00"
           },
           {
             "id": "fe5cea52dd508d788fc52053",
@@ -2260,14 +2283,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T07:00:06.010378+00:00",
+        "published_checked_at": "2026-11-19T07:12:30.098437+00:00",
         "meets_declared_height_floor": null,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "cd139b13d00fb110eb54db87",
             "status": "playable",
-            "checked_at": "2026-11-18T07:00:06.010378+00:00"
+            "checked_at": "2026-11-19T07:12:30.098437+00:00"
           },
           {
             "id": "c1e71311a44296838f6b0648",
@@ -2287,14 +2310,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:58:25.814660+00:00",
+        "published_checked_at": "2026-11-19T07:10:48.843743+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "1c2e93906f36f2bdd1da26ec",
             "status": "playable",
-            "checked_at": "2026-11-18T06:58:25.814660+00:00"
+            "checked_at": "2026-11-19T07:10:48.843743+00:00"
           },
           {
             "id": "fe00971781020e9d77ec7363",
@@ -2314,14 +2337,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:58:32.743627+00:00",
+        "published_checked_at": "2026-11-19T07:10:53.753734+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "62a6081a9ae6dbe0aa2525d0",
             "status": "playable",
-            "checked_at": "2026-11-18T06:58:32.743627+00:00"
+            "checked_at": "2026-11-19T07:10:53.753734+00:00"
           },
           {
             "id": "7a3a6412a80acbcf52160d88",
@@ -2341,14 +2364,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:58:37.596555+00:00",
+        "published_checked_at": "2026-11-19T07:11:00.746816+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "832354b9cc6c467c013fb99d",
             "status": "playable",
-            "checked_at": "2026-11-18T06:58:37.596555+00:00"
+            "checked_at": "2026-11-19T07:11:00.746816+00:00"
           },
           {
             "id": "ef8a89ad4b9406af8aa11a80",
@@ -2368,14 +2391,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:58:42.456432+00:00",
+        "published_checked_at": "2026-11-19T07:11:05.613404+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "e946a5956c5de3b38a0120e1",
             "status": "playable",
-            "checked_at": "2026-11-18T06:58:42.456432+00:00"
+            "checked_at": "2026-11-19T07:11:05.613404+00:00"
           },
           {
             "id": "436182546629ec2e96623500",
@@ -2395,14 +2418,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:58:47.372181+00:00",
+        "published_checked_at": "2026-11-19T07:11:10.502303+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "9669e293bb02aaf422d17eec",
             "status": "playable",
-            "checked_at": "2026-11-18T06:58:47.372181+00:00"
+            "checked_at": "2026-11-19T07:11:10.502303+00:00"
           },
           {
             "id": "f9aa7f290a2f1563c300242d",
@@ -2422,14 +2445,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:58:52.238440+00:00",
+        "published_checked_at": "2026-11-19T07:11:17.364815+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "0f99c997998d290dfb551388",
             "status": "playable",
-            "checked_at": "2026-11-18T06:58:52.238440+00:00"
+            "checked_at": "2026-11-19T07:11:17.364815+00:00"
           },
           {
             "id": "9e2282710970e6bc22436cff",
@@ -2449,14 +2472,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:58:57.126588+00:00",
+        "published_checked_at": "2026-11-19T07:11:22.303116+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "6cd09ab290e5c73df8409956",
             "status": "playable",
-            "checked_at": "2026-11-18T06:58:57.126588+00:00"
+            "checked_at": "2026-11-19T07:11:22.303116+00:00"
           },
           {
             "id": "d15681990aa4543640bb7bfc",
@@ -2476,14 +2499,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T07:00:17.781987+00:00",
+        "published_checked_at": "2026-11-19T07:12:40.013362+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "1f95d41ffa750e32cc417041",
             "status": "playable",
-            "checked_at": "2026-11-18T07:00:17.781987+00:00"
+            "checked_at": "2026-11-19T07:12:40.013362+00:00"
           }
         ],
         "quality_comparison": "reference_not_measured",
@@ -2498,7 +2521,7 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 25.0,
-        "published_checked_at": "2026-11-17T07:04:21.816438+00:00",
+        "published_checked_at": "2026-11-19T07:14:23.802321+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
@@ -2535,7 +2558,7 @@
           {
             "id": "3f99462c1b079b61ff038ed5",
             "status": "playable",
-            "checked_at": "2026-11-18T07:02:06.222146+00:00"
+            "checked_at": "2026-11-19T07:14:23.802321+00:00"
           },
           {
             "id": "4746cc06e17672aee0b0fa62",
@@ -2555,14 +2578,14 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 30.0,
-        "published_checked_at": "2026-11-18T07:01:15.696154+00:00",
+        "published_checked_at": "2026-11-19T07:13:34.611118+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "44e2e8a0f6417e3fd924673e",
             "status": "playable",
-            "checked_at": "2026-11-18T07:01:15.696154+00:00"
+            "checked_at": "2026-11-19T07:13:34.611118+00:00"
           }
         ],
         "quality_comparison": "reference_not_measured",
@@ -2584,7 +2607,7 @@
           {
             "id": "0fdef5594c66e65d9dc5b637",
             "status": "unavailable",
-            "checked_at": "2026-11-15T18:18:41.484197+00:00"
+            "checked_at": "2026-11-19T07:20:09.941309+00:00"
           }
         ],
         "quality_comparison": "reference_not_measured",
@@ -2606,7 +2629,7 @@
           {
             "id": "69ece6c0d170a857e9c28aba",
             "status": "unavailable",
-            "checked_at": "2026-11-15T18:18:29.916949+00:00"
+            "checked_at": "2026-11-19T07:19:59.586477+00:00"
           }
         ],
         "quality_comparison": "reference_not_measured",
@@ -2621,14 +2644,14 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 25.0,
-        "published_checked_at": "2026-11-18T06:55:41.188729+00:00",
+        "published_checked_at": "2026-11-19T07:08:25.634378+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "f143761543372297f59eade1",
             "status": "playable",
-            "checked_at": "2026-11-18T06:55:41.188729+00:00"
+            "checked_at": "2026-11-19T07:08:25.634378+00:00"
           }
         ],
         "quality_comparison": "reference_not_measured",
@@ -2643,14 +2666,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:59:32.161770+00:00",
+        "published_checked_at": "2026-11-19T07:11:56.282742+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "96643867a2ba87d16a54834f",
             "status": "playable",
-            "checked_at": "2026-11-18T06:59:32.161770+00:00"
+            "checked_at": "2026-11-19T07:11:56.282742+00:00"
           },
           {
             "id": "4b03f67e7c9ba2c40bf9c883",
@@ -2670,14 +2693,14 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 25.0,
-        "published_checked_at": "2026-11-18T07:02:03.562020+00:00",
+        "published_checked_at": "2026-11-19T07:14:21.309752+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "b1e0475bf94c100af97317e2",
             "status": "playable",
-            "checked_at": "2026-11-18T07:02:03.562020+00:00"
+            "checked_at": "2026-11-19T07:14:21.309752+00:00"
           },
           {
             "id": "03e456deb8e36117bd0e8af1",
@@ -2697,14 +2720,14 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:55:47.366490+00:00",
+        "published_checked_at": "2026-11-19T07:08:29.304568+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "e5c9d4c1c2e76a698dfe12f2",
             "status": "playable",
-            "checked_at": "2026-11-18T06:55:47.366490+00:00"
+            "checked_at": "2026-11-19T07:08:29.304568+00:00"
           },
           {
             "id": "2dc60f1fde3534cfb328bf14",
@@ -2724,14 +2747,14 @@
         "published_width": 854,
         "published_height": 480,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:55:51.978035+00:00",
+        "published_checked_at": "2026-11-19T07:08:34.876572+00:00",
         "meets_declared_height_floor": false,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "6d3289f3f24ee85fdad3743b",
             "status": "playable",
-            "checked_at": "2026-11-18T06:55:51.978035+00:00"
+            "checked_at": "2026-11-19T07:08:34.876572+00:00"
           }
         ],
         "quality_comparison": "reference_not_measured",
@@ -2746,7 +2769,7 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:55:37.624502+00:00",
+        "published_checked_at": "2026-11-19T07:08:21.916053+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
@@ -2758,7 +2781,7 @@
           {
             "id": "d7c5f990686f0bade7c0c73e",
             "status": "playable",
-            "checked_at": "2026-11-18T06:55:37.624502+00:00"
+            "checked_at": "2026-11-19T07:08:21.916053+00:00"
           }
         ],
         "quality_comparison": "reference_not_measured",
@@ -2773,14 +2796,14 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:59:42.099213+00:00",
+        "published_checked_at": "2026-11-19T07:12:07.318821+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "7992f8b8df3b3379f9c45703",
             "status": "playable",
-            "checked_at": "2026-11-18T06:59:42.099213+00:00"
+            "checked_at": "2026-11-19T07:12:07.318821+00:00"
           },
           {
             "id": "25b3a1af8de6a70380986fdc",
@@ -2816,14 +2839,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:59:54.106020+00:00",
+        "published_checked_at": "2026-11-19T07:12:18.267817+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "9fb7eb381dabdd17f4fcad3b",
             "status": "playable",
-            "checked_at": "2026-11-18T06:59:54.106020+00:00"
+            "checked_at": "2026-11-19T07:12:18.267817+00:00"
           },
           {
             "id": "b104b9dde25d7c114f7fdab6",
@@ -2843,14 +2866,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:59:48.099565+00:00",
+        "published_checked_at": "2026-11-19T07:12:13.376192+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "4f1371a306e073603df05733",
             "status": "playable",
-            "checked_at": "2026-11-18T06:59:48.099565+00:00"
+            "checked_at": "2026-11-19T07:12:13.376192+00:00"
           },
           {
             "id": "b6f77e020488b75cc398d473",
@@ -2902,14 +2925,14 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 25.0,
-        "published_checked_at": "2026-11-18T07:00:39.798405+00:00",
+        "published_checked_at": "2026-11-19T07:13:02.675647+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "753d7d71761e992c952b47db",
             "status": "playable",
-            "checked_at": "2026-11-18T07:00:39.798405+00:00"
+            "checked_at": "2026-11-19T07:13:02.675647+00:00"
           },
           {
             "id": "5562de0193398a4b8d51d011",
@@ -2929,7 +2952,7 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 25.0,
-        "published_checked_at": "2026-11-18T07:00:49.134502+00:00",
+        "published_checked_at": "2026-11-19T07:13:09.890166+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
@@ -2941,7 +2964,7 @@
           {
             "id": "dd19350797cf5f9f4f113003",
             "status": "playable",
-            "checked_at": "2026-11-18T07:00:49.134502+00:00"
+            "checked_at": "2026-11-19T07:13:09.890166+00:00"
           }
         ],
         "quality_comparison": "reference_not_measured",
@@ -2956,14 +2979,14 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 25.0,
-        "published_checked_at": "2026-11-18T07:00:52.737872+00:00",
+        "published_checked_at": "2026-11-19T07:13:15.518668+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "f1f9c692ec579c0728b3d192",
             "status": "playable",
-            "checked_at": "2026-11-18T07:00:52.737872+00:00"
+            "checked_at": "2026-11-19T07:13:15.518668+00:00"
           },
           {
             "id": "1337221547b8f1d7d759b0b1",
@@ -2983,7 +3006,7 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 25.0,
-        "published_checked_at": "2026-11-18T06:56:51.407309+00:00",
+        "published_checked_at": "2026-11-19T07:09:14.105762+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
@@ -3000,7 +3023,7 @@
           {
             "id": "43b1c6c2811d7375324e78be",
             "status": "playable",
-            "checked_at": "2026-11-18T06:56:51.407309+00:00"
+            "checked_at": "2026-11-19T07:09:14.105762+00:00"
           }
         ],
         "quality_comparison": "reference_not_measured",
@@ -3015,14 +3038,14 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 25.0,
-        "published_checked_at": "2026-11-18T07:00:45.403330+00:00",
+        "published_checked_at": "2026-11-19T07:13:06.371643+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "d9f267888e3f3fe8b34eeb93",
             "status": "playable",
-            "checked_at": "2026-11-18T07:00:45.403330+00:00"
+            "checked_at": "2026-11-19T07:13:06.371643+00:00"
           },
           {
             "id": "3a4c94ee15153d59e0e130e4",
@@ -3042,14 +3065,14 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 60.0,
-        "published_checked_at": "2026-11-18T06:56:55.431643+00:00",
+        "published_checked_at": "2026-11-19T07:09:17.975816+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "c80f48bc314b4b8cdba7b6b5",
             "status": "playable",
-            "checked_at": "2026-11-18T06:56:55.431643+00:00"
+            "checked_at": "2026-11-19T07:09:17.975816+00:00"
           }
         ],
         "quality_comparison": "reference_not_measured",
@@ -3064,14 +3087,14 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 25.0,
-        "published_checked_at": "2026-11-18T06:56:43.158655+00:00",
+        "published_checked_at": "2026-11-19T07:08:55.352275+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "88ede18d59093729cc740dfc",
             "status": "playable",
-            "checked_at": "2026-11-18T06:56:43.158655+00:00"
+            "checked_at": "2026-11-19T07:08:55.352275+00:00"
           },
           {
             "id": "c12516f72f85ee70e5423c9c",
@@ -3091,14 +3114,14 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T07:00:23.100128+00:00",
+        "published_checked_at": "2026-11-19T07:12:47.400073+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "c7e7b9dd2d7590a9c43ad9d3",
             "status": "playable",
-            "checked_at": "2026-11-18T07:00:23.100128+00:00"
+            "checked_at": "2026-11-19T07:12:47.400073+00:00"
           }
         ],
         "quality_comparison": "reference_not_measured",
@@ -3113,14 +3136,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T07:00:01.049448+00:00",
+        "published_checked_at": "2026-11-19T07:12:23.228434+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "ebaf7ca5260efb589d0b81a9",
             "status": "playable",
-            "checked_at": "2026-11-18T07:00:01.049448+00:00"
+            "checked_at": "2026-11-19T07:12:23.228434+00:00"
           },
           {
             "id": "c4853eee8f9375ae65715f3d",
@@ -3140,14 +3163,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:59:09.036396+00:00",
+        "published_checked_at": "2026-11-19T07:11:34.188511+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "af9851922f007fd8fd17c2d3",
             "status": "playable",
-            "checked_at": "2026-11-18T06:59:09.036396+00:00"
+            "checked_at": "2026-11-19T07:11:34.188511+00:00"
           },
           {
             "id": "072ad4c1fed0dd50498e20e3",
@@ -3167,14 +3190,14 @@
         "published_width": 1280,
         "published_height": 720,
         "published_fps": 50.0,
-        "published_checked_at": "2026-11-18T06:59:15.983914+00:00",
+        "published_checked_at": "2026-11-19T07:11:39.082836+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
             "id": "2d58d9a2ca982dde2df9ca30",
             "status": "playable",
-            "checked_at": "2026-11-18T06:59:15.983914+00:00"
+            "checked_at": "2026-11-19T07:11:39.082836+00:00"
           },
           {
             "id": "1033979356e89b4c36612efd",
