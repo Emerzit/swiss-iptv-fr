@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T07:21:02.516671+00:00",
+  "generated_at": "2026-11-19T11:02:38.830568+00:00",
   "audience": "public",
   "playlists": {
     "swiss-fr": 74,
@@ -9,7 +9,7 @@
     "swiss-fr-news": 16
   },
   "exclusions": {
-    "rights_pending": 898,
+    "rights_pending": 899,
     "check_expired": 47,
     "unconfirmed_french_audio": 1,
     "account_required": 2,
@@ -1674,13 +1674,9 @@
     }
   ],
   "changes": {
-    "added": [
-      "DigitalChannel.bj"
-    ],
+    "added": [],
     "removed": [],
-    "source_changed": [
-      "France24.fr"
-    ]
+    "source_changed": []
   },
   "reference": {
     "url": "https://github.com/iptv-ch/iptv-ch.github.io/blob/master/tvopenchfr.m3u",
