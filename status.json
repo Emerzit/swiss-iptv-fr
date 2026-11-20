@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-20T07:20:09.503285+00:00",
+  "generated_at": "2026-11-20T11:03:56.458386+00:00",
   "audience": "public",
   "playlists": {
     "swiss-fr": 74,
@@ -9,8 +9,8 @@
     "swiss-fr-news": 15
   },
   "exclusions": {
-    "rights_pending": 906,
-    "check_expired": 47,
+    "rights_pending": 907,
+    "check_expired": 46,
     "unconfirmed_french_audio": 1,
     "no_swiss_playback": 1,
     "account_required": 2,
@@ -840,9 +840,9 @@
     {
       "id": "Canal9.ch",
       "name": "Canal 9",
-      "source_id": "b1e0475bf94c100af97317e2",
-      "url": "https://livehd.vedge.infomaniak.com/livecast/ik:livehd/manifest.m3u8",
-      "checked_at": "2026-11-20T07:15:24.100498+00:00",
+      "source_id": "03e456deb8e36117bd0e8af1",
+      "url": "https://livehd.vedge.infomaniak.com/livecast/ik:livehd/playlist.m3u8",
+      "checked_at": "2026-11-20T11:00:06.798053+00:00",
       "width": 1920,
       "height": 1080,
       "fps": 25.0,
@@ -855,7 +855,7 @@
       "quality": {
         "mode": "best",
         "variant_rank": 0,
-        "bandwidth": 3344896,
+        "bandwidth": 3386406,
         "failed_higher_variants": []
       }
     },
@@ -1675,13 +1675,11 @@
     }
   ],
   "changes": {
-    "added": [
-      "RefletTV.ci"
-    ],
-    "removed": [
-      "7Info.ci"
-    ],
-    "source_changed": []
+    "added": [],
+    "removed": [],
+    "source_changed": [
+      "Canal9.ch"
+    ]
   },
   "reference": {
     "url": "https://github.com/iptv-ch/iptv-ch.github.io/blob/master/tvopenchfr.m3u",
@@ -2694,7 +2692,7 @@
         "published_width": 1920,
         "published_height": 1080,
         "published_fps": 25.0,
-        "published_checked_at": "2026-11-20T07:15:24.100498+00:00",
+        "published_checked_at": "2026-11-20T11:00:06.798053+00:00",
         "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
@@ -2706,7 +2704,7 @@
           {
             "id": "03e456deb8e36117bd0e8af1",
             "status": "playable",
-            "checked_at": "2026-11-17T06:59:36.206363+00:00"
+            "checked_at": "2026-11-20T11:00:06.798053+00:00"
           }
         ],
         "quality_comparison": "reference_not_measured",
