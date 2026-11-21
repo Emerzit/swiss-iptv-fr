@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz" x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz"
-# Generated 2026-11-20T11:03:56.342349+00:00; audience=public; sample playback only
+# Generated 2026-11-21T08:30:55.304154+00:00; audience=public; sample playback only
 #EXTINF:-1 tvg-id="RTS.1.ch" tvg-name="RTS 1" tvg-logo="https://i.imgur.com/OP5lHv9.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="1",RTS 1
 https://viamotionhsi.netplus.ch/live/eds/rts1hd/browser-HLS8/rts1hd.m3u8
 #EXTINF:-1 tvg-id="RTS.2.ch" tvg-name="RTS 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/RTS_2_logo_2019.svg/960px-RTS_2_logo_2019.svg.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="2",RTS 2
@@ -72,8 +72,6 @@ https://i24newsfrench-cdn.encoders.immergo.tv/master.m3u8
 https://naxoo.vedge.infomaniak.com/livecast/ik:naxoo/manifest.m3u8
 #EXTINF:-1 tvg-id="TV8.Mont.Blanc.ch" tvg-name="TV8 Mont-Blanc" tvg-logo="https://i.imgur.com/dOXRNVj.png" group-title="unknown" tvg-language="fra" tvg-country="FR" tvg-chno="75",TV8 Mont-Blanc
 https://viamotionhsi.netplus.ch/live/eds/tv8montblanc/browser-HLS8/tv8montblanc.m3u8
-#EXTINF:-1 tvg-id="Canal.9.ch" tvg-name="Canal 9" tvg-logo="https://i.imgur.com/TNciMh2.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="74",Canal 9
-https://livehd.vedge.infomaniak.com/livecast/ik:livehd/playlist.m3u8
 #EXTINF:-1 tvg-id="Canal.Alpha.JU.ch" tvg-name="Canal Alpha Jura" tvg-logo="https://i.imgur.com/eQ8xHK9.jpg" group-title="CH Regional JU" tvg-language="fra" tvg-country="CH" tvg-chno="78",Canal Alpha Jura
 https://canalalphaju.vedge.infomaniak.com/livecast/ik:canalalphaju/manifest.m3u8
 #EXTINF:-1 tvg-id="Canal.Alpha.NE.ch" tvg-name="Canal Alpha Neuchâtel" tvg-logo="https://i.imgur.com/eQ8xHK9.jpg" group-title="CH Regional NE" tvg-language="fra" tvg-country="CH" tvg-chno="79",Canal Alpha Neuchâtel
@@ -110,8 +108,6 @@ https://viamotionhsi.netplus.ch/live/eds/bluezoomfr/browser-HLS8/bluezoomfr.m3u8
 https://viamotionhsi.netplus.ch/live/eds/lequipe21/browser-HLS8/lequipe21.m3u8
 #EXTINF:-1 tvg-id="Gulli.ch" tvg-name="Gulli" tvg-logo="https://i.imgur.com/kqYssbW.png" group-title="kids" tvg-language="fra" tvg-country="FR" tvg-chno="20",Gulli
 https://viamotionhsi.netplus.ch/live/eds/gulli/browser-HLS8/gulli.m3u8
-#EXTINF:-1 tvg-id="AfrikInfoTV.gn@SD" tvg-name="Afrik Info TV" tvg-logo="https://i.imgur.com/hz2LOD8.jpeg" group-title="news" tvg-language="fra" tvg-country="GN",Afrik Info TV
-https://kali.vdopanel.com:3119/hybrid/play.m3u8
 #EXTINF:-1 tvg-id="BenieTV.ci@SD" tvg-name="Benie TV" tvg-logo="https://i.imgur.com/7FXi05e.jpeg" group-title="religious" tvg-language="fra" tvg-country="CI",Benie TV
 https://tv.voozmedia.fun/benietv/index.m3u8
 #EXTINF:-1 tvg-id="BFMTechCo.fr" tvg-name="BFM Tech & Co" tvg-logo="https://i.imgur.com/FQ0FpXV.png" group-title="science,news" tvg-language="fra" tvg-country="FR",BFM Tech & Co
@@ -144,6 +140,8 @@ https://5790d294af2dc.streamlock.net/8124/8124/chunklist.m3u8
 https://edge-a3.evrideo.tv/8f37c9f0-fe22-44f4-b64a-76ad11730daf_1000026630_HLS/manifest.m3u8
 #EXTINF:-1 tvg-id="TebeoTV.fr@SD" tvg-name="Tebeo TV" tvg-logo="https://i.imgur.com/WdZWBEd.png" group-title="general" tvg-language="fra" tvg-country="FR",Tebeo TV
 https://tebeo.streamakaci.tv/tebeo/tebeo-multi/playlist.m3u8
+#EXTINF:-1 tvg-id="TeleZoukla.mq" tvg-name="Tele Zoukla" tvg-logo="https://i.imgur.com/lWYKgPC.png" group-title="music" tvg-language="fra" tvg-country="MQ",Tele Zoukla
+https://vdo.pro-fhi.net/p/3228/stream/play.m3u8
 #EXTINF:-1 tvg-id="tvdecouverte.ch" tvg-name="TV Decouverte" tvg-logo="https://i.imgur.com/RuOUbwc.png" group-title="culture" tvg-language="fra" tvg-country="CH",TV Decouverte
 https://tvdecouverte.vedge.infomaniak.com/livecast/ik:tvdecouverte/manifest.m3u8
 #EXTINF:-1 tvg-id="ZitataTV.mq@SD" tvg-name="Zitata TV" tvg-logo="https://i.imgur.com/KJmefse.png" group-title="general" tvg-language="fra" tvg-country="MQ",Zitata TV
