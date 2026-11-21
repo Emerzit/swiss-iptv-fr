@@ -1,29 +1,29 @@
 {
-  "generated_at": "2026-11-21T08:30:55.414577+00:00",
+  "generated_at": "2026-11-21T20:15:37.677418+00:00",
   "audience": "public",
   "playlists": {
-    "swiss-fr": 73,
-    "swiss-fr-internet": 73,
+    "swiss-fr": 75,
+    "swiss-fr-internet": 75,
     "swiss-fr-multicast": 0,
-    "swiss-fr-regional": 10,
-    "swiss-fr-news": 14
+    "swiss-fr-regional": 11,
+    "swiss-fr-news": 15
   },
   "exclusions": {
     "rights_pending": 910,
-    "no_swiss_playback": 4,
     "check_expired": 46,
     "unconfirmed_french_audio": 1,
+    "no_swiss_playback": 2,
     "account_required": 2,
     "identity_unresolved": 1
   },
   "epg": {
     "swiss-fr": {
       "url": "https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz",
-      "matched_channels": 47
+      "matched_channels": 48
     },
     "swiss-fr-internet": {
       "url": "https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz",
-      "matched_channels": 47
+      "matched_channels": 48
     },
     "swiss-fr-multicast": {
       "url": null,
@@ -31,7 +31,7 @@
     },
     "swiss-fr-regional": {
       "url": "https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz",
-      "matched_channels": 7
+      "matched_channels": 8
     },
     "swiss-fr-news": {
       "url": "https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz",
@@ -838,6 +838,28 @@
       }
     },
     {
+      "id": "Canal9.ch",
+      "name": "Canal 9",
+      "source_id": "03e456deb8e36117bd0e8af1",
+      "url": "https://livehd.vedge.infomaniak.com/livecast/ik:livehd/playlist.m3u8",
+      "checked_at": "2026-11-21T20:12:58.633603+00:00",
+      "width": 1920,
+      "height": 1080,
+      "fps": 25.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 124,
+      "language_evidence": null,
+      "decoded_seconds": 5.0,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 3421818,
+        "failed_higher_variants": []
+      }
+    },
+    {
       "id": "CanalAlphaJura.ch",
       "name": "Canal Alpha Jura",
       "source_id": "e5c9d4c1c2e76a698dfe12f2",
@@ -1230,6 +1252,28 @@
         "mode": "best",
         "variant_rank": 0,
         "bandwidth": 4581280,
+        "failed_higher_variants": []
+      }
+    },
+    {
+      "id": "AfrikInfoTV.gn",
+      "name": "Afrik Info TV",
+      "source_id": "8d9a0f6a716ec1efb1f1eae9",
+      "url": "https://kali.vdopanel.com:3119/hybrid/play.m3u8",
+      "checked_at": "2026-11-21T20:12:53.876952+00:00",
+      "width": 854,
+      "height": 480,
+      "fps": 25.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 123,
+      "language_evidence": null,
+      "decoded_seconds": 5.0,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 0,
         "failed_higher_variants": []
       }
     },
@@ -1654,21 +1698,20 @@
   ],
   "changes": {
     "added": [
-      "TeleZoukla.mq"
-    ],
-    "removed": [
       "AfrikInfoTV.gn",
       "Canal9.ch"
     ],
+    "removed": [],
     "source_changed": []
   },
   "reference": {
     "url": "https://github.com/iptv-ch/iptv-ch.github.io/blob/master/tvopenchfr.m3u",
     "sha256": "278d8b9cf76cddca7951384e43473954174539d7a3d6f04160d0e387ec3eca43",
     "reference_entries": 57,
-    "covered_entries": 49,
-    "missing_entries": 8,
+    "covered_entries": 50,
+    "missing_entries": 7,
     "additional_channels": [
+      "AfrikInfoTV.gn",
       "BFMBusiness.fr",
       "BFMTechCo.fr",
       "BenieTV.ci",
@@ -2669,12 +2712,12 @@
         "channel_id": "Canal9.ch",
         "malformed_reference_row": false,
         "declared_quality": "HD",
-        "present": false,
-        "published_width": null,
-        "published_height": null,
-        "published_fps": null,
-        "published_checked_at": null,
-        "meets_declared_height_floor": null,
+        "present": true,
+        "published_width": 1920,
+        "published_height": 1080,
+        "published_fps": 25.0,
+        "published_checked_at": "2026-11-21T20:12:58.633603+00:00",
+        "meets_declared_height_floor": true,
         "reference_decode": null,
         "internet_checks": [
           {
@@ -2684,8 +2727,8 @@
           },
           {
             "id": "03e456deb8e36117bd0e8af1",
-            "status": "unavailable",
-            "checked_at": "2026-11-21T08:26:58.236707+00:00"
+            "status": "playable",
+            "checked_at": "2026-11-21T20:12:58.633603+00:00"
           }
         ],
         "quality_comparison": "reference_not_measured",
