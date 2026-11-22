@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz" x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz"
-# Generated 2026-11-22T08:35:45.204478+00:00; audience=public; sample playback only
+# Generated 2026-11-22T11:04:33.045488+00:00; audience=public; sample playback only
 #EXTINF:-1 tvg-id="RTS.1.ch" tvg-name="RTS 1" tvg-logo="https://i.imgur.com/OP5lHv9.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="1",RTS 1
 https://viamotionhsi.netplus.ch/live/eds/rts1hd/browser-HLS8/rts1hd.m3u8
 #EXTINF:-1 tvg-id="RTS.2.ch" tvg-name="RTS 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/RTS_2_logo_2019.svg/960px-RTS_2_logo_2019.svg.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="2",RTS 2
@@ -120,6 +120,8 @@ https://live-cdn-technco-euw1.bfmb.bct.nextradiotv.com/master.m3u8
 https://live.creacast.com/canallocalgrosblie-ch1/smil:canallocalgrosblie-ch1.smil/playlist.m3u8
 #EXTINF:-1 tvg-id="CPACFrench.ca" tvg-name="CPAC (français / anglais)" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/2016_CPAC_logo.svg/960px-2016_CPAC_logo.svg.png" group-title="legislative" tvg-language="fra,eng" tvg-country="CA",CPAC (français / anglais)
 https://cpac-ca-live.cdn.vustreams.com/groupa/live/f9809cea-1e07-47cd-a94d-2ddd3e1351db/live.isml/.m3u8
+#EXTINF:-1 tvg-id="DigitalChannel.bj@SD" tvg-name="Digital Channel" tvg-logo="https://digitalchannel.bj/wp-content/uploads/2025/03/cropped-logo-192x192.png" group-title="general" tvg-language="fra" tvg-country="BJ",Digital Channel
+https://stream.digitalchannel.bj/live/ds_64de185c18c9d786a760f01e0e592348.m3u8
 #EXTINF:-1 tvg-id="FilinfoTV.bf" tvg-name="Filinfo TV" tvg-logo="https://i.imgur.com/KG93Tvn.png" group-title="news" tvg-language="fra" tvg-country="BF",Filinfo TV
 https://d3t1ss6x7vm1uz.cloudfront.net/hls/master.m3u8
 #EXTINF:-1 tvg-id="Gong.fr" tvg-name="Gong" tvg-logo="https://i.imgur.com/lA9UFMG.png" group-title="animation" tvg-language="fra" tvg-country="FR",Gong
