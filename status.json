@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-23T07:11:05.249678+00:00",
+  "generated_at": "2026-11-23T11:03:39.075332+00:00",
   "audience": "public",
   "playlists": {
-    "swiss-fr": 75,
-    "swiss-fr-internet": 75,
+    "swiss-fr": 76,
+    "swiss-fr-internet": 76,
     "swiss-fr-multicast": 0,
     "swiss-fr-regional": 11,
     "swiss-fr-news": 14
   },
   "exclusions": {
-    "rights_pending": 922,
+    "rights_pending": 924,
     "check_expired": 46,
     "unconfirmed_french_audio": 1,
     "no_swiss_playback": 4,
@@ -1454,6 +1454,28 @@
       }
     },
     {
+      "id": "LintelligentTV.fr",
+      "name": "L'intelligent TV",
+      "source_id": "20696ebeb5e8788bcbb33e6b",
+      "url": "https://video1.getstreamhosting.com:1936/8074/8074/playlist.m3u8",
+      "checked_at": "2026-11-23T11:03:13.659557+00:00",
+      "width": 1280,
+      "height": 720,
+      "fps": 29.97,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 150,
+      "language_evidence": null,
+      "decoded_seconds": 5.0,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 1699248,
+        "failed_higher_variants": []
+      }
+    },
+    {
       "id": "LeNouveauManagerTV.bj",
       "name": "Le Nouveau Manager TV",
       "source_id": "028a3e37bd674614be6a821b",
@@ -1698,11 +1720,9 @@
   ],
   "changes": {
     "added": [
-      "GongMax.fr"
+      "LintelligentTV.fr"
     ],
-    "removed": [
-      "AfrikInfoTV.gn"
-    ],
+    "removed": [],
     "source_changed": []
   },
   "reference": {
@@ -1723,6 +1743,7 @@
       "GongMax.fr",
       "HANDICAPTV.fr",
       "LeNouveauManagerTV.bj",
+      "LintelligentTV.fr",
       "LougaTV.sn",
       "ManaEgliseOnline.pt",
       "Matele.be",
