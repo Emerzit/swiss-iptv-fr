@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz" x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz"
-# Generated 2026-11-22T11:04:33.045488+00:00; audience=public; sample playback only
+# Generated 2026-11-23T07:11:05.136340+00:00; audience=public; sample playback only
 #EXTINF:-1 tvg-id="RTS.1.ch" tvg-name="RTS 1" tvg-logo="https://i.imgur.com/OP5lHv9.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="1",RTS 1
 https://viamotionhsi.netplus.ch/live/eds/rts1hd/browser-HLS8/rts1hd.m3u8
 #EXTINF:-1 tvg-id="RTS.2.ch" tvg-name="RTS 2" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/RTS_2_logo_2019.svg/960px-RTS_2_logo_2019.svg.png" group-title="unknown" tvg-language="fra" tvg-country="CH" tvg-chno="2",RTS 2
@@ -110,8 +110,6 @@ https://viamotionhsi.netplus.ch/live/eds/bluezoomfr/browser-HLS8/bluezoomfr.m3u8
 https://viamotionhsi.netplus.ch/live/eds/lequipe21/browser-HLS8/lequipe21.m3u8
 #EXTINF:-1 tvg-id="Gulli.ch" tvg-name="Gulli" tvg-logo="https://i.imgur.com/kqYssbW.png" group-title="kids" tvg-language="fra" tvg-country="FR" tvg-chno="20",Gulli
 https://viamotionhsi.netplus.ch/live/eds/gulli/browser-HLS8/gulli.m3u8
-#EXTINF:-1 tvg-id="AfrikInfoTV.gn@SD" tvg-name="Afrik Info TV" tvg-logo="https://i.imgur.com/hz2LOD8.jpeg" group-title="news" tvg-language="fra" tvg-country="GN",Afrik Info TV
-https://kali.vdopanel.com:3119/hybrid/play.m3u8
 #EXTINF:-1 tvg-id="BenieTV.ci@SD" tvg-name="Benie TV" tvg-logo="https://i.imgur.com/7FXi05e.jpeg" group-title="religious" tvg-language="fra" tvg-country="CI",Benie TV
 https://tv.voozmedia.fun/benietv/index.m3u8
 #EXTINF:-1 tvg-id="BFMTechCo.fr" tvg-name="BFM Tech & Co" tvg-logo="https://i.imgur.com/FQ0FpXV.png" group-title="science,news" tvg-language="fra" tvg-country="FR",BFM Tech & Co
@@ -125,6 +123,8 @@ https://stream.digitalchannel.bj/live/ds_64de185c18c9d786a760f01e0e592348.m3u8
 #EXTINF:-1 tvg-id="FilinfoTV.bf" tvg-name="Filinfo TV" tvg-logo="https://i.imgur.com/KG93Tvn.png" group-title="news" tvg-language="fra" tvg-country="BF",Filinfo TV
 https://d3t1ss6x7vm1uz.cloudfront.net/hls/master.m3u8
 #EXTINF:-1 tvg-id="Gong.fr" tvg-name="Gong" tvg-logo="https://i.imgur.com/lA9UFMG.png" group-title="animation" tvg-language="fra" tvg-country="FR",Gong
+https://amg01596-gongnetworks-gong-ono-vh5f2.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="GongMax.fr" tvg-name="Gong Max" tvg-logo="https://i.imgur.com/I9DVdqE.png" group-title="animation" tvg-language="fra" tvg-country="FR",Gong Max
 https://amg01596-gongnetworks-gong-ono-vh5f2.amagi.tv/playlist.m3u8
 #EXTINF:-1 tvg-id="HANDICAPTV.fr" tvg-name="HANDICAP TV" tvg-logo="https://i.imgur.com/vXbAeD0.png" group-title="lifestyle" tvg-language="fra" tvg-country="FR",HANDICAP TV
 https://srv.webtvmanager.fr:3697/stream/play.m3u8
