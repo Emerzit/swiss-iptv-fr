@@ -1,5 +1,5 @@
 #EXTM3U url-tvg="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz" x-tvg-url="https://epgshare01.online/epgshare01/epg_ripper_CH1.xml.gz"
-# Generated 2026-11-23T11:03:39.074332+00:00; audience=public; sample playback only
+# Generated 2026-11-24T07:21:44.291987+00:00; audience=public; sample playback only
 #EXTINF:-1 tvg-id="RTSInfo.ch" tvg-name="RTS Info" tvg-logo="https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/switzerland/rts-info-ch.png" group-title="news" tvg-language="fra" tvg-country="CH",RTS Info
 https://rtsinfo-d.akamaized.net/out/v1/lsvs/rts-info/cmaf/hls-master.m3u8?dw=7201
 #EXTINF:-1 tvg-id="franceinfo.ch" tvg-name="Franceinfo" tvg-logo="https://i.imgur.com/eITXz6A.png" group-title="news" tvg-language="fra" tvg-country="FR" tvg-chno="16",Franceinfo
@@ -22,6 +22,8 @@ https://ott.tv5monde.com/Content/HLS/Live/channel(info)/variant.m3u8
 https://i24newsfrench-cdn.encoders.immergo.tv/master.m3u8
 #EXTINF:-1 tvg-id="Léman.Bleu.Télévision.ch" tvg-name="Léman Bleu" tvg-logo="https://i.imgur.com/6ijbSTr.png" group-title="news" tvg-language="fra" tvg-country="CH" tvg-chno="76",Léman Bleu
 https://naxoo.vedge.infomaniak.com/livecast/ik:naxoo/manifest.m3u8
+#EXTINF:-1 tvg-id="AfrikInfoTV.gn@SD" tvg-name="Afrik Info TV" tvg-logo="https://i.imgur.com/hz2LOD8.jpeg" group-title="news" tvg-language="fra" tvg-country="GN",Afrik Info TV
+https://kali.vdopanel.com:3119/hybrid/play.m3u8
 #EXTINF:-1 tvg-id="BFMTechCo.fr" tvg-name="BFM Tech & Co" tvg-logo="https://i.imgur.com/FQ0FpXV.png" group-title="science,news" tvg-language="fra" tvg-country="FR",BFM Tech & Co
 https://live-cdn-technco-euw1.bfmb.bct.nextradiotv.com/master.m3u8
 #EXTINF:-1 tvg-id="FilinfoTV.bf" tvg-name="Filinfo TV" tvg-logo="https://i.imgur.com/KG93Tvn.png" group-title="news" tvg-language="fra" tvg-country="BF",Filinfo TV
