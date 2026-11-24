@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-24T07:21:44.292986+00:00",
+  "generated_at": "2026-11-24T11:03:32.674992+00:00",
   "audience": "public",
   "playlists": {
-    "swiss-fr": 77,
-    "swiss-fr-internet": 77,
+    "swiss-fr": 78,
+    "swiss-fr-internet": 78,
     "swiss-fr-multicast": 0,
     "swiss-fr-regional": 11,
     "swiss-fr-news": 15
@@ -1608,6 +1608,28 @@
       }
     },
     {
+      "id": "Novocomedy.fr",
+      "name": "Novocomedy",
+      "source_id": "d203be7ad68877c3e17caf42",
+      "url": "https://livecdn.premiumfree.tv/afxpstr/NovoPranks/index.m3u8",
+      "checked_at": "2026-11-24T11:03:09.304547+00:00",
+      "width": 1920,
+      "height": 1080,
+      "fps": 25.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 124,
+      "language_evidence": null,
+      "decoded_seconds": 5.0,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 4290000,
+        "failed_higher_variants": []
+      }
+    },
+    {
       "id": "RadioTeleEvangileSansLimite.ca",
       "name": "Radio Tele Evangile Sans Limite",
       "source_id": "90751c03772fe7ea13da74fd",
@@ -1742,7 +1764,7 @@
   ],
   "changes": {
     "added": [
-      "AfrikInfoTV.gn"
+      "Novocomedy.fr"
     ],
     "removed": [],
     "source_changed": []
@@ -1772,6 +1794,7 @@
       "Matele.be",
       "MonacoInfo.mc",
       "NOVO19.fr",
+      "Novocomedy.fr",
       "RTSInfo.ch",
       "RadioTeleEvangileSansLimite.ca",
       "RefletTV.ci",
