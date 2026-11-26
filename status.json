@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T09:48:42.711410+00:00",
+  "generated_at": "2026-11-26T11:03:41.487366+00:00",
   "audience": "public",
   "playlists": {
     "swiss-fr": 76,
@@ -1720,10 +1720,7 @@
   ],
   "changes": {
     "added": [],
-    "removed": [
-      "LeNouveauManagerTV.bj",
-      "LougaTV.sn"
-    ],
+    "removed": [],
     "source_changed": []
   },
   "reference": {
