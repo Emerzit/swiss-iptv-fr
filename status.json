@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-11-27T07:13:31.182652+00:00",
+  "generated_at": "2026-11-27T11:03:45.240659+00:00",
   "audience": "public",
   "playlists": {
-    "swiss-fr": 77,
-    "swiss-fr-internet": 77,
+    "swiss-fr": 78,
+    "swiss-fr-internet": 78,
     "swiss-fr-multicast": 0,
     "swiss-fr-regional": 11,
     "swiss-fr-news": 15
   },
   "exclusions": {
-    "rights_pending": 929,
+    "rights_pending": 932,
     "check_expired": 46,
     "unconfirmed_french_audio": 1,
-    "no_swiss_playback": 4,
+    "no_swiss_playback": 3,
     "account_required": 2,
     "identity_unresolved": 1
   },
@@ -1366,6 +1366,28 @@
       }
     },
     {
+      "id": "DigitalChannel.bj",
+      "name": "Digital Channel",
+      "source_id": "a1a3b941244a71d7426bb2da",
+      "url": "https://stream.digitalchannel.bj/live/ds_64de185c18c9d786a760f01e0e592348.m3u8",
+      "checked_at": "2026-11-27T11:00:20.209548+00:00",
+      "width": 1280,
+      "height": 720,
+      "fps": 25.0,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "audio_language": null,
+      "frames": 89,
+      "language_evidence": null,
+      "decoded_seconds": 4.96,
+      "quality": {
+        "mode": "best",
+        "variant_rank": 0,
+        "bandwidth": 1,
+        "failed_higher_variants": []
+      }
+    },
+    {
       "id": "FilinfoTV.bf",
       "name": "Filinfo TV",
       "source_id": "58fe22ee7dac9f96c8676c0d",
@@ -1742,12 +1764,9 @@
   ],
   "changes": {
     "added": [
-      "LeNouveauManagerTV.bj",
-      "LougaTV.sn"
-    ],
-    "removed": [
       "DigitalChannel.bj"
     ],
+    "removed": [],
     "source_changed": []
   },
   "reference": {
@@ -1763,6 +1782,7 @@
       "BenieTV.ci",
       "CPACFrench.ca",
       "CanalLocalGrosblie.fr",
+      "DigitalChannel.bj",
       "FilinfoTV.bf",
       "Gong.fr",
       "GongMax.fr",
